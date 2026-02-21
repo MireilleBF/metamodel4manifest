@@ -1,0 +1,9 @@
+uid: 6781f9af-6d16-4a56-87a4-91095b6cc061
+type: SoftwareFile
+name: GPT2ModelWeights
+properties:
+  location: https://openaipublic.blob.core.windows.net/gpt-2/models/124M/model.ckpt.data-00000-of-00001
+  n_parameters: 124439808
+category: model_weights
+software_fileKind: file
+languages: []

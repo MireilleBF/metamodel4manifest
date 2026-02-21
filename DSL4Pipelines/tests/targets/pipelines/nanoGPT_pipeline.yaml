@@ -1,0 +1,23 @@
+uid: nanoGPT Pipeline
+type: Pipeline
+properties: {}
+tasks:
+- uid: 3c0b7bac-0405-4739-9cbf-9f40db69f27e
+  type: Task
+  name: DataCollection
+  description: Collecting the training data for GPT2 model
+  properties: {}
+  steps: []
+- uid: 3bdad084-e96b-412f-bb7a-2238ec9b1586
+  type: Task
+  name: Tokenizing
+  description: Tokenizing the training data using byte-level BPE tokenizer
+  properties:
+    family: byte-bpe-tokenizer
+  steps: []
+- uid: 47bf7a42-41b3-4274-a74f-457e614fbb1c
+  type: Task
+  name: PreTraining
+  description: Pre-training the GPT2 model using the tokenized data
+  properties: {}
+  steps: []

@@ -1,0 +1,19 @@
+uid: 9a047a28-cfbe-4861-9231-2ca735a0e42e
+type: Data
+name: openWebText
+description: "a reconstructed 'open' version of the GPT2 training corpus \n based on the data published in the GPT2 technical report, \n This corpus was constructed from the code located on code_ref"
+properties:
+  code_ref: https://github.com/jcpeterson/openwebtext
+access: private
+license: none
+software_fileKind: file
+software_downloadLocation: https://huggingface.co/datasets/Skylion007/openwebtext
+languages: []
+data_types:
+- text
+dataset_kinds:
+- corpus
+data_formats:
+- .txt
+dataset_hasSensitivePersonalInformation: 'yes'
+dataset_knownBias: []

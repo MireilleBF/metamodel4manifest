@@ -1,0 +1,9 @@
+uid: 57cdcafa-f2e6-428f-9d12-0bf06023d5e7
+type: SoftwareFile
+name: GPT2TokenizerCode
+properties:
+  reference_implementation: https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py
+  'pre_tokenization:': to encode
+software_fileKind: file
+contentType: text/x-python
+languages: []

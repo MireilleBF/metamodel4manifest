@@ -1,0 +1,163 @@
+
+ classDiagram 
+    direction RL
+
+
+
+
+
+
+PreTraining__Element ..> vocabulary__Data  : CONTAINS
+PreTraining__Element ..> openWebText__Data  : CONTAINS
+PreTraining__Element ..> GPT2TrainingConfig__SoftwareFile  : CONTAINS
+
+
+
+
+
+PreTraining__Element ..> nanoGPT_Model__MLModel  : CONTAINS
+PreTraining__Element ..> GPT2ModelWeights__SoftwareFile  : CONTAINS
+
+
+
+Tokenizing__Element ..> PreTraining__Element  : CONTAINS
+
+
+
+
+
+Tokenizing__Element ..> GPT2TokenizerCode__SoftwareFile  : CONTAINS
+Tokenizing__Element ..> openWebText__Data  : CONTAINS
+
+
+
+Tokenizing__Element ..> vocabulary__Data  : CONTAINS
+
+
+
+DataCollection__Element ..> Tokenizing__Element  : CONTAINS
+
+
+
+DataCollection__Element ..> openWebText__Data  : CONTAINS
+
+class GPT2TrainingConfig__SoftwareFile{
+    uid : 22118bbb-3f9c-4327-b6af-68a945...
+    type : SoftwareFile
+    name : GPT2TrainingConfig
+    properties : description: Training the GPT2 model using collected data \n		 optimizer: &#123;&#39;type&#39;: &#39;adamw&#39;, &#39;weight_decay&#39;: 0.1, &#39;beta1&#39;: 0.9, &#39;beta2&#39;: 0.95, &#39;notes&#39;: &#39;Weight decay is not applied to bias and layer norm layers&#39;&#125; \n		 model_config: &#123;&#39;type&#39;: &#39;decoder&#39;, &#39;n_parameters&#39;: 124439808, &#39;n_active_parameters&#39;: 124439808, &#39;n_embedding_dimensions&#39;: 768, &#39;n_transformers&#39;: 12, &#39;positional_embedding&#39;: &#123;&#39;type&#39;: &#39;learned&#39;, &#39;n_positions&#39;: 1024&#125;, &#39;transformer_attention&#39;: &#123;&#39;type&#39;: &#39;multi-head-attention&#39;, &#39;n_heads&#39;: 12&#125;, &#39;transformer_ffn&#39;: &#123;&#39;hidden_layer_size&#39;: 3072, &#39;hidden_layer_size_ratio&#39;: 4.0&#125;&#125;
+    category : config
+    software_file_kind : FILE
+}
+
+class GPT2ModelWeights__SoftwareFile{
+    uid : 3e5e0c19-1e43-418f-811a-7c10fa...
+    type : SoftwareFile
+    name : GPT2ModelWeights
+    properties : location: https://openaipublic.blob.core.windows.net/gpt-2/models/124M/model.ckpt.data-00000-of-00001 \n		 n_parameters: 124439808
+    category : model_weights
+    software_file_kind : FILE
+}
+
+class GPT2TokenizerCode__SoftwareFile{
+    uid : 971faccf-5c88-49a8-9bf4-876d5f...
+    type : SoftwareFile
+    name : GPT2TokenizerCode
+    properties : reference_implementation: https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py \n		 pre_tokenization:: to encode
+    software_file_kind : FILE
+}
+
+class vocabulary__Data{
+    uid : cd81fffd-03f8-45c8-aebf-659d3f...
+    type : Data
+    name : vocabulary
+    description : The generated ...
+    properties : code_ref: https://github.com/jcpeterson/openwebtext \n		 n_vocab: 50257
+    access : private
+    license : none
+    category : vocabulary
+    software_file_kind : FILE
+    dataset_kinds : dataset
+    data_formats : text, bpe
+    dataset_has_sensitive_personal_information : yes
+}
+
+class openWebText__Data{
+    uid : 466735c6-048e-4c1e-a016-a0b12a...
+    type : Data
+    name : openWebText
+    description : a reconstructed &#39;open&#39; version...
+    properties : code_ref: https://github.com/jcpeterson/openwebtext
+    access : private
+    license : none
+    software_file_kind : FILE
+    languages : french, english, german, spanish
+    data_types : text
+    dataset_kinds : corpus
+    data_formats : .txt
+    dataset_has_sensitive_personal_information : yes
+}
+
+class nanoGPT_Model__MLModel{
+    uid : f0f32e26-901e-4fc2-8a00-3398ec...
+    type : MLModel
+    name : nanoGPT Model
+    properties : model_type: GPT2 \n		 framework: PyTorch \n		 model_size: 124M
+    software_file_kind : FILE
+}
+
+class PreTraining__Element{
+    uid : 52d36a9c-fbe6-47a3-8777-bd95f1...
+    type : Task
+    name : PreTraining
+    description : Pre-training the GPT2 model us...
+}
+
+class Tokenizing__Element{
+    uid : a5cc4185-47fd-47c0-9d7f-94be61...
+    type : Task
+    name : Tokenizing
+    description : Tokenizing the training data u...
+    properties : family: byte-bpe-tokenizer
+}
+
+class DataCollection__Element{
+    uid : c9ef23f8-ea65-4849-a216-4b1a1a...
+    type : Task
+    name : DataCollection
+    description : Collecting the training data f...
+}
+
+class NanoGPT_Pipeline__Pipeline{
+    uid : nanoGPT Pipeline
+    type : Pipeline
+    name : NanoGPT Pipeline
+}
+NanoGPT_Pipeline__Pipeline --> DataCollection__Element  : tasks
+NanoGPT_Pipeline__Pipeline --> Tokenizing__Element  : tasks
+NanoGPT_Pipeline__Pipeline --> PreTraining__Element  : tasks
+
+class NanoGPT_Manifest__Manifest{
+    uid : nanoGPT manifest
+    type : Manifest
+    name : NanoGPT Manifest
+}
+NanoGPT_Manifest__Manifest --> NanoGPT_Pipeline__Pipeline  : pipeline
+NanoGPT_Manifest__Manifest --> nanoGPT_Model__MLModel  : artefacts
+NanoGPT_Manifest__Manifest --> openWebText__Data  : artefacts
+NanoGPT_Manifest__Manifest --> vocabulary__Data  : artefacts
+NanoGPT_Manifest__Manifest --> GPT2TokenizerCode__SoftwareFile  : artefacts
+NanoGPT_Manifest__Manifest --> GPT2ModelWeights__SoftwareFile  : artefacts
+NanoGPT_Manifest__Manifest --> GPT2TrainingConfig__SoftwareFile  : artefacts
+
+style NanoGPT_Manifest__Manifest fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style NanoGPT_Pipeline__Pipeline fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+style DataCollection__Element fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style Tokenizing__Element fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style PreTraining__Element fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style nanoGPT_Model__MLModel fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style openWebText__Data fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style vocabulary__Data fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style GPT2TokenizerCode__SoftwareFile fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style GPT2ModelWeights__SoftwareFile fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5
+style GPT2TrainingConfig__SoftwareFile fill:#fff3e0,stroke:#e65100,stroke-width:1px,stroke-dasharray: 5 5

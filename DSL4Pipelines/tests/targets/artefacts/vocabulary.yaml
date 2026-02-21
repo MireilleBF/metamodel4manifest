@@ -1,0 +1,22 @@
+uid: 483adf8a-37a6-4c41-96aa-364c798bfbc9
+type: Data
+name: vocabulary
+description: The generated ...
+properties:
+  code_ref: https://github.com/jcpeterson/openwebtext
+  n_vocab: 50257
+access: private
+license: none
+category: vocabulary
+software_fileKind: file
+contentType: text/plain
+software_downloadLocation: https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe
+languages: []
+data_types: []
+dataset_kinds:
+- dataset
+data_formats:
+- text
+- bpe
+dataset_hasSensitivePersonalInformation: 'yes'
+dataset_knownBias: []

@@ -1,0 +1,462 @@
+
+ classDiagram 
+
+
+class inst_4405763056__Relationship{
+    uid : 3c6e40b0-c52e-4524-b760-753dc5587a55
+    type : Element
+    relationshipType : EVALUATES
+}
+inst_4405763056__Relationship --> inst_4405760608__Step  : from_
+inst_4405763056__Relationship --> Confusion_Matrix__Metric  : to_
+
+
+class inst_4405376304__Relationship{
+    uid : 8cecd44e-bf43-4ef5-9065-ab31e97c4fa2
+    type : Element
+    relationshipType : EVALUATES
+}
+inst_4405376304__Relationship --> inst_4405760608__Step  : from_
+inst_4405376304__Relationship --> Model_Accuracy__Metric  : to_
+
+
+class inst_4405715040__Relationship{
+    uid : 22dcc6f9-7d58-4f31-9425-abe6581f473b
+    type : Element
+    relationshipType : GENERATES
+}
+inst_4405715040__Relationship --> inst_4405762784__Step  : from_
+inst_4405715040__Relationship --> Evaluation_Visualization__SoftwareFile  : to_
+
+
+class inst_4405714432__Relationship{
+    uid : 78fafcf5-c709-435e-831e-44d30b8b6707
+    type : Element
+    relationshipType : GENERATES
+}
+inst_4405714432__Relationship --> inst_4405376880__Step  : from_
+inst_4405714432__Relationship --> Trained_Decision_Tree_Model__MLModel  : to_
+
+
+class inst_4405620688__Relationship{
+    uid : f872d53f-9ab7-47fc-b8f9-c59fcc84ee4d
+    type : Element
+    relationshipType : GENERATES
+}
+inst_4405620688__Relationship --> inst_4405620048__Step  : from_
+inst_4405620688__Relationship --> output_visualization__SoftwareFile  : to_
+
+
+class inst_4405619728__Relationship{
+    uid : b7558f77-8542-474a-bef9-5f2d8c0effd9
+    type : Element
+    relationshipType : DEPENDS_ON
+}
+inst_4405619728__Relationship --> inst_4405619408__Step  : from_
+inst_4405619728__Relationship --> Iris_Flower_Dataset__Data  : to_
+
+
+class inst_4405470480__Relationship{
+    uid : 7c36c3eb-9aea-4147-8e90-fa80b060df61
+    type : Element
+    relationshipType : SOURCE
+}
+inst_4405470480__Relationship --> Iris_Analysis_Pipeline_Manifest__PipelineManifest  : from_
+inst_4405470480__Relationship --> inst_4405470144__SoftwareFile  : to_
+class Confusion_Matrix__Metric{
+    uid : d8816157-d1c5-4f5f-a5af-61831ed287d6
+    type : Element
+    name : Confusion Matrix
+    description : Matrice de confusion du modèle de classification sur le dataset IRIS.
+    properties : calculation_method: confusion_matrix from scikit-learn
+    kind : perf:confusion_matrix
+    category : PERFORMANCE
+}
+class Model_Accuracy__Metric{
+    uid : 1c250cae-7289-4ef3-bcdf-f2d5d33343f5
+    type : Element
+    name : Model Accuracy
+    description : Accuracy du modèle de classification sur le dataset IRIS.
+    properties : calculation_method: accuracy_score from scikit-learn
+    kind : perf:accuracy
+    category : PERFORMANCE
+}
+class Evaluation_Visualization__SoftwareFile{
+    uid : 49961f03-2585-48be-b9a4-dd1e95b77d0a
+    type : SoftwareFile
+    name : Evaluation Visualization
+    description : Result from excution , Content Preview: Matrice de Confusion
+    properties : Content Preview: DecisionTreeClassifier(random_state=42)
+    software_fileKind : FILE
+}
+class inst_4405621328__CreationInfo{
+    createdBy : Data Scientist
+    type : CreationInfo
+    createdOn : 2024-06-24T10:00:00Z
+}
+class Trained_Decision_Tree_Model__MLModel{
+    uid : 0be7d9be-bef9-4ccd-a770-afd0958871c9
+    type : MLModel
+    name : Trained Decision Tree Model
+    description : Un modèle de classification entraîné sur le dataset IRIS.
+    properties : model_type: Decision Tree
+    software_fileKind : FILE
+    software_primaryPurpose : Classification
+    contentType : application/octet-stream
+    software_downloadLocation : https://example.com/downloads/iris_decision_tree_model.bin
+    external_reference : https://doi.org/10.1234/iris-model
+}
+Trained_Decision_Tree_Model__MLModel --> inst_4405621328__CreationInfo  : creationInfo
+class output_visualization__SoftwareFile{
+    uid : 792dce77-9416-4004-9226-6d0e499d9c64
+    type : SoftwareFile
+    name : output_visualization
+    description : visualisation Stream to stdout, Content Preview: sepal length...
+    software_fileKind : FILE
+}
+class inst_4405471824__CreationInfo{
+    createdBy : R.A. Fisher
+    type : CreationInfo
+    createdOn : 1936-01-01
+}
+class Iris_Flower_Dataset__Data{
+    uid : 175b8259-c592-4155-9053-c375c951998c
+    type : Data
+    name : Iris Flower Dataset
+    description : Dataset classique de Fisher contenant 150 instances de 3 espèces d&#39;iris &#40;Setosa, Versicolor, Virginica&#41;.
+    properties : num_instances: 150 | num_features: 4 | num_classes: 3 | feature_names: ['sepal length', 'sepal width', 'petal length', 'petal width'] | class_names: ['setosa', 'versicolor', 'virginica']
+    software_fileKind : FILE
+    software_primaryPurpose : Classification and Pattern Recognition
+    contentType : text/csv
+    software_downloadLocation : https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data
+    external_reference : https://doi.org/10.24432/C56P4B
+    data_languages : English
+    data_types : tabular
+    data_kinds : dataset
+    datasetSize : 4550
+    datasetAvailability : public
+    dataset_hasSensitivePersonalInformation : no
+    dataset_intendedUse : Training and evaluation of classification models.
+    dataset_knownBias : Class balanced 50 samples per class
+}
+Iris_Flower_Dataset__Data --> inst_4405471824__CreationInfo  : creationInfo
+class inst_4405469808__ExternalReference{
+    externalIdentifierType : url
+    identifier : nbpath
+}
+class inst_4405470144__SoftwareFile{
+    uid : 281105e2-115f-4137-9e30-b42a26dca774
+    type : SoftwareFile
+    software_fileKind : FILE
+    contentType : Jupiter Notebook
+    languages : english, french, python
+}
+inst_4405470144__SoftwareFile --> inst_4405469808__ExternalReference  : external_reference
+class inst_4405964432__Instruction{
+    uid : e6dd807e-1a7e-4c1d-afd2-847a9fdb0c99
+    type : Element
+    shell : python
+    code : plt.show&#40;&#41;
+}
+class inst_4405964272__Instruction{
+    uid : 769b5556-9290-4b63-a6e8-d6d37f598476
+    type : Element
+    shell : python
+    code : plt.title&#40;&#39;Matrice de Confusion&#39;&#41;
+}
+class inst_4405964112__Instruction{
+    uid : 27e0b26b-f8ca-4a27-a034-90ac2c88ead3
+    type : Element
+    shell : python
+    code : plt.ylabel&#40;&#39;Valeur réelle&#39;&#41;
+}
+class inst_4405963952__Instruction{
+    uid : ed659cef-5cd7-492d-883e-e5bd92c9030e
+    type : Element
+    shell : python
+    code : plt.xlabel&#40;&#39;Prédiction&#39;&#41;
+}
+class inst_4405963792__Instruction{
+    uid : bb86f0e5-fcbb-4492-9f67-a71fa7f10d0f
+    type : Element
+    shell : python
+    code : plt.figure&#40;figsize=&#40;8, 6&#41;&#41;
+}
+class inst_4405963632__Instruction{
+    uid : b69f8ba4-c3ba-497f-abe0-a0a7dee6b49b
+    type : Element
+    shell : python
+    code : plt.figure&#40;figsize=&#40;8, 6&#41;&#41;
+}
+class inst_4405762784__Step{
+    uid : Visualize
+    type : Element
+}
+inst_4405762784__Step --> inst_4405963632__Instruction  : commands
+inst_4405762784__Step --> inst_4405963792__Instruction  : commands
+inst_4405762784__Step --> inst_4405963952__Instruction  : commands
+inst_4405762784__Step --> inst_4405964112__Instruction  : commands
+inst_4405762784__Step --> inst_4405964272__Instruction  : commands
+inst_4405762784__Step --> inst_4405964432__Instruction  : commands
+class inst_4405963472__Instruction{
+    uid : 160f247a-2c45-4b0f-b244-ffb0917f5259
+    type : Element
+    shell : python
+    code : cm = confusion_matrix&#40;y_test, predictions&#41;
+}
+class inst_4405963312__Instruction{
+    uid : b2876315-9040-482a-b230-c7803f2a8a42
+    type : Element
+    shell : python
+    code : print&#40;classification_report&#40;y_test, predictions&#41;&#41;
+}
+class inst_4405963152__Instruction{
+    uid : 9ec4c915-eab1-4574-826d-ae39abf0c6ee
+    type : Element
+    shell : python
+    code : print&#40;&#39;
+Rapport de classification :&#39;&#41;
+}
+class inst_4405962992__Instruction{
+    uid : 2bf04d70-ab98-4289-a3e5-97c67c6688e4
+    type : Element
+    shell : python
+    code : print&#40;f&#39;Accuracy du modèle : &#123;accuracy:.2f&#125;&#39;&#41;
+}
+class inst_4405962832__Instruction{
+    uid : ab4e6dd5-ff7b-4241-94f0-f7c77ec4b39b
+    type : Element
+    shell : python
+    code : accuracy = accuracy_score&#40;y_test, predictions&#41;
+}
+class inst_4405962672__Instruction{
+    uid : 1676e572-8e0d-479a-bb70-7c01d6cd09a6
+    type : Element
+    shell : python
+    code : predictions = model.predict&#40;X_test&#41;
+}
+class inst_4405760608__Step{
+    uid : Model Evaluation
+    type : Element
+}
+inst_4405760608__Step --> inst_4405962672__Instruction  : commands
+inst_4405760608__Step --> inst_4405962832__Instruction  : commands
+inst_4405760608__Step --> inst_4405962992__Instruction  : commands
+inst_4405760608__Step --> inst_4405963152__Instruction  : commands
+inst_4405760608__Step --> inst_4405963312__Instruction  : commands
+inst_4405760608__Step --> inst_4405963472__Instruction  : commands
+class inst_4405714736__Task{
+    uid : ModelEvaluation
+    type : Element
+}
+inst_4405714736__Task --> inst_4405760608__Step  : steps
+inst_4405714736__Task --> inst_4405762784__Step  : steps
+class inst_4406247856__Instruction{
+    uid : 3e3e6a95-1790-4ff8-96ac-4bebead2ca4f
+    type : Element
+    shell : python
+    code : model.fit&#40;X_train, y_train&#41;;
+}
+class inst_4405376880__Step{
+    uid : Fit Model
+    type : Element
+}
+inst_4405376880__Step --> inst_4406247856__Instruction  : commands
+class inst_4348482448__Instruction{
+    uid : a0fa8e86-02c4-4ea2-a986-23340acfb349
+    type : Element
+    shell : python
+    code : model = DecisionTreeClassifier&#40;random_state=42&#41;
+}
+class inst_4405714128__Step{
+    uid : Model Training
+    type : Element
+}
+inst_4405714128__Step --> inst_4348482448__Instruction  : commands
+class inst_4405713824__Task{
+    uid : ModelTraining
+    type : Element
+}
+inst_4405713824__Task --> inst_4405714128__Step  : steps
+inst_4405713824__Task --> inst_4405376880__Step  : steps
+class inst_4405857168__Instruction{
+    uid : 6fb0162b-b5a3-49d1-b735-4073491aca2e
+    type : Element
+    shell : python
+    code : X = df.drop&#40;&#39;species&#39;, axis=1&#41;
+}
+class inst_4405713520__Step{
+    uid : DataPreparation
+    type : Element
+}
+inst_4405713520__Step --> inst_4405857168__Instruction  : commands
+class inst_4405621008__Task{
+    uid : DataPreparation
+    type : Element
+}
+inst_4405621008__Task --> inst_4405713520__Step  : steps
+class inst_4405856592__Instruction{
+    uid : 7586ffaa-4ee4-4cae-9029-d341c92ccb56
+    type : Element
+    shell : python
+    code : plt.show&#40;&#41;
+}
+class inst_4406088864__Instruction{
+    uid : 6024ac59-5652-4a68-afd6-f1e7aad8f8be
+    type : Element
+    shell : python
+    code : plt.title&#40;&#39;Distribution de la longueur des pétales&#39;&#41;
+}
+class inst_4405814768__Instruction{
+    uid : 9f99ae3f-4915-4dd6-b240-e53f46e89e37
+    type : Element
+    shell : python
+    code : sns.histplot&#40;data=df, x=&#39;petal_length&#39;, hue=&#39;species&#39;, multiple=&#39;stack&#39;&#41;
+}
+class inst_4405808720__Instruction{
+    uid : 78c71356-9032-4a55-94a8-e0086007d4ee
+    type : Element
+    shell : python
+    code : plt.figure&#40;figsize=&#40;8, 6&#41;&#41;
+}
+class inst_4405603664__Instruction{
+    uid : cee83bf0-1c08-49e2-8866-3dcd5f610d3d
+    type : Element
+    shell : python
+    code : plt.show&#40;&#41;
+}
+class inst_4405603424__Instruction{
+    uid : c14daa95-9974-440e-aad0-303dda78f9a0
+    type : Element
+    shell : python
+    code : sns.pairplot&#40;df, hue=&#39;species&#39;&#41;
+}
+class inst_4405620048__Step{
+    uid : Visualization
+    type : Element
+}
+inst_4405620048__Step --> inst_4405603424__Instruction  : commands
+inst_4405620048__Step --> inst_4405603664__Instruction  : commands
+inst_4405620048__Step --> inst_4405808720__Instruction  : commands
+inst_4405620048__Step --> inst_4405814768__Instruction  : commands
+inst_4405620048__Step --> inst_4406088864__Instruction  : commands
+inst_4405620048__Step --> inst_4405856592__Instruction  : commands
+class inst_4405843536__Instruction{
+    uid : 696ebdf5-41b2-433a-88ac-e65200b1fbda
+    type : Element
+    shell : python
+    code : print&#40;df.head&#40;&#41;&#41;
+}
+class inst_4405843280__Instruction{
+    uid : 0606f53b-b7c6-4483-8cb9-5a814814e64f
+    type : Element
+    shell : python
+    code : df = pd.DataFrame&#40;data=np.c_[iris[&#39;data&#39;], iris[&#39;target&#39;]]
+}
+class inst_4405760064__Instruction{
+    uid : 01c0c8e0-d0ca-4b9e-b17d-29219a9b2392
+    type : Element
+    shell : python
+    code : iris = load_iris&#40;&#41;
+}
+class inst_4405619408__Step{
+    uid : Load Dataset
+    type : Element
+}
+inst_4405619408__Step --> inst_4405760064__Instruction  : commands
+inst_4405619408__Step --> inst_4405843280__Instruction  : commands
+inst_4405619408__Step --> inst_4405843536__Instruction  : commands
+class inst_4405619088__Task{
+    uid : DataLoading
+    type : Element
+}
+inst_4405619088__Task --> inst_4405619408__Step  : steps
+inst_4405619088__Task --> inst_4405620048__Step  : steps
+class inst_4405759520__Instruction{
+    uid : 4556362d-9de0-4b5f-9a42-1e9f111443cd
+    type : Element
+    shell : python
+    code : :from sklearn.datasets import load_iris
+}
+class inst_4405377744__Instruction{
+    uid : 65e1bfb3-5940-49c5-bd08-397605f22f2c
+    type : Element
+    shell : python
+    code : from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+}
+class inst_4405713216__Instruction{
+    uid : 89722663-c5d2-461d-8c2e-be5ba7823057
+    type : Element
+    shell : python
+    code : from sklearn.tree import DecisionTreeClassifier
+}
+class inst_4405712912__Instruction{
+    uid : 291109ce-60f5-4926-b46c-940edc1f108e
+    type : Element
+    shell : python
+    code : from sklearn.model_selection import train_test_split
+}
+class inst_4405618768__Instruction{
+    uid : b695e47b-6294-444f-93de-7935181a51b9
+    type : Element
+    shell : python
+    code : import seaborn as sns
+}
+class inst_4405618448__Instruction{
+    uid : f30ceb34-16a4-4d2a-b08c-7241075d4af7
+    type : Element
+    shell : python
+    code : import matplotlib.pyplot as plt
+}
+class inst_4405471488__Instruction{
+    uid : 63abb708-cb8e-4474-bb32-addcc65d778f
+    type : Element
+    shell : python
+    code : import numpy as np
+}
+class inst_4405471152__Step{
+    uid : Import Libraries
+    type : Element
+}
+inst_4405471152__Step --> inst_4405471488__Instruction  : commands
+inst_4405471152__Step --> inst_4405618448__Instruction  : commands
+inst_4405471152__Step --> inst_4405618768__Instruction  : commands
+inst_4405471152__Step --> inst_4405712912__Instruction  : commands
+inst_4405471152__Step --> inst_4405713216__Instruction  : commands
+inst_4405471152__Step --> inst_4405377744__Instruction  : commands
+inst_4405471152__Step --> inst_4405759520__Instruction  : commands
+class inst_4405470816__Task{
+    uid : LibraryLoading
+    type : Element
+}
+inst_4405470816__Task --> inst_4405471152__Step  : steps
+class inst_4405469472__Pipeline{
+    uid : Iris Analysis Pipeline
+    type : Element
+}
+inst_4405469472__Pipeline --> inst_4405470816__Task  : tasks
+inst_4405469472__Pipeline --> inst_4405619088__Task  : tasks
+inst_4405469472__Pipeline --> inst_4405621008__Task  : tasks
+inst_4405469472__Pipeline --> inst_4405713824__Task  : tasks
+inst_4405469472__Pipeline --> inst_4405714736__Task  : tasks
+class Iris_Analysis_Pipeline_Manifest__PipelineManifest{
+    uid : Classification on IRIS
+    type : Element
+    name : Iris Analysis Pipeline Manifest
+    description :  classification ...
+}
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405469472__Pipeline  : pipeline
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405470144__SoftwareFile  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> Iris_Flower_Dataset__Data  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> output_visualization__SoftwareFile  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> Trained_Decision_Tree_Model__MLModel  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> Evaluation_Visualization__SoftwareFile  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> Model_Accuracy__Metric  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> Confusion_Matrix__Metric  : artefacts
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405470480__Relationship  : relations
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405619728__Relationship  : relations
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405620688__Relationship  : relations
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405714432__Relationship  : relations
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405715040__Relationship  : relations
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405376304__Relationship  : relations
+Iris_Analysis_Pipeline_Manifest__PipelineManifest --> inst_4405763056__Relationship  : relations

@@ -1,0 +1,9 @@
+uid: cf21c737-7fe5-49e9-8e65-50d8d4591571
+type: MLModel
+name: nanoGPT Model
+properties:
+  model_type: GPT2
+  framework: PyTorch
+  model_size: 124M
+software_fileKind: file
+languages: []
