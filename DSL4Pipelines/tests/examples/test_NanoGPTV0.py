@@ -322,7 +322,8 @@ def evaluate_artefact_yaml_serialization_deserialisation(artefact: Artefact):
     assert loaded_element is not None, "YAML loading to dict returned None"
     # pylint: disable=redefined-builtin
     assert isinstance(loaded_element, dict), (
-        f"Expected loaded element to be a dict, got {type(loaded_element)}"
+        f"Expected loaded element to be a dict, got {{loaded_element.__class__.__name__}}"
+
     )
 
     object = YAMLSerializer._from_yaml(Task, loaded_element)
