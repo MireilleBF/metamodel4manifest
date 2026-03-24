@@ -1,0 +1,55 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:df1ba669-785d-4f90-8218-671926fb779f",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:31.178217+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "THUDM/codegeex2-6b-c6d36fb6-4b21-54d5-9e9f-682501709383",
+            "name": "THUDM/codegeex2-6b",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/THUDM/codegeex2-6b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "",
+                    "architectureFamily": "chatglm",
+                    "modelArchitecture": "ChatGLMModel",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "THUDM"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "chatglm",
+                "codegeex",
+                "glm",
+                "thudm",
+                "custom_code",
+                "zh",
+                "en",
+                "arxiv:2303.17568",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

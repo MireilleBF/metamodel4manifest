@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:5ce98aae-3f04-42f8-b9e3-4c8ff678fa2a",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:36.837933+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "yisol/IDM-VTON-fb0deb39-effe-5490-8eb3-df3888c33d2c",
+            "name": "yisol/IDM-VTON",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-NC-SA-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/yisol/IDM-VTON",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "stable-diffusion-xl-1.0-inpainting-0.1"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "yisol"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "onnx",
+                "safetensors",
+                "stable-diffusion-xl",
+                "inpainting",
+                "virtual try-on",
+                "arxiv:2403.05139",
+                "license:cc-by-nc-sa-4.0",
+                "diffusers:StableDiffusionXLInpaintPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

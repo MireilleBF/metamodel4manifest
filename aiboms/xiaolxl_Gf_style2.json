@@ -1,0 +1,60 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:9630b52f-0e35-4b69-a63f-2865b3f9d02e",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:01.682303+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "xiaolxl/Gf_style2-af9d6f7c-fc91-5ce3-9996-0c5ee7b1fd76",
+            "name": "xiaolxl/Gf_style2",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-NC-SA-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/xiaolxl/Gf_style2",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "xiaolxl"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "stable-diffusion",
+                "stable-diffusion-diffusers",
+                "text-to-image",
+                "en",
+                "license:cc-by-nc-sa-4.0",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

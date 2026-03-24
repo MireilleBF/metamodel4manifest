@@ -1,0 +1,215 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:177e22c4-ec29-43f7-97a1-56d076b3f185",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:47.629897+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "google/flan-t5-large-414f681a-6c60-5617-be08-2462712a6cee",
+            "name": "google/flan-t5-large",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/google/flan-t5-large",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text2text-generation",
+                    "architectureFamily": "t5",
+                    "modelArchitecture": "T5ForConditionalGeneration",
+                    "datasets": [
+                        {
+                            "ref": "svakulenk0/qrecc-75d4d811-c4b4-5d84-99b7-572b4eaa601b"
+                        },
+                        {
+                            "ref": "taskmaster2-6a0b1d8b-d00b-5825-825c-ab5801864e0f"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "# Uses\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "google"
+                }
+            ],
+            "description": "# Model Details\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "tf",
+                "jax",
+                "safetensors",
+                "t5",
+                "text2text-generation",
+                "en",
+                "fr",
+                "ro",
+                "de",
+                "multilingual",
+                "dataset:svakulenk0/qrecc",
+                "dataset:taskmaster2",
+                "dataset:djaym7/wiki_dialog",
+                "dataset:deepmind/code_contests",
+                "dataset:lambada",
+                "dataset:gsm8k",
+                "dataset:aqua_rat",
+                "dataset:esnli",
+                "dataset:quasc",
+                "dataset:qed",
+                "arxiv:2210.11416",
+                "arxiv:1910.09700",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "svakulenk0/qrecc-75d4d811-c4b4-5d84-99b7-572b4eaa601b",
+            "name": "svakulenk0/qrecc",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "svakulenk0/qrecc-75d4d811-c4b4-5d84-99b7-572b4eaa601b",
+                    "name": "svakulenk0/qrecc",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/svakulenk0/qrecc",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "open-domain-qa"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "expert-generated, found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "QReCC"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "extended|natural_questions, extended|quac"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-3.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for QReCC: Question Rewriting in Conversational Context\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nQReCC (Question Rewriting in Conversational Context) is an end-to-end open-domain question answering dataset comprising of 14K conversations with 81K question-answer pairs. The goal of this dataset is to provide a challenging benchmark for end-to-end conversational question answering that includes the individual subtasks of question rewriting, passage retrieval and reading comprehension.\u2026 See the full description on the dataset page: https://huggingface.co/datasets/svakulenk0/qrecc.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "svakulenk0",
+                                    "url": "https://huggingface.co/svakulenk0"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "taskmaster2-6a0b1d8b-d00b-5825-825c-ab5801864e0f",
+            "name": "taskmaster2",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "taskmaster2-6a0b1d8b-d00b-5825-825c-ab5801864e0f",
+                    "name": "taskmaster2",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/taskmaster2",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, fill-mask"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "dialogue-modeling"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "1K<n<10K"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "crowdsourced"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Taskmaster-2"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "taskmaster-2"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-4.0"
+                            }
+                        ]
+                    },
+                    "description": "Taskmaster is dataset for goal oriented conversations. The Taskmaster-2 dataset consists of 17,289 dialogs in the seven domains which include restaurants, food ordering, movies, hotels, flights, music and sports. Unlike Taskmaster-1, which includes both written \"self-dialogs\" and spoken two-person dialogs, Taskmaster-2 consists entirely of spoken two-person dialogs. In addition, while Taskmaster-1 is almost exclusively task-based, Taskmaster-2 contains a good number of search- and recommendation-oriented dialogs. All dialogs in this release were created using a Wizard of Oz (WOz) methodology in which crowdsourced workers played the role of a 'user' and trained call center operators played the role of the 'assistant'. In this way, users were led to believe they were interacting with an automated system that \u201cspoke\u201d using text-to-speech (TTS) even though it was in fact a human behind the scenes. As a result, users could express themselves however they chose in the context of an automated interface.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "google-research-datasets",
+                                    "url": "https://huggingface.co/google-research-datasets"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

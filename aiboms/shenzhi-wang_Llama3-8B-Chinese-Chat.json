@@ -1,0 +1,71 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:26dfe02e-bc7b-4215-8821-466c6156ee36",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:19.203739+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "shenzhi-wang/Llama3-8B-Chinese-Chat-7071ca73-b8a7-55a7-88a3-57f2e07a1dc3",
+            "name": "shenzhi-wang/Llama3-8B-Chinese-Chat",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/shenzhi-wang/Llama3-8B-Chinese-Chat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "meta-llama/Meta-Llama-3-8B-Instruct"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "shenzhi-wang"
+                }
+            ],
+            "description": "# Model Summary\n\nLlama3-8B-Chinese-Chat is an instruction-tuned language model for Chinese & English users with various abilities such as roleplaying & tool-using built upon the Meta-Llama-3-8B-Instruct model.\n\nDevelopers: [Shenzhi Wang](https://shenzhi-wang.netlify.app)\\*, [Yaowei Zheng](https://github.com/hiyouga)\\*, Guoyin Wang (in.ai), Shiji Song, Gao Huang. (\\*: Equal Contribution)\n\n- License: [Llama-3 License](https://llama.meta.com/llama3/license/)\n- Base Model: Meta-Llama-3-8B-Instruct\n- Model Size: 8.03B\n- Context length: 8K\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "llama-factory",
+                "orpo",
+                "conversational",
+                "en",
+                "zh",
+                "base_model:meta-llama/Meta-Llama-3-8B-Instruct",
+                "base_model:finetune:meta-llama/Meta-Llama-3-8B-Instruct",
+                "doi:10.57967/hf/2316",
+                "license:llama3",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

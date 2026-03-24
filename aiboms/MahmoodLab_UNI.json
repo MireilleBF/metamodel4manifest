@@ -1,0 +1,61 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:7bf2a2ff-f257-4976-bda7-a738ea3d6c18",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:50.109851+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "MahmoodLab/UNI-e389804a-cb6d-54fb-aa17-7b67314ba1e8",
+            "name": "MahmoodLab/UNI",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-NC-ND-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-NC-ND-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/MahmoodLab/UNI",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-feature-extraction",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "timm"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "MahmoodLab"
+                }
+            ],
+            "tags": [
+                "timm",
+                "pytorch",
+                "histology",
+                "pathology",
+                "vision",
+                "self-supervised",
+                "vit",
+                "image-feature-extraction",
+                "en",
+                "license:cc-by-nc-nd-4.0",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

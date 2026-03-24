@@ -1,0 +1,132 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:233d5921-371f-49e2-b4ff-85ec83b14e8d",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:05:47.205994+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "CrucibleAI/ControlNetMediaPipeFace-503af4bf-b2bc-5bdc-b351-00971e5b156f",
+            "name": "CrucibleAI/ControlNetMediaPipeFace",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "openrail"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/CrucibleAI/ControlNetMediaPipeFace",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": [
+                        {
+                            "ref": "LAION-Face-f04242ab-0303-5b19-a995-e176894a2e50"
+                        },
+                        {
+                            "ref": "LAION-e2fd9e0b-ad81-58e8-94c9-4f67d007c49d"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "stabilityai/stable-diffusion-2-1-base"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "CrucibleAI"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "controlnet",
+                "laion",
+                "face",
+                "mediapipe",
+                "image-to-image",
+                "en",
+                "dataset:LAION-Face",
+                "dataset:LAION",
+                "arxiv:2302.05543",
+                "arxiv:2112.10752",
+                "arxiv:2210.08402",
+                "base_model:stabilityai/stable-diffusion-2-1-base",
+                "base_model:adapter:stabilityai/stable-diffusion-2-1-base",
+                "license:openrail",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "LAION-Face-f04242ab-0303-5b19-a995-e176894a2e50",
+            "name": "LAION-Face",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LAION-Face-f04242ab-0303-5b19-a995-e176894a2e50",
+                    "name": "LAION-Face",
+                    "contents": {
+                        "url": "",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "",
+                                    "url": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "LAION-e2fd9e0b-ad81-58e8-94c9-4f67d007c49d",
+            "name": "LAION",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LAION-e2fd9e0b-ad81-58e8-94c9-4f67d007c49d",
+                    "name": "LAION",
+                    "contents": {
+                        "url": "",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "",
+                                    "url": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

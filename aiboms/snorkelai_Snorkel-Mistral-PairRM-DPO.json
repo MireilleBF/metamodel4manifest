@@ -1,0 +1,110 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:186b3938-e5f9-4211-9d3d-386dc79e2178",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:33.835743+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "snorkelai/Snorkel-Mistral-PairRM-DPO-403dd6ad-2bf4-56e2-9567-4e1ca7c2a0d7",
+            "name": "snorkelai/Snorkel-Mistral-PairRM-DPO",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/snorkelai/Snorkel-Mistral-PairRM-DPO",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset-dd6f83d6-06bd-5b0d-bde9-4420a29f05ef"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "snorkelai"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "mistral",
+                "text-generation",
+                "conversational",
+                "dataset:snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset",
+                "arxiv:2305.18290",
+                "arxiv:2306.02561",
+                "arxiv:2401.10020",
+                "arxiv:2312.11456",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset-dd6f83d6-06bd-5b0d-bde9-4420a29f05ef",
+            "name": "snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset-dd6f83d6-06bd-5b0d-bde9-4420a29f05ef",
+                    "name": "snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train_iteration_1\", \"path\": \"data/train_iteration_1-*\"}, {\"split\": \"test_iteration_1\", \"path\": \"data/test_iteration_1-*\"}, {\"split\": \"train_iteration_2\", \"path\": \"data/train_iteration_2-*\"}, {\"split\": \"test_iteration_2\", \"path\": \"data/test_iteration_2-*\"}, {\"split\": \"train_iteration_3\", \"path\": \"data/train_iteration_3-*\"}, {\"split\": \"test_iteration_3\", \"path\": \"data/test_iteration_3-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset:\n\t\n\nThis is the data used for training Snorkel model\nWe use ONLY the prompts from UltraFeedback; no external LLM responses used.\n\n\t\n\t\t\n\t\tMethodology:\n\t\n\n\nGenerate 5 response variations for each prompt from a subset of 20,000 using the LLM - to start, we used Mistral-7B-Instruct-v0.2.\nApply PairRM for response reranking.\nUpdate the LLM by applying Direct Preference Optimization (DPO) on the top (chosen) and bottom (rejected) responses.\nUse this LLM as the base model for the next\u2026 See the full description on the dataset page: https://huggingface.co/datasets/snorkelai/Snorkel-Mistral-PairRM-DPO-Dataset.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "snorkelai",
+                                    "url": "https://huggingface.co/snorkelai"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

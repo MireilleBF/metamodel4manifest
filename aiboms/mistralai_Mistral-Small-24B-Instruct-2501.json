@@ -1,0 +1,75 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:85122e4e-ae03-4e1d-9545-d5e36a4bb860",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:09:12.590359+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "mistralai/Mistral-Small-24B-Instruct-2501-bb4eab6c-b1db-5a9b-b379-57bbb8b51a68",
+            "name": "mistralai/Mistral-Small-24B-Instruct-2501",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/mistralai/Mistral-Small-24B-Instruct-2501",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "vllm"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "mistralai/Mistral-Small-24B-Base-2501"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "mistralai"
+                }
+            ],
+            "tags": [
+                "vllm",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "transformers",
+                "conversational",
+                "en",
+                "fr",
+                "de",
+                "es",
+                "it",
+                "pt",
+                "zh",
+                "ja",
+                "ru",
+                "ko",
+                "base_model:mistralai/Mistral-Small-24B-Base-2501",
+                "base_model:finetune:mistralai/Mistral-Small-24B-Base-2501",
+                "license:apache-2.0",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

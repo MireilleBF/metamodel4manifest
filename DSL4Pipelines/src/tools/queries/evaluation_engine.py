@@ -3,9 +3,10 @@
 This module contains a brief description of the EvaluationEngine:
 execution of evaluation rules, on a manifest and generation of reports.
 """
+from typing import List
 
 from DSL4Pipelines.src.tools.queries.manifest_query import ManifestQuery
-from DSL4Pipelines.src.tools.queries.metarules import RULE_REGISTRY, RuleReport
+from DSL4Pipelines.src.tools.queries.metarules import RULE_REGISTRY, RuleReport, Rule
 from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 
 """

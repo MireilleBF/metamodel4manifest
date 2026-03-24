@@ -12,7 +12,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
     Instruction,
     Task,
 )
-from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
+from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerializer
 from DSL4Pipelines.tests.examples.NotebookIRISManifest import (
     test_build_pipeline,
     test_build_manifestFromNBonIrisClassification,
@@ -23,7 +23,7 @@ from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy, Tax
 from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import Category
 
 
-# --------- TESTS FOR YAMLSerializer.py : from an Objet to Yaml ---------
+# --------- TESTS FOR yamlSerializer.py : from an Objet to Yaml ---------
 def test_toYaml_Simple_Element() -> str:
     e = Element(name="TestElement", type="Element")
     yaml_output = YAMLSerializer.to_yaml(e, False)

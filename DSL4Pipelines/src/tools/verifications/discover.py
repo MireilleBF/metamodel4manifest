@@ -11,13 +11,20 @@ def get_all_data(element : Element) -> dict:
     #    "type": element.type,
     #    "uid": element.uid
     #}
-    data = element.__dict__
-    # On ajoute toutes les properties par-dessus
-    for prop in element.properties:
-        if isinstance(prop, dict):
-            data.update(prop)  # Si c'est un dict, on ajoute tous les éléments
-        else:
-            data[prop.key] = prop.value
+    data = element.__dict__.copy() # .copy() est plus sûr pour ne pas modifier l'objet original
+
+    if hasattr(element, "properties"):
+        if element.properties is not None:
+            if isinstance(element.properties, dict):
+                # Si properties est déjà un dict, on peut l'ajouter directement
+                data.update(element.properties)
+            elif isinstance(element.properties, list):
+                # Si properties est une liste de dicts, on peut les fusionner en un seul dict
+                for prop in element.properties:
+                    if isinstance(prop, dict):
+                        data.update(prop)
+                    else:
+                        print(f"Warning: Ignoring non-dict property {prop} in element {element.name}")
 
     return data
 

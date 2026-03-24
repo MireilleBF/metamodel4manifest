@@ -1,11 +1,22 @@
-from dataclasses import dataclass
-from typing import Callable, List, Any
+
+from dataclasses import dataclass, field
+from typing import Callable, List, Any, Optional
+
+from DSL4Pipelines.src.metamodel.artefacts.artefacts import Artefact
+from DSL4Pipelines.src.metamodel.core.structure import Element
+
 
 @dataclass
-class Rule:
-    name: str
-    weight: float
-    func: Callable  # La fonction de l'expert
+class Rule(Element):
+    name: str = "noName"  # Un nom lisible pour la règle
+    weight: float = 0.0  # Un poids pour indiquer l'importance de la règle (optionnel)
+    # La fonction renvoie True peu importent les arguments reçus (*args, **kwargs)
+    func: Callable = lambda *args, **kwargs: True
+    def __str__(self):
+        return f"Rule: {self.name} (weight: {self.weight})"
+    def evaluate(self, *args, **kwargs) -> Any:
+        """Exécute la fonction de la règle avec les arguments donnés."""
+        return self.func(*args, **kwargs)
 
 # C'est ici que toutes les règles seront "stockées" automatiquement
 RULE_REGISTRY: List[Rule] = []
@@ -34,11 +45,14 @@ class EvaluationResult:
         return f"{icon} {self.label}: {self.evidence} (score: {self.score:.2f})"
 
 @dataclass
-class RuleReport:
-    rule: Rule
-    results: List[EvaluationResult]
-    avg_score: float
-    status: str
+class RuleReport(Artefact):
+    type: str = "RuleReport"
+    rule: Optional[Rule] = (
+        None  # e.g., ArtefactCatalog.ACCESS.PUBLIC, ArtefactCatalog.ACCESS.PRIVATE, etc.
+    )
+    results: List[EvaluationResult] = field(default_factory=list)
+    avg_score: float = 0.0
+    status: str = "Red"  # Green, Orange, Red
 
     def __str__(self):
         icon = "🟢" \

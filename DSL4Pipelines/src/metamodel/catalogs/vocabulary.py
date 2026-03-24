@@ -21,6 +21,8 @@ class RelationshipType(str, Enum):
     ANNOTATED_BY = "annotatedBy" #to link a task or step to a category and taxonomy
     USES = "uses" # to link a script to the artefacts it uses (e.g., predict.py uses model.bin, ...)
     COMPOSED_OF = "composedOf" # to link an Element to its components (e.g., a pipeline composedOf steps, a step composedOf scripts and artefacts, ...)
+    DERIVED_FROM = "derivedFrom" # to link an artefact to another artefact from which it is derived (e.g., a fine-tuned model derivedFrom a pre-trained model, a dataset derivedFrom another dataset, ...)
+
 
  #   CONTAINS = "contains"
  #   TRAINED_ON = "trainedOn" #
@@ -73,3 +75,4 @@ class RelationshipType(str, Enum):
 class FileKind(str, Enum):
     FILE = "file"
     DIRECTORY = "directory"
+    LIBRARY = "library"

@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:cc4f2de6-dd96-40e5-9af6-a4cf2e6f0131",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:56.971574+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Lightricks/LTX-Video-f913a94a-df23-5d4f-896d-f3d6ccfee6fe",
+            "name": "Lightricks/LTX-Video",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "other"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Lightricks/LTX-Video",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-video",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "### Direct use\nYou can use the model for purposes under the [license](https://huggingface.co/Lightricks/LTX-Video/resolve/main/License.txt)\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Lightricks"
+                }
+            ],
+            "description": "## Model Details\n- **Developed by:** Lightricks\n- **Model type:** Diffusion-based text-to-video and image-to-video generation model\n- **Language(s):** English\n\n",
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "ltx-video",
+                "text-to-video",
+                "image-to-video",
+                "en",
+                "license:other",
+                "diffusers:LTXPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

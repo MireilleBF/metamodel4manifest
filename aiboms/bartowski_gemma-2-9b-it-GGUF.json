@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:91c49391-2b96-43f6-a861-9a7b20ace6e3",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:39.917665+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "bartowski/gemma-2-9b-it-GGUF-f316b6fd-a5cc-5c4d-88b1-506958728927",
+            "name": "bartowski/gemma-2-9b-it-GGUF",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "gemma"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/bartowski/gemma-2-9b-it-GGUF",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "google/gemma-2-9b-it"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "bartowski"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "gguf",
+                "conversational",
+                "text-generation",
+                "base_model:google/gemma-2-9b-it",
+                "base_model:quantized:google/gemma-2-9b-it",
+                "license:gemma",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

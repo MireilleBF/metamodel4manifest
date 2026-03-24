@@ -1,0 +1,128 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:0a7bcbb7-e75c-4157-a3a2-73302e018689",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:57.951037+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "sentence-transformers/all-MiniLM-L6-v2-cb279e3b-49dd-5fdb-897e-ddee2b388c61",
+            "name": "sentence-transformers/all-MiniLM-L6-v2",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "sentence-similarity",
+                    "architectureFamily": "bert",
+                    "modelArchitecture": "BertModel",
+                    "datasets": [
+                        {
+                            "ref": "s2orc-65a8fab1-76ce-5ee8-8f9f-ba89f6ce0d0a"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "sentence-transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended uses\n\nOur model is intended to be used as a sentence and short paragraph encoder. Given an input text, it outputs a vector which captures\nthe semantic information. The sentence vector may be used for information retrieval, clustering or sentence similarity tasks.\n\nBy default, input text longer than 256 word pieces is truncated.\n\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "sentence-transformers"
+                }
+            ],
+            "tags": [
+                "sentence-transformers",
+                "pytorch",
+                "tf",
+                "rust",
+                "onnx",
+                "safetensors",
+                "openvino",
+                "bert",
+                "feature-extraction",
+                "sentence-similarity",
+                "transformers",
+                "en",
+                "dataset:s2orc",
+                "dataset:flax-sentence-embeddings/stackexchange_xml",
+                "dataset:ms_marco",
+                "dataset:gooaq",
+                "dataset:yahoo_answers_topics",
+                "dataset:code_search_net",
+                "dataset:search_qa",
+                "dataset:eli5",
+                "dataset:snli",
+                "dataset:multi_nli",
+                "dataset:wikihow",
+                "dataset:natural_questions",
+                "dataset:trivia_qa",
+                "dataset:embedding-data/sentence-compression",
+                "dataset:embedding-data/flickr30k-captions",
+                "dataset:embedding-data/altlex",
+                "dataset:embedding-data/simple-wiki",
+                "dataset:embedding-data/QQP",
+                "dataset:embedding-data/SPECTER",
+                "dataset:embedding-data/PAQ_pairs",
+                "dataset:embedding-data/WikiAnswers",
+                "arxiv:1904.06472",
+                "arxiv:2102.07033",
+                "arxiv:2104.08727",
+                "arxiv:1704.05179",
+                "arxiv:1810.09305",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-embeddings-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "s2orc-65a8fab1-76ce-5ee8-8f9f-ba89f6ce0d0a",
+            "name": "s2orc",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "s2orc-65a8fab1-76ce-5ee8-8f9f-ba89f6ce0d0a",
+                    "name": "s2orc",
+                    "contents": {
+                        "url": "",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "",
+                                    "url": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

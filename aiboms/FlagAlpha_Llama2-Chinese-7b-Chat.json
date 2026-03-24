@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:723b9bc0-8c1d-4015-a79e-0b5c04da28a0",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:36.168625+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "FlagAlpha/Llama2-Chinese-7b-Chat-0d793936-712e-5ad5-a1d7-cc03f965376e",
+            "name": "FlagAlpha/Llama2-Chinese-7b-Chat",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/FlagAlpha/Llama2-Chinese-7b-Chat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "question-answering",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "FlagAlpha"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "llama",
+                "text-generation",
+                "question-answering",
+                "zh",
+                "en",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

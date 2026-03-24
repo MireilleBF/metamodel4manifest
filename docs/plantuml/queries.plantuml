@@ -1,13 +1,16 @@
 @startuml classes_queries
 set namespaceSeparator none
+left to right direction
 
+class Core.Element #lightgray
+class Artefact #lightgray
 class "Rule" as Rule {
     name : str
     weight : float
     func : Callable
 }
 Note right of Rule : func should take a ManifestQuery\n and return an iterator on EvaluationResult
-
+Rule --|> Core.Element
 note top of Rule
   **Definition & Registry:** Represents a specific
   expert validation logic.
@@ -68,10 +71,7 @@ class "RuleReport" as RuleReport {
   'results : List[EvaluationResult]
   status : str
 }
-RuleReport --> "1\n rule" Rule
-RuleReport --> "0..*\n results" EvaluationResult
-
-note left of RuleReport
+note bottom of RuleReport
   **Executive Summary:** Aggregates multiple 'EvaluationResult'
   for a single rule.
 
@@ -79,5 +79,11 @@ note left of RuleReport
   and the weighted average score based on
   the associated 'Rule'.
 end note
+RuleReport --> "1\n rule" Rule
+RuleReport --> "0..*\n results" EvaluationResult
+RuleReport --|> Artefact
 
+
+Artefact --|> Core.Element
+Manifest --|> Core.Element
 @enduml

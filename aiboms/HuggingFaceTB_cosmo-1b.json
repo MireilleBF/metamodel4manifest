@@ -1,0 +1,135 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:d2d12bd3-deb5-4428-9931-3bf6ea7aae10",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:51.460477+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "HuggingFaceTB/cosmo-1b-3ae0d358-fdbe-5afc-845f-95d5e33a1462",
+            "name": "HuggingFaceTB/cosmo-1b",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/HuggingFaceTB/cosmo-1b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "HuggingFaceTB/cosmopedia-eaa52c56-2a38-5af1-a072-510ea8ee58be"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "HuggingFaceTB"
+                }
+            ],
+            "description": "# Model Summary\nThis is a 1.8B model trained on [Cosmopedia](https://huggingface.co/datasets/HuggingFaceTB/cosmopedia) synthetic dataset.\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "en",
+                "dataset:HuggingFaceTB/cosmopedia",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "HuggingFaceTB/cosmopedia-eaa52c56-2a38-5af1-a072-510ea8ee58be",
+            "name": "HuggingFaceTB/cosmopedia",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "HuggingFaceTB/cosmopedia-eaa52c56-2a38-5af1-a072-510ea8ee58be",
+                    "name": "HuggingFaceTB/cosmopedia",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/HuggingFaceTB/cosmopedia",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: auto_math_text {\"split\": \"train\", \"path\": \"data/auto_math_text/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: khanacademy {\"split\": \"train\", \"path\": \"data/khanacademy/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: openstax {\"split\": \"train\", \"path\": \"data/openstax/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: stanford {\"split\": \"train\", \"path\": \"data/stanford/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: stories {\"split\": \"train\", \"path\": \"data/stories/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: web_samples_v1 {\"split\": \"train\", \"path\": \"data/web_samples_v1/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: web_samples_v2 {\"split\": \"train\", \"path\": \"data/web_samples_v2/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: wikihow {\"split\": \"train\", \"path\": \"data/wikihow/train-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tCosmopedia v0.1\n\t\n\n\n    \n    Image generated by DALL-E, the prompt was generated by Mixtral-8x7B-Instruct-v0.1\n\n\nNote: Cosmopedia v0.2 is available at smollm-corpus\nUser: What do you think \"Cosmopedia\" could mean? Hint: in our case it's not related to cosmology.\n\nMixtral-8x7B-Instruct-v0.1: A possible meaning for \"Cosmopedia\" could be an encyclopedia or collection of information about\ndifferent cultures, societies, and topics from around the world, emphasizing diversity and global\u2026 See the full description on the dataset page: https://huggingface.co/datasets/HuggingFaceTB/cosmopedia.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "HuggingFaceTB",
+                                    "url": "https://huggingface.co/HuggingFaceTB"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

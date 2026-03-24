@@ -1,0 +1,57 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:51a6e528-bf0c-4a2e-87ff-a97c2d3f1b4c",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:32.576996+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "CalderaAI/30B-Lazarus-91118210-dbb7-5f9e-b9c0-040d7d55b803",
+            "name": "CalderaAI/30B-Lazarus",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/CalderaAI/30B-Lazarus",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "CalderaAI"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "llama",
+                "text-generation",
+                "alpaca",
+                "cot",
+                "vicuna",
+                "uncensored",
+                "merge",
+                "mix",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

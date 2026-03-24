@@ -1,0 +1,65 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:cea34d09-695e-4c53-95dd-ed39a753d698",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:08.790636+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "mattshumer/Reflection-Llama-3.1-70B-e3fa0014-5a31-585f-906c-63abf7979278",
+            "name": "mattshumer/Reflection-Llama-3.1-70B",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3.1"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/mattshumer/Reflection-Llama-3.1-70B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "meta-llama/Meta-Llama-3.1-70B-Instruct"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "mattshumer"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "conversational",
+                "base_model:meta-llama/Llama-3.1-70B-Instruct",
+                "base_model:finetune:meta-llama/Llama-3.1-70B-Instruct",
+                "license:llama3.1",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

@@ -1,0 +1,101 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:9db4606a-09a9-4360-b0fc-7cb59ae2a9ff",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:08.850940+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "yifeihu/TFT-ID-1.0-6337023f-302f-514b-8946-ab98eb3d633d",
+            "name": "yifeihu/TFT-ID-1.0",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/yifeihu/TFT-ID-1.0",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-text-to-text",
+                    "architectureFamily": "florence2",
+                    "modelArchitecture": "Florence2ForConditionalGeneration",
+                    "datasets": [
+                        {
+                            "ref": "yifeihu/TFT-ID-1.0-coco-47dbb736-97f2-55ad-9e21-fa09b7e8ca7e"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "yifeihu"
+                }
+            ],
+            "description": "## Model Summary\n\nTFT-ID (Table/Figure/Text IDentifier) is an object detection model finetuned to extract tables, figures, and text sections in academic papers created by [Yifei Hu](https://x.com/hu_yifei).\n\n![image/png](https://huggingface.co/yifeihu/TFT-ID-1.0/resolve/main/TFT-ID.png)\n\nTFT-ID is finetuned from [microsoft/Florence-2](https://huggingface.co/microsoft/Florence-2-large) checkpoints.\n\n- The model was finetuned with papers from Hugging Face Daily Papers. All 36,000+ bounding boxes are manually annotated and checked by [Yifei Hu](https://x.com/hu_yifei).\n- TFT-ID model takes an image of a single paper page as the input, and return bounding boxes for all tables, figures, and text sections in the given page.\n- The text sections contain clean text content perfect for downstream OCR workflows. I recommend using **TB-OCR-preview-0.1** [[HF]](https://huggingface.co/yifeihu/TB-OCR-preview-0.1) as the OCR model to convert the text sections into clean markdown and math latex output.\n\nObject Detection results format:\n{'\\<OD>': {'bboxes': [[x1, y1, x2, y2], ...],\n'labels': ['label1', 'label2', ...]} }\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "florence2",
+                "text-generation",
+                "vision",
+                "ocr",
+                "segmentation",
+                "image-text-to-text",
+                "custom_code",
+                "dataset:yifeihu/TFT-ID-1.0-coco",
+                "license:mit",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "yifeihu/TFT-ID-1.0-coco-47dbb736-97f2-55ad-9e21-fa09b7e8ca7e",
+            "name": "yifeihu/TFT-ID-1.0-coco",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "yifeihu/TFT-ID-1.0-coco-47dbb736-97f2-55ad-9e21-fa09b7e8ca7e",
+                    "name": "yifeihu/TFT-ID-1.0-coco",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/yifeihu/TFT-ID-1.0-coco",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "The annotations are under MIT licenses. As for the paper images, please follow the original license or user agreement on arXiv (most of them are under CC0 license).\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "yifeihu",
+                                    "url": "https://huggingface.co/yifeihu"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

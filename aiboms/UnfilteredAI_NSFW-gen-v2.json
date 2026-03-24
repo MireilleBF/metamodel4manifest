@@ -1,0 +1,69 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:66f2ded6-d7c0-4e63-beca-6a4c80ae0f6c",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:06.078787+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "UnfilteredAI/NSFW-gen-v2-3008400a-3bb3-5529-9ef1-68e8d819ae2f",
+            "name": "UnfilteredAI/NSFW-gen-v2",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "other"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/UnfilteredAI/NSFW-gen-v2",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "OEvortex/PixelGen"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "UnfilteredAI"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "UnfilteredAI",
+                "3d",
+                "text-to-image",
+                "not-for-all-audiences",
+                "en",
+                "pt",
+                "th",
+                "base_model:OEvortex/PixelGen",
+                "base_model:finetune:OEvortex/PixelGen",
+                "license:other",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionXLPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

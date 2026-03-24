@@ -1,0 +1,811 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:6c30f959-773f-4a8a-8d8f-048f6696b464",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:15.234258+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "mosaicml/mpt-30b-ada03924-735b-56ca-a31a-82b5861a937f",
+            "name": "mosaicml/mpt-30b",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/mosaicml/mpt-30b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mpt",
+                    "modelArchitecture": "MPTForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "allenai/c4-afca0d3d-77f1-5298-9a7a-e383d0df3c0b"
+                        },
+                        {
+                            "ref": "mc4-3aafa06e-ba99-523a-8109-8b1111f0da44"
+                        },
+                        {
+                            "ref": "togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd"
+                        },
+                        {
+                            "ref": "bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd"
+                        },
+                        {
+                            "ref": "allenai/s2orc-9f147a24-d534-5a4a-a6d5-16fbc1f01d50"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "mosaicml"
+                }
+            ],
+            "description": "## Model Description\n\nThe architecture is a modification of a standard decoder-only transformer.\n\nThe model has been modified from a standard transformer in the following ways:\n* It uses [FlashAttention](https://arxiv.org/pdf/2205.14135.pdf)\n* It uses [ALiBi (Attention with Linear Biases)](https://arxiv.org/abs/2108.12409) and does not use positional embeddings\n* It does not use biases\n\n\n| Hyperparameter | Value |\n|----------------|-------|\n|n_parameters | 29.95B |\n|n_layers | 48 |\n| n_heads | 64 |\n| d_model | 7168 |\n| vocab size | 50432 |\n| sequence length | 8192 |\n\n\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "mpt",
+                "text-generation",
+                "Composer",
+                "MosaicML",
+                "llm-foundry",
+                "StreamingDatasets",
+                "custom_code",
+                "dataset:allenai/c4",
+                "dataset:mc4",
+                "dataset:togethercomputer/RedPajama-Data-1T",
+                "dataset:bigcode/the-stack-dedup",
+                "dataset:allenai/s2orc",
+                "arxiv:2108.12409",
+                "arxiv:2302.13971",
+                "arxiv:2205.14135",
+                "arxiv:2010.04245",
+                "arxiv:1909.08053",
+                "arxiv:2302.06675",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "allenai/c4-afca0d3d-77f1-5298-9a7a-e383d0df3c0b",
+            "name": "allenai/c4",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "allenai/c4-afca0d3d-77f1-5298-9a7a-e383d0df3c0b",
+                    "name": "allenai/c4",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/allenai/c4",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, fill-mask"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "language-modeling, masked-language-modeling"
+                            },
+                            {
+                                "name": "language",
+                                "value": "af, am, ar, az, be, bg, bn, ca, ceb, co, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fil, fr, fy, ga, gd, gl, gu, ha, haw, he, hi, hmn, ht, hu, hy, id, ig, is, it, iw, ja, jv, ka, kk, km, kn, ko, ku, ky, la, lb, lo, lt, lv, mg, mi, mk, ml, mn, mr, ms, mt, my, ne, nl, no, ny, pa, pl, ps, pt, ro, ru, sd, si, sk, sl, sm, sn, so, sq, sr, st, su, sv, sw, ta, te, tg, th, tr, uk, und, ur, uz, vi, xh, yi, yo, zh, zu"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "n<1K, 1K<n<10K, 10K<n<100K, 100K<n<1M, 1M<n<10M, 10M<n<100M, 100M<n<1B, 1B<n<10B"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "no-annotation"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "C4"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "c4"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: en {\"split\": \"train\", \"path\": \"en/c4-train.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"en/c4-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: en.noblocklist {\"split\": \"train\", \"path\": \"en.noblocklist/c4-train.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"en.noblocklist/c4-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: en.noclean {\"split\": \"train\", \"path\": \"en.noclean/c4-train.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"en.noclean/c4-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: realnewslike {\"split\": \"train\", \"path\": \"realnewslike/c4-train.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"realnewslike/c4-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: multilingual {\"split\": \"train\", \"path\": [\"multilingual/c4-af.*.json.gz\", \"multilingual/c4-am.*.json.gz\", \"multilingual/c4-ar.*.json.gz\", \"multilingual/c4-az.*.json.gz\", \"multilingual/c4-be.*.json.gz\", \"multilingual/c4-bg.*.json.gz\", \"multilingual/c4-bg-Latn.*.json.gz\", \"multilingual/c4-bn.*.json.gz\", \"multilingual/c4-ca.*.json.gz\", \"multilingual/c4-ceb.*.json.gz\", \"multilingual/c4-co.*.json.gz\", \"multilingual/c4-cs.*.json.gz\", \"multilingual/c4-cy.*.json.gz\", \"multilingual/c4-da.*.json.gz\", \"multilingual/c4-de.*.json.gz\", \"multilingual/c4-el.*.json.gz\", \"multilingual/c4-el-Latn.*.json.gz\", \"multilingual/c4-en.*.json.gz\", \"multilingual/c4-eo.*.json.gz\", \"multilingual/c4-es.*.json.gz\", \"multilingual/c4-et.*.json.gz\", \"multilingual/c4-eu.*.json.gz\", \"multilingual/c4-fa.*.json.gz\", \"multilingual/c4-fi.*.json.gz\", \"multilingual/c4-fil.*.json.gz\", \"multilingual/c4-fr.*.json.gz\", \"multilingual/c4-fy.*.json.gz\", \"multilingual/c4-ga.*.json.gz\", \"multilingual/c4-gd.*.json.gz\", \"multilingual/c4-gl.*.json.gz\", \"multilingual/c4-gu.*.json.gz\", \"multilingual/c4-ha.*.json.gz\", \"multilingual/c4-haw.*.json.gz\", \"multilingual/c4-hi.*.json.gz\", \"multilingual/c4-hi-Latn.*.json.gz\", \"multilingual/c4-hmn.*.json.gz\", \"multilingual/c4-ht.*.json.gz\", \"multilingual/c4-hu.*.json.gz\", \"multilingual/c4-hy.*.json.gz\", \"multilingual/c4-id.*.json.gz\", \"multilingual/c4-ig.*.json.gz\", \"multilingual/c4-is.*.json.gz\", \"multilingual/c4-it.*.json.gz\", \"multilingual/c4-iw.*.json.gz\", \"multilingual/c4-ja.*.json.gz\", \"multilingual/c4-ja-Latn.*.json.gz\", \"multilingual/c4-jv.*.json.gz\", \"multilingual/c4-ka.*.json.gz\", \"multilingual/c4-kk.*.json.gz\", \"multilingual/c4-km.*.json.gz\", \"multilingual/c4-kn.*.json.gz\", \"multilingual/c4-ko.*.json.gz\", \"multilingual/c4-ku.*.json.gz\", \"multilingual/c4-ky.*.json.gz\", \"multilingual/c4-la.*.json.gz\", \"multilingual/c4-lb.*.json.gz\", \"multilingual/c4-lo.*.json.gz\", \"multilingual/c4-lt.*.json.gz\", \"multilingual/c4-lv.*.json.gz\", \"multilingual/c4-mg.*.json.gz\", \"multilingual/c4-mi.*.json.gz\", \"multilingual/c4-mk.*.json.gz\", \"multilingual/c4-ml.*.json.gz\", \"multilingual/c4-mn.*.json.gz\", \"multilingual/c4-mr.*.json.gz\", \"multilingual/c4-ms.*.json.gz\", \"multilingual/c4-mt.*.json.gz\", \"multilingual/c4-my.*.json.gz\", \"multilingual/c4-ne.*.json.gz\", \"multilingual/c4-nl.*.json.gz\", \"multilingual/c4-no.*.json.gz\", \"multilingual/c4-ny.*.json.gz\", \"multilingual/c4-pa.*.json.gz\", \"multilingual/c4-pl.*.json.gz\", \"multilingual/c4-ps.*.json.gz\", \"multilingual/c4-pt.*.json.gz\", \"multilingual/c4-ro.*.json.gz\", \"multilingual/c4-ru.*.json.gz\", \"multilingual/c4-ru-Latn.*.json.gz\", \"multilingual/c4-sd.*.json.gz\", \"multilingual/c4-si.*.json.gz\", \"multilingual/c4-sk.*.json.gz\", \"multilingual/c4-sl.*.json.gz\", \"multilingual/c4-sm.*.json.gz\", \"multilingual/c4-sn.*.json.gz\", \"multilingual/c4-so.*.json.gz\", \"multilingual/c4-sq.*.json.gz\", \"multilingual/c4-sr.*.json.gz\", \"multilingual/c4-st.*.json.gz\", \"multilingual/c4-su.*.json.gz\", \"multilingual/c4-sv.*.json.gz\", \"multilingual/c4-sw.*.json.gz\", \"multilingual/c4-ta.*.json.gz\", \"multilingual/c4-te.*.json.gz\", \"multilingual/c4-tg.*.json.gz\", \"multilingual/c4-th.*.json.gz\", \"multilingual/c4-tr.*.json.gz\", \"multilingual/c4-uk.*.json.gz\", \"multilingual/c4-und.*.json.gz\", \"multilingual/c4-ur.*.json.gz\", \"multilingual/c4-uz.*.json.gz\", \"multilingual/c4-vi.*.json.gz\", \"multilingual/c4-xh.*.json.gz\", \"multilingual/c4-yi.*.json.gz\", \"multilingual/c4-yo.*.json.gz\", \"multilingual/c4-zh.*.json.gz\", \"multilingual/c4-zh-Latn.*.json.gz\", \"multilingual/c4-zu.*.json.gz\"]}, {\"split\": \"validation\", \"path\": [\"multilingual/c4-af-validation.*.json.gz\", \"multilingual/c4-am-validation.*.json.gz\", \"multilingual/c4-ar-validation.*.json.gz\", \"multilingual/c4-az-validation.*.json.gz\", \"multilingual/c4-be-validation.*.json.gz\", \"multilingual/c4-bg-validation.*.json.gz\", \"multilingual/c4-bg-Latn-validation.*.json.gz\", \"multilingual/c4-bn-validation.*.json.gz\", \"multilingual/c4-ca-validation.*.json.gz\", \"multilingual/c4-ceb-validation.*.json.gz\", \"multilingual/c4-co-validation.*.json.gz\", \"multilingual/c4-cs-validation.*.json.gz\", \"multilingual/c4-cy-validation.*.json.gz\", \"multilingual/c4-da-validation.*.json.gz\", \"multilingual/c4-de-validation.*.json.gz\", \"multilingual/c4-el-validation.*.json.gz\", \"multilingual/c4-el-Latn-validation.*.json.gz\", \"multilingual/c4-en-validation.*.json.gz\", \"multilingual/c4-eo-validation.*.json.gz\", \"multilingual/c4-es-validation.*.json.gz\", \"multilingual/c4-et-validation.*.json.gz\", \"multilingual/c4-eu-validation.*.json.gz\", \"multilingual/c4-fa-validation.*.json.gz\", \"multilingual/c4-fi-validation.*.json.gz\", \"multilingual/c4-fil-validation.*.json.gz\", \"multilingual/c4-fr-validation.*.json.gz\", \"multilingual/c4-fy-validation.*.json.gz\", \"multilingual/c4-ga-validation.*.json.gz\", \"multilingual/c4-gd-validation.*.json.gz\", \"multilingual/c4-gl-validation.*.json.gz\", \"multilingual/c4-gu-validation.*.json.gz\", \"multilingual/c4-ha-validation.*.json.gz\", \"multilingual/c4-haw-validation.*.json.gz\", \"multilingual/c4-hi-validation.*.json.gz\", \"multilingual/c4-hi-Latn-validation.*.json.gz\", \"multilingual/c4-hmn-validation.*.json.gz\", \"multilingual/c4-ht-validation.*.json.gz\", \"multilingual/c4-hu-validation.*.json.gz\", \"multilingual/c4-hy-validation.*.json.gz\", \"multilingual/c4-id-validation.*.json.gz\", \"multilingual/c4-ig-validation.*.json.gz\", \"multilingual/c4-is-validation.*.json.gz\", \"multilingual/c4-it-validation.*.json.gz\", \"multilingual/c4-iw-validation.*.json.gz\", \"multilingual/c4-ja-validation.*.json.gz\", \"multilingual/c4-ja-Latn-validation.*.json.gz\", \"multilingual/c4-jv-validation.*.json.gz\", \"multilingual/c4-ka-validation.*.json.gz\", \"multilingual/c4-kk-validation.*.json.gz\", \"multilingual/c4-km-validation.*.json.gz\", \"multilingual/c4-kn-validation.*.json.gz\", \"multilingual/c4-ko-validation.*.json.gz\", \"multilingual/c4-ku-validation.*.json.gz\", \"multilingual/c4-ky-validation.*.json.gz\", \"multilingual/c4-la-validation.*.json.gz\", \"multilingual/c4-lb-validation.*.json.gz\", \"multilingual/c4-lo-validation.*.json.gz\", \"multilingual/c4-lt-validation.*.json.gz\", \"multilingual/c4-lv-validation.*.json.gz\", \"multilingual/c4-mg-validation.*.json.gz\", \"multilingual/c4-mi-validation.*.json.gz\", \"multilingual/c4-mk-validation.*.json.gz\", \"multilingual/c4-ml-validation.*.json.gz\", \"multilingual/c4-mn-validation.*.json.gz\", \"multilingual/c4-mr-validation.*.json.gz\", \"multilingual/c4-ms-validation.*.json.gz\", \"multilingual/c4-mt-validation.*.json.gz\", \"multilingual/c4-my-validation.*.json.gz\", \"multilingual/c4-ne-validation.*.json.gz\", \"multilingual/c4-nl-validation.*.json.gz\", \"multilingual/c4-no-validation.*.json.gz\", \"multilingual/c4-ny-validation.*.json.gz\", \"multilingual/c4-pa-validation.*.json.gz\", \"multilingual/c4-pl-validation.*.json.gz\", \"multilingual/c4-ps-validation.*.json.gz\", \"multilingual/c4-pt-validation.*.json.gz\", \"multilingual/c4-ro-validation.*.json.gz\", \"multilingual/c4-ru-validation.*.json.gz\", \"multilingual/c4-ru-Latn-validation.*.json.gz\", \"multilingual/c4-sd-validation.*.json.gz\", \"multilingual/c4-si-validation.*.json.gz\", \"multilingual/c4-sk-validation.*.json.gz\", \"multilingual/c4-sl-validation.*.json.gz\", \"multilingual/c4-sm-validation.*.json.gz\", \"multilingual/c4-sn-validation.*.json.gz\", \"multilingual/c4-so-validation.*.json.gz\", \"multilingual/c4-sq-validation.*.json.gz\", \"multilingual/c4-sr-validation.*.json.gz\", \"multilingual/c4-st-validation.*.json.gz\", \"multilingual/c4-su-validation.*.json.gz\", \"multilingual/c4-sv-validation.*.json.gz\", \"multilingual/c4-sw-validation.*.json.gz\", \"multilingual/c4-ta-validation.*.json.gz\", \"multilingual/c4-te-validation.*.json.gz\", \"multilingual/c4-tg-validation.*.json.gz\", \"multilingual/c4-th-validation.*.json.gz\", \"multilingual/c4-tr-validation.*.json.gz\", \"multilingual/c4-uk-validation.*.json.gz\", \"multilingual/c4-und-validation.*.json.gz\", \"multilingual/c4-ur-validation.*.json.gz\", \"multilingual/c4-uz-validation.*.json.gz\", \"multilingual/c4-vi-validation.*.json.gz\", \"multilingual/c4-xh-validation.*.json.gz\", \"multilingual/c4-yi-validation.*.json.gz\", \"multilingual/c4-yo-validation.*.json.gz\", \"multilingual/c4-zh-validation.*.json.gz\", \"multilingual/c4-zh-Latn-validation.*.json.gz\", \"multilingual/c4-zu-validation.*.json.gz\"]}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: af {\"split\": \"train\", \"path\": \"multilingual/c4-af.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-af-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: am {\"split\": \"train\", \"path\": \"multilingual/c4-am.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-am-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ar {\"split\": \"train\", \"path\": \"multilingual/c4-ar.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ar-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: az {\"split\": \"train\", \"path\": \"multilingual/c4-az.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-az-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: be {\"split\": \"train\", \"path\": \"multilingual/c4-be.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-be-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: bg {\"split\": \"train\", \"path\": \"multilingual/c4-bg.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-bg-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: bg-Latn {\"split\": \"train\", \"path\": \"multilingual/c4-bg-Latn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-bg-Latn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: bn {\"split\": \"train\", \"path\": \"multilingual/c4-bn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-bn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ca {\"split\": \"train\", \"path\": \"multilingual/c4-ca.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ca-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ceb {\"split\": \"train\", \"path\": \"multilingual/c4-ceb.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ceb-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: co {\"split\": \"train\", \"path\": \"multilingual/c4-co.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-co-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: cs {\"split\": \"train\", \"path\": \"multilingual/c4-cs.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-cs-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: cy {\"split\": \"train\", \"path\": \"multilingual/c4-cy.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-cy-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: da {\"split\": \"train\", \"path\": \"multilingual/c4-da.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-da-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: de {\"split\": \"train\", \"path\": \"multilingual/c4-de.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-de-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: el {\"split\": \"train\", \"path\": \"multilingual/c4-el.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-el-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: el-Latn {\"split\": \"train\", \"path\": \"multilingual/c4-el-Latn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-el-Latn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: en-multi {\"split\": \"train\", \"path\": \"multilingual/c4-en.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-en-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: eo {\"split\": \"train\", \"path\": \"multilingual/c4-eo.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-eo-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: es {\"split\": \"train\", \"path\": \"multilingual/c4-es.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-es-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: et {\"split\": \"train\", \"path\": \"multilingual/c4-et.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-et-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: eu {\"split\": \"train\", \"path\": \"multilingual/c4-eu.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-eu-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: fa {\"split\": \"train\", \"path\": \"multilingual/c4-fa.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-fa-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: fi {\"split\": \"train\", \"path\": \"multilingual/c4-fi.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-fi-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: fil {\"split\": \"train\", \"path\": \"multilingual/c4-fil.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-fil-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: fr {\"split\": \"train\", \"path\": \"multilingual/c4-fr.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-fr-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: fy {\"split\": \"train\", \"path\": \"multilingual/c4-fy.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-fy-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ga {\"split\": \"train\", \"path\": \"multilingual/c4-ga.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ga-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: gd {\"split\": \"train\", \"path\": \"multilingual/c4-gd.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-gd-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: gl {\"split\": \"train\", \"path\": \"multilingual/c4-gl.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-gl-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: gu {\"split\": \"train\", \"path\": \"multilingual/c4-gu.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-gu-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ha {\"split\": \"train\", \"path\": \"multilingual/c4-ha.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ha-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: haw {\"split\": \"train\", \"path\": \"multilingual/c4-haw.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-haw-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: hi {\"split\": \"train\", \"path\": \"multilingual/c4-hi.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-hi-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: hi-Latn {\"split\": \"train\", \"path\": \"multilingual/c4-hi-Latn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-hi-Latn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: hmn {\"split\": \"train\", \"path\": \"multilingual/c4-hmn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-hmn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ht {\"split\": \"train\", \"path\": \"multilingual/c4-ht.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ht-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: hu {\"split\": \"train\", \"path\": \"multilingual/c4-hu.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-hu-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: hy {\"split\": \"train\", \"path\": \"multilingual/c4-hy.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-hy-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: id {\"split\": \"train\", \"path\": \"multilingual/c4-id.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-id-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ig {\"split\": \"train\", \"path\": \"multilingual/c4-ig.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ig-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: is {\"split\": \"train\", \"path\": \"multilingual/c4-is.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-is-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: it {\"split\": \"train\", \"path\": \"multilingual/c4-it.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-it-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: iw {\"split\": \"train\", \"path\": \"multilingual/c4-iw.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-iw-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ja {\"split\": \"train\", \"path\": \"multilingual/c4-ja.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ja-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ja-Latn {\"split\": \"train\", \"path\": \"multilingual/c4-ja-Latn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ja-Latn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: jv {\"split\": \"train\", \"path\": \"multilingual/c4-jv.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-jv-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ka {\"split\": \"train\", \"path\": \"multilingual/c4-ka.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ka-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: kk {\"split\": \"train\", \"path\": \"multilingual/c4-kk.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-kk-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: km {\"split\": \"train\", \"path\": \"multilingual/c4-km.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-km-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: kn {\"split\": \"train\", \"path\": \"multilingual/c4-kn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-kn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ko {\"split\": \"train\", \"path\": \"multilingual/c4-ko.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ko-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ku {\"split\": \"train\", \"path\": \"multilingual/c4-ku.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ku-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ky {\"split\": \"train\", \"path\": \"multilingual/c4-ky.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ky-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: la {\"split\": \"train\", \"path\": \"multilingual/c4-la.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-la-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: lb {\"split\": \"train\", \"path\": \"multilingual/c4-lb.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-lb-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: lo {\"split\": \"train\", \"path\": \"multilingual/c4-lo.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-lo-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: lt {\"split\": \"train\", \"path\": \"multilingual/c4-lt.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-lt-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: lv {\"split\": \"train\", \"path\": \"multilingual/c4-lv.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-lv-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mg {\"split\": \"train\", \"path\": \"multilingual/c4-mg.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-mg-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mi {\"split\": \"train\", \"path\": \"multilingual/c4-mi.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-mi-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mk {\"split\": \"train\", \"path\": \"multilingual/c4-mk.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-mk-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ml {\"split\": \"train\", \"path\": \"multilingual/c4-ml.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ml-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mn {\"split\": \"train\", \"path\": \"multilingual/c4-mn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-mn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mr {\"split\": \"train\", \"path\": \"multilingual/c4-mr.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-mr-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ms {\"split\": \"train\", \"path\": \"multilingual/c4-ms.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ms-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mt {\"split\": \"train\", \"path\": \"multilingual/c4-mt.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-mt-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: my {\"split\": \"train\", \"path\": \"multilingual/c4-my.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-my-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ne {\"split\": \"train\", \"path\": \"multilingual/c4-ne.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ne-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: nl {\"split\": \"train\", \"path\": \"multilingual/c4-nl.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-nl-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: no {\"split\": \"train\", \"path\": \"multilingual/c4-no.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-no-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ny {\"split\": \"train\", \"path\": \"multilingual/c4-ny.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ny-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: pa {\"split\": \"train\", \"path\": \"multilingual/c4-pa.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-pa-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: pl {\"split\": \"train\", \"path\": \"multilingual/c4-pl.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-pl-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ps {\"split\": \"train\", \"path\": \"multilingual/c4-ps.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ps-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: pt {\"split\": \"train\", \"path\": \"multilingual/c4-pt.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-pt-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ro {\"split\": \"train\", \"path\": \"multilingual/c4-ro.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ro-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ru {\"split\": \"train\", \"path\": \"multilingual/c4-ru.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ru-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ru-Latn {\"split\": \"train\", \"path\": \"multilingual/c4-ru-Latn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ru-Latn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sd {\"split\": \"train\", \"path\": \"multilingual/c4-sd.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sd-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: si {\"split\": \"train\", \"path\": \"multilingual/c4-si.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-si-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sk {\"split\": \"train\", \"path\": \"multilingual/c4-sk.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sk-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sl {\"split\": \"train\", \"path\": \"multilingual/c4-sl.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sl-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sm {\"split\": \"train\", \"path\": \"multilingual/c4-sm.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sm-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sn {\"split\": \"train\", \"path\": \"multilingual/c4-sn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: so {\"split\": \"train\", \"path\": \"multilingual/c4-so.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-so-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sq {\"split\": \"train\", \"path\": \"multilingual/c4-sq.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sq-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sr {\"split\": \"train\", \"path\": \"multilingual/c4-sr.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sr-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: st {\"split\": \"train\", \"path\": \"multilingual/c4-st.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-st-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: su {\"split\": \"train\", \"path\": \"multilingual/c4-su.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-su-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sv {\"split\": \"train\", \"path\": \"multilingual/c4-sv.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sv-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: sw {\"split\": \"train\", \"path\": \"multilingual/c4-sw.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-sw-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ta {\"split\": \"train\", \"path\": \"multilingual/c4-ta.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ta-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: te {\"split\": \"train\", \"path\": \"multilingual/c4-te.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-te-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: tg {\"split\": \"train\", \"path\": \"multilingual/c4-tg.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-tg-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: th {\"split\": \"train\", \"path\": \"multilingual/c4-th.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-th-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: tr {\"split\": \"train\", \"path\": \"multilingual/c4-tr.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-tr-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: uk {\"split\": \"train\", \"path\": \"multilingual/c4-uk.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-uk-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: und {\"split\": \"train\", \"path\": \"multilingual/c4-und.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-und-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: ur {\"split\": \"train\", \"path\": \"multilingual/c4-ur.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-ur-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: uz {\"split\": \"train\", \"path\": \"multilingual/c4-uz.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-uz-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: vi {\"split\": \"train\", \"path\": \"multilingual/c4-vi.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-vi-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: xh {\"split\": \"train\", \"path\": \"multilingual/c4-xh.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-xh-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: yi {\"split\": \"train\", \"path\": \"multilingual/c4-yi.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-yi-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: yo {\"split\": \"train\", \"path\": \"multilingual/c4-yo.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-yo-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: zh {\"split\": \"train\", \"path\": \"multilingual/c4-zh.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-zh-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: zh-Latn {\"split\": \"train\", \"path\": \"multilingual/c4-zh-Latn.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-zh-Latn-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: zu {\"split\": \"train\", \"path\": \"multilingual/c4-zu.*.json.gz\"}, {\"split\": \"validation\", \"path\": \"multilingual/c4-zu-validation.*.json.gz\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tC4\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nA colossal, cleaned version of Common Crawl's web crawl corpus. Based on Common Crawl dataset: \"https://commoncrawl.org\".\nThis is the processed version of Google's C4 dataset\nWe prepared five variants of the data: en, en.noclean, en.noblocklist, realnewslike, and multilingual (mC4).\nFor reference, these are the sizes of the variants:\n\nen: 305GB\nen.noclean: 2.3TB\nen.noblocklist: 380GB\nrealnewslike: 15GB\nmultilingual (mC4): 9.7TB (108 subsets, one per\u2026 See the full description on the dataset page: https://huggingface.co/datasets/allenai/c4.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "allenai",
+                                    "url": "https://huggingface.co/allenai"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "mc4-3aafa06e-ba99-523a-8109-8b1111f0da44",
+            "name": "mc4",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "mc4-3aafa06e-ba99-523a-8109-8b1111f0da44",
+                    "name": "mc4",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/mc4",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, fill-mask"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "language-modeling, masked-language-modeling"
+                            },
+                            {
+                                "name": "language",
+                                "value": "af, am, ar, az, be, bg, bn, ca, ceb, co, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fil, fr, fy, ga, gd, gl, gu, ha, haw, he, hi, hmn, ht, hu, hy, id, ig, is, it, iw, ja, jv, ka, kk, km, kn, ko, ku, ky, la, lb, lo, lt, lv, mg, mi, mk, ml, mn, mr, ms, mt, my, ne, nl, no, ny, pa, pl, ps, pt, ro, ru, sd, si, sk, sl, sm, sn, so, sq, sr, st, su, sv, sw, ta, te, tg, th, tr, uk, und, ur, uz, vi, xh, yi, yo, zh, zu"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "n<1K, 1K<n<10K, 10K<n<100K, 100K<n<1M, 1M<n<10M, 10M<n<100M, 100M<n<1B, 1B<n<10B"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "no-annotation"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "mC4"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "mc4"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "A colossal, cleaned version of Common Crawl's web crawl corpus.\n\nBased on Common Crawl dataset: \"https://commoncrawl.org\".\n\nThis is the processed version of Google's mC4 dataset by AllenAI.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "legacy-datasets",
+                                    "url": "https://huggingface.co/legacy-datasets"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd",
+            "name": "togethercomputer/RedPajama-Data-1T",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "togethercomputer/RedPajama-Data-1T-a4e569fa-366b-5f51-a831-a3d09c070ecd",
+                    "name": "togethercomputer/RedPajama-Data-1T",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/togethercomputer/RedPajama-Data-1T",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Red Pajama 1T"
+                            }
+                        ]
+                    },
+                    "description": "RedPajama is a clean-room, fully open-source implementation of the LLaMa dataset.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "togethercomputer",
+                                    "url": "https://huggingface.co/togethercomputer"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd",
+            "name": "bigcode/the-stack-dedup",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd",
+                    "name": "bigcode/the-stack-dedup",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigcode/the-stack-dedup",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": ""
+                            },
+                            {
+                                "name": "language",
+                                "value": "code"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "unknown"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": ""
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced, expert-generated"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "The-Stack"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": ""
+                            },
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for The Stack\n\t\n\n\n\n\t\n\t\t\n\t\tChangelog\n\t\n\n\n\t\n\t\t\nRelease\nDescription\n\n\n\t\t\nv1.0\nInitial release of the Stack. Included 30 programming languages and 18 permissive licenses. Note: Three included licenses (MPL/EPL/LGPL) are considered weak copyleft licenses. The resulting near-deduplicated dataset is 1.5TB in size.\n\n\nv1.1\nThe three copyleft licenses ((MPL/EPL/LGPL) were excluded and the list of permissive licenses extended to 193 licenses in total. The list of programming\u2026 See the full description on the dataset page: https://huggingface.co/datasets/bigcode/the-stack-dedup.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigcode",
+                                    "url": "https://huggingface.co/bigcode"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "allenai/s2orc-9f147a24-d534-5a4a-a6d5-16fbc1f01d50",
+            "name": "allenai/s2orc",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "allenai/s2orc-9f147a24-d534-5a4a-a6d5-16fbc1f01d50",
+                    "name": "allenai/s2orc",
+                    "contents": {
+                        "url": "",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "",
+                                    "url": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

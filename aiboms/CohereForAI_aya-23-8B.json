@@ -1,0 +1,83 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:991f7884-d59b-4550-bdae-aac37ca043bd",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:11:00.509898+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "CohereForAI/aya-23-8B-a60e0032-7ad9-5cd1-9cc8-c8928ba8ea40",
+            "name": "CohereForAI/aya-23-8B",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-NC-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/CohereForAI/aya-23-8B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "cohere",
+                    "modelArchitecture": "CohereForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "CohereForAI"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "cohere",
+                "text-generation",
+                "conversational",
+                "en",
+                "fr",
+                "de",
+                "es",
+                "it",
+                "pt",
+                "ja",
+                "ko",
+                "zh",
+                "ar",
+                "el",
+                "fa",
+                "pl",
+                "id",
+                "cs",
+                "he",
+                "hi",
+                "nl",
+                "ro",
+                "ru",
+                "tr",
+                "uk",
+                "vi",
+                "arxiv:2405.15032",
+                "license:cc-by-nc-4.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

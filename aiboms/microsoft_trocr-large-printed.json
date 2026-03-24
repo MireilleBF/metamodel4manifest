@@ -1,0 +1,57 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:c56c0de3-38e5-40ac-b8e4-a5d5d7fcb11f",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:11:35.324573+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "microsoft/trocr-large-printed-a3a84b84-be1d-5153-a8fc-3aec7d4d5f00",
+            "name": "microsoft/trocr-large-printed",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/microsoft/trocr-large-printed",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-text",
+                    "architectureFamily": "vision-encoder-decoder",
+                    "modelArchitecture": "VisionEncoderDecoderModel",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended uses & limitations\n\nYou can use the raw model for optical character recognition (OCR) on single text-line images. See the [model hub](https://huggingface.co/models?search=microsoft/trocr) to look for fine-tuned versions on a task that interests you.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "microsoft"
+                }
+            ],
+            "description": "## Model description\n\nThe TrOCR model is an encoder-decoder model, consisting of an image Transformer as encoder, and a text Transformer as decoder. The image encoder was initialized from the weights of BEiT, while the text decoder was initialized from the weights of RoBERTa.\n\nImages are presented to the model as a sequence of fixed-size patches (resolution 16x16), which are linearly embedded. One also adds absolute position embeddings before feeding the sequence to the layers of the Transformer encoder. Next, the Transformer text decoder autoregressively generates tokens.\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "vision-encoder-decoder",
+                "image-text-to-text",
+                "trocr",
+                "image-to-text",
+                "arxiv:2109.10282",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:e8dc6954-4052-42cb-9809-025127f3ef89",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:05:48.383078+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Qwen/Qwen1.5-14B-Chat-4c4f7498-26d8-534c-aa9d-28094f592acd",
+            "name": "Qwen/Qwen1.5-14B-Chat",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "tongyi-qianwen",
+                        "url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat/blob/main/LICENSE"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "qwen2",
+                    "modelArchitecture": "Qwen2ForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Qwen"
+                }
+            ],
+            "description": "## Introduction\n\nQwen1.5 is the beta version of Qwen2, a transformer-based decoder-only language model pretrained on a large amount of data. In comparison with the previous released Qwen, the improvements include:\n\n* 8 model sizes, including 0.5B, 1.8B, 4B, 7B, 14B, 32B and 72B dense models, and an MoE model of 14B with 2.7B activated;\n* Significant performance improvement in human preference for chat models;\n* Multilingual support of both base and chat models;\n* Stable support of 32K context length for models of all sizes\n* No need of `trust_remote_code`.\n\nFor more details, please refer to our [blog post](https://qwenlm.github.io/blog/qwen1.5/) and [GitHub repo](https://github.com/QwenLM/Qwen1.5).\n<br>\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "qwen2",
+                "text-generation",
+                "chat",
+                "conversational",
+                "en",
+                "arxiv:2309.16609",
+                "license:other",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

@@ -1,0 +1,56 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:8eb72400-1f8c-467b-a730-4c0512eb727b",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:27.447486+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "stabilityai/stable-video-diffusion-img2vid-xt-1-1-4e29a09d-0dc8-5665-b3d1-a7054b61fd33",
+            "name": "stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "stable-video-diffusion-1-1-community",
+                        "url": "LICENSE.md"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-video",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "stabilityai"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "image-to-video",
+                "license:other",
+                "diffusers:StableVideoDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

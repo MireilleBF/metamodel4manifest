@@ -124,6 +124,8 @@ class ExternalReference:
     external_identifier_type: Optional[str] = None
     identifier: Optional[str] = None
     type: str = "ExternalReference"
+    #eg documentation, website, etc. to specify the kind of external reference (e.g., "documentation", "website", "vcs", etc.)
+    kind: Optional[str] = None
 
 
 #    issuingAuthority: Optional[str] = None

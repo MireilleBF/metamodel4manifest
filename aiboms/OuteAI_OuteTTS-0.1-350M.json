@@ -1,0 +1,209 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:d33a7a85-0191-4322-9eb3-5da8515d0765",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:57.238983+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "OuteAI/OuteTTS-0.1-350M-a49e303f-c74d-5267-b33d-cb107be17270",
+            "name": "OuteAI/OuteTTS-0.1-350M",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/OuteAI/OuteTTS-0.1-350M",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-speech",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "facebook/multilingual_librispeech-d70db1bd-fd05-542c-ab32-3b3b2f62abe0"
+                        },
+                        {
+                            "ref": "parler-tts/libritts_r_filtered-0af8ce06-fe70-59e0-89c9-fac56f9841fe"
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "OuteAI"
+                }
+            ],
+            "description": "## Model Description\n\n> [!IMPORTANT]\n> A newer version of this model is available: [OuteTTS-0.2-500M](https://huggingface.co/OuteAI/OuteTTS-0.2-500M)\n\nOuteTTS-0.1-350M is a novel text-to-speech synthesis model that leverages pure language modeling without external adapters or complex architectures, built upon the LLaMa architecture using our Oute3-350M-DEV base model, it demonstrates that high-quality speech synthesis is achievable through a straightforward approach using crafted prompts and audio tokens.\n",
+            "tags": [
+                "safetensors",
+                "llama",
+                "text-to-speech",
+                "en",
+                "dataset:facebook/multilingual_librispeech",
+                "dataset:parler-tts/libritts_r_filtered",
+                "license:cc-by-4.0",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "facebook/multilingual_librispeech-d70db1bd-fd05-542c-ab32-3b3b2f62abe0",
+            "name": "facebook/multilingual_librispeech",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "facebook/multilingual_librispeech-d70db1bd-fd05-542c-ab32-3b3b2f62abe0",
+                    "name": "facebook/multilingual_librispeech",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/facebook/multilingual_librispeech",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "automatic-speech-recognition, text-to-speech, text-to-audio"
+                            },
+                            {
+                                "name": "language",
+                                "value": "de, nl, fr, it, es, pt, pl, en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "expert-generated"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced, expert-generated"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "MultiLingual LibriSpeech"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "multilingual-librispeech"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: dutch {\"split\": \"dev\", \"path\": \"dutch/dev-*\"}, {\"split\": \"test\", \"path\": \"dutch/test-*\"}, {\"split\": \"train\", \"path\": \"dutch/train-*\"}, {\"split\": \"9_hours\", \"path\": \"dutch/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"dutch/1_hours-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: french {\"split\": \"dev\", \"path\": \"french/dev-*\"}, {\"split\": \"test\", \"path\": \"french/test-*\"}, {\"split\": \"train\", \"path\": \"french/train-*\"}, {\"split\": \"9_hours\", \"path\": \"french/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"french/1_hours-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: german {\"split\": \"dev\", \"path\": \"german/dev-*\"}, {\"split\": \"test\", \"path\": \"german/test-*\"}, {\"split\": \"train\", \"path\": \"german/train-*\"}, {\"split\": \"9_hours\", \"path\": \"german/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"german/1_hours-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: italian {\"split\": \"dev\", \"path\": \"italian/dev-*\"}, {\"split\": \"test\", \"path\": \"italian/test-*\"}, {\"split\": \"train\", \"path\": \"italian/train-*\"}, {\"split\": \"9_hours\", \"path\": \"italian/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"italian/1_hours-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: polish {\"split\": \"dev\", \"path\": \"polish/dev-*\"}, {\"split\": \"test\", \"path\": \"polish/test-*\"}, {\"split\": \"train\", \"path\": \"polish/train-*\"}, {\"split\": \"9_hours\", \"path\": \"polish/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"polish/1_hours-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: portuguese {\"split\": \"dev\", \"path\": \"portuguese/dev-*\"}, {\"split\": \"test\", \"path\": \"portuguese/test-*\"}, {\"split\": \"train\", \"path\": \"portuguese/train-*\"}, {\"split\": \"9_hours\", \"path\": \"portuguese/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"portuguese/1_hours-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: spanish {\"split\": \"dev\", \"path\": \"spanish/dev-*\"}, {\"split\": \"test\", \"path\": \"spanish/test-*\"}, {\"split\": \"train\", \"path\": \"spanish/train-*\"}, {\"split\": \"9_hours\", \"path\": \"spanish/9_hours-*\"}, {\"split\": \"1_hours\", \"path\": \"spanish/1_hours-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-4.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for MultiLingual LibriSpeech\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nThis is a streamable version of the Multilingual LibriSpeech (MLS) dataset. \nThe data archives were restructured from the original ones from OpenSLR to make it easier to stream.\nMLS dataset is a large multilingual corpus suitable for speech research. The dataset is derived from read audiobooks from LibriVox and consists of \n8 languages - English, German, Dutch, Spanish, French, Italian, Portuguese, Polish. It\u2026 See the full description on the dataset page: https://huggingface.co/datasets/facebook/multilingual_librispeech.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "facebook",
+                                    "url": "https://huggingface.co/facebook"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "parler-tts/libritts_r_filtered-0af8ce06-fe70-59e0-89c9-fac56f9841fe",
+            "name": "parler-tts/libritts_r_filtered",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "parler-tts/libritts_r_filtered-0af8ce06-fe70-59e0-89c9-fac56f9841fe",
+                    "name": "parler-tts/libritts_r_filtered",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/parler-tts/libritts_r_filtered",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-to-speech, automatic-speech-recognition"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Filtered LibriTTS-R"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: clean {\"split\": \"dev.clean\", \"path\": \"clean/dev.clean-*\"}, {\"split\": \"test.clean\", \"path\": \"clean/test.clean-*\"}, {\"split\": \"train.clean.100\", \"path\": \"clean/train.clean.100-*\"}, {\"split\": \"train.clean.360\", \"path\": \"clean/train.clean.360-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: other {\"split\": \"dev.other\", \"path\": \"other/dev.other-*\"}, {\"split\": \"test.other\", \"path\": \"other/test.other-*\"}, {\"split\": \"train.other.500\", \"path\": \"other/train.other.500-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-4.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for Filtered LibriTTS-R\n\t\n\nThis is a filtered version of LibriTTS-R. It has been filtered based on two sources:\n\nLibriTTS-R paper [1], which lists samples for which speech restoration have failed\nLibriTTS-P [2] list of excluded speakers for which multiple speakers have been detected.\n\nLibriTTS-R [1] is a sound quality improved version of the LibriTTS corpus which is a multi-speaker English corpus of approximately \n585 hours of read English speech at 24kHz sampling rate\u2026 See the full description on the dataset page: https://huggingface.co/datasets/parler-tts/libritts_r_filtered.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "parler-tts",
+                                    "url": "https://huggingface.co/parler-tts"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

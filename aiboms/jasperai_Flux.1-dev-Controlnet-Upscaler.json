@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:03501f3b-e08f-4f69-abfc-a8df6e2e7435",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:53.938727+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "jasperai/Flux.1-dev-Controlnet-Upscaler-d09ad99a-5861-54b8-8a72-6c0e9419cddd",
+            "name": "jasperai/Flux.1-dev-Controlnet-Upscaler",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "flux-1-dev-non-commercial-license",
+                        "url": "https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/jasperai/Flux.1-dev-Controlnet-Upscaler",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "black-forest-labs/FLUX.1-dev"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "jasperai"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "ControlNet",
+                "super-resolution",
+                "upscaler",
+                "image-to-image",
+                "base_model:black-forest-labs/FLUX.1-dev",
+                "base_model:finetune:black-forest-labs/FLUX.1-dev",
+                "license:other",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

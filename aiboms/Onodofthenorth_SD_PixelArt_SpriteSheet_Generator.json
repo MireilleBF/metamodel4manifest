@@ -1,0 +1,59 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:91a1be0c-37ee-4e3e-b477-a3bbadab8d2f",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:10.847797+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Onodofthenorth/SD_PixelArt_SpriteSheet_Generator-78899ac8-70e2-5e14-b147-254f207458c5",
+            "name": "Onodofthenorth/SD_PixelArt_SpriteSheet_Generator",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Onodofthenorth/SD_PixelArt_SpriteSheet_Generator",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Onodofthenorth"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "spritesheet",
+                "text-to-image",
+                "en",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

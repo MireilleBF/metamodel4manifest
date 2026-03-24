@@ -1,0 +1,121 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:1d16f7dc-bada-4a14-8e69-fe319978c8a0",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:59.292521+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "tiiuae/falcon-180B-chat-317f9001-e3fb-5d6e-ab9e-6f9ccda2a408",
+            "name": "tiiuae/falcon-180B-chat",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "unknown"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/tiiuae/falcon-180B-chat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "falcon",
+                    "modelArchitecture": "FalconForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "tiiuae"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "falcon",
+                "text-generation",
+                "conversational",
+                "en",
+                "de",
+                "es",
+                "fr",
+                "dataset:tiiuae/falcon-refinedweb",
+                "arxiv:1911.02150",
+                "arxiv:2005.14165",
+                "arxiv:2104.09864",
+                "arxiv:2205.14135",
+                "arxiv:2306.01116",
+                "license:unknown",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c",
+            "name": "tiiuae/falcon-refinedweb",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "tiiuae/falcon-refinedweb-0f0f969c-55e1-583f-88a6-b6a6fc0a250c",
+                    "name": "tiiuae/falcon-refinedweb",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/tiiuae/falcon-refinedweb",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100B<n<1T"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Falcon RefinedWeb"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\t\ud83d\udcc0 Falcon RefinedWeb\n\t\n\nFalcon RefinedWeb is a massive English web dataset built by TII and released under an ODC-By 1.0 license.\nSee the \ud83d\udcd3 paper on arXiv for more details. \nRefinedWeb is built through stringent filtering and large-scale deduplication of CommonCrawl; we found models trained on RefinedWeb to achieve performance in-line or better than models trained on curated datasets, while only relying on web data. \nRefinedWeb is also \"multimodal-friendly\": it contains links and alt\u2026 See the full description on the dataset page: https://huggingface.co/datasets/tiiuae/falcon-refinedweb.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "tiiuae",
+                                    "url": "https://huggingface.co/tiiuae"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

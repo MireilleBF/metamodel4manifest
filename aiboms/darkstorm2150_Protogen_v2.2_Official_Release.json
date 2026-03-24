@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:6bdf8b9c-f7bd-485e-be25-7ddfca5f91b1",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:29.720011+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "darkstorm2150/Protogen_v2.2_Official_Release-6be78ca9-2d98-5046-87a8-9788651b445b",
+            "name": "darkstorm2150/Protogen_v2.2_Official_Release",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/darkstorm2150/Protogen_v2.2_Official_Release",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "darkstorm2150"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "stable-diffusion",
+                "stable-diffusion-diffusers",
+                "text-to-image",
+                "art",
+                "artistic",
+                "protogen",
+                "en",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

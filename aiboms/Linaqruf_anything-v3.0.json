@@ -1,0 +1,59 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:87ad83c3-f7da-444e-908a-7185a9383682",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:05:44.703324+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Linaqruf/anything-v3.0-ea30b06b-15f1-59c5-9b41-78f1a2ba3156",
+            "name": "Linaqruf/anything-v3.0",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Linaqruf/anything-v3.0",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Linaqruf"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "stable-diffusion",
+                "stable-diffusion-diffusers",
+                "text-to-image",
+                "en",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

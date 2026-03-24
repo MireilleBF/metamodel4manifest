@@ -1,5 +1,6 @@
 from typing import Iterator
 
+
 from DSL4Pipelines.src.tools.queries.evaluation_engine import EvaluationEngine
 from DSL4Pipelines.src.tools.queries.rules.rules import (
     check_dataset_and_model_presence,
@@ -9,7 +10,7 @@ from DSL4Pipelines.tests.examples.NotebookIRISManifest import (
     test_build_manifestFromNBonIrisClassification,
 )
 from DSL4Pipelines.src.tools.queries.manifest_query import ManifestQuery
-from DSL4Pipelines.src.tools.queries.metarules import EvaluationResult
+from DSL4Pipelines.src.tools.queries.metarules import EvaluationResult, RULE_REGISTRY
 
 
 def test_rules():
@@ -19,6 +20,19 @@ def test_rules():
     engine = EvaluationEngine()
     report = engine.run_rules(manifest, rules)
     print(report)
+
+def test_rule_evaluate():
+    manifest = test_build_manifestFromNBonIrisClassification()
+
+    mq = ManifestQuery(manifest)
+    rule = check_dataset_and_model_presence
+    result = rule(mq)
+    assert isinstance(result, Iterator), "Expected an iterator of EvaluationResult"
+    for r in result:
+        assert isinstance(r, EvaluationResult), "Expected an EvaluationResult instance"
+        print(
+            f"  {r.label}: {'✅' if r.success else '❌'} (Score: {r.score}) - Evidence: {r.evidence}"
+        )
 
 
 def test_rules_on_iris_nb():

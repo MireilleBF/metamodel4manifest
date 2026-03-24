@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:8fb259c9-7473-490d-9dbe-4a7be78140b4",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:42.767214+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "ginipick/flux-lora-eric-cat-1098dae3-5917-5d95-92ae-c9eb0c37adb9",
+            "name": "ginipick/flux-lora-eric-cat",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "flux-1-dev-non-commercial-license"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "black-forest-labs/FLUX.1-dev"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "ginipick"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "autotrain",
+                "spacerunner",
+                "text-to-image",
+                "flux",
+                "lora",
+                "template:sd-lora",
+                "base_model:black-forest-labs/FLUX.1-dev",
+                "base_model:adapter:black-forest-labs/FLUX.1-dev",
+                "license:other",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

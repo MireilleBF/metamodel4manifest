@@ -1,0 +1,56 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:9b74d018-5d15-445e-8d31-05509e227b27",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:30.729605+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "22h/vintedois-diffusion-v0-1-f31dddad-cd40-5261-96ba-93da6c3a76bd",
+            "name": "22h/vintedois-diffusion-v0-1",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/22h/vintedois-diffusion-v0-1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "22h"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "text-to-image",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

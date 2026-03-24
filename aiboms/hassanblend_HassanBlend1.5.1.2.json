@@ -1,0 +1,56 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:06373e5a-9f20-4c26-aade-078fd7186ea4",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:05:37.177550+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "hassanblend/HassanBlend1.5.1.2-0b779cec-23ee-5fb2-bebd-56a78559f0c0",
+            "name": "hassanblend/HassanBlend1.5.1.2",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/hassanblend/HassanBlend1.5.1.2",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "hassanblend"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "text-to-image",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

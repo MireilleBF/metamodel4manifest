@@ -1,0 +1,98 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:2a50bf45-b545-4830-a6e3-b3b329082122",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:15.493193+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "pyannote/embedding-545a1e33-13a6-5e29-a61d-1ec7fa3de51b",
+            "name": "pyannote/embedding",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/pyannote/embedding",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": [
+                        {
+                            "ref": "voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "pyannote-audio"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "pyannote"
+                }
+            ],
+            "tags": [
+                "pyannote-audio",
+                "pytorch",
+                "tensorboard",
+                "pyannote",
+                "pyannote-audio-model",
+                "audio",
+                "voice",
+                "speech",
+                "speaker",
+                "speaker-recognition",
+                "speaker-verification",
+                "speaker-identification",
+                "speaker-embedding",
+                "dataset:voxceleb",
+                "license:mit",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4",
+            "name": "voxceleb",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "voxceleb-9a76933d-07f5-5789-ad60-681177a7daf4",
+                    "name": "voxceleb",
+                    "contents": {
+                        "url": "",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "",
+                                    "url": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

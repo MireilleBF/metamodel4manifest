@@ -1,0 +1,63 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:c3ea5e61-7ab9-4b41-a019-62b0c0ecfd1a",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:43.386748+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "jimmycarter/LibreFLUX-42a7ef5f-a30a-5d91-98d0-eed85ff99c6f",
+            "name": "jimmycarter/LibreFLUX",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/jimmycarter/LibreFLUX",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "jimmycarter"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "text-to-image",
+                "arxiv:2403.12015",
+                "arxiv:2309.16588",
+                "arxiv:2309.14859",
+                "arxiv:2403.17887",
+                "arxiv:2211.01324",
+                "arxiv:2306.04675",
+                "license:apache-2.0",
+                "endpoints_compatible",
+                "diffusers:FluxPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

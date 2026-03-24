@@ -12,6 +12,7 @@ from DSL4Pipelines.src.metamodel.catalogs.artefact_catalog import ArtefactCatalo
 from DSL4Pipelines.src.metamodel.catalogs.MLModelCatalog import MLModelCatalog
 
 
+#equivalent to a model card?
 @dataclass
 class MLModel(SoftwareFile):
     """MLModel is a specific type of SoftwareFile that represents a machine learning model."""
@@ -21,6 +22,19 @@ class MLModel(SoftwareFile):
     )
     ml_model_type: Optional[str] = (
         None  # e.g., "Transformer", "CNN", "RNN", MLModelCatalog.ML_MODEL_TYPE.TRANSFORMER
+    )
+    #cycloneDX uses task instead of purpose, but I find that purpose is more intuitive and less technical, so I prefer to use purpose.
+    purpose: Optional[str] = (
+        None  # e.g., "text-to-image, text classification", "image recognition", "object detection", ...
+    )
+    architectureFamily: Optional[str] = (
+        None  # e.g., ???"
+    )
+    modelArchitecture: Optional[str] = (
+        None  # e.g., "BERT", "ResNet", "LSTM", ...
+    )
+    modelSize: Optional[str] = (
+        None  # e.g., "110M parameters", "1.5B parameters", ...
     )
 
     def validate(self, errors: list = None) -> bool:

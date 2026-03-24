@@ -27,15 +27,19 @@ rectangle "FATEs Justification System" as FS {
 
     CollectEvidence as (Collect evidence) #lightgreen
     InstrumentCI as (Instrument the CI/CD pipeline to justify) #lightgreen
+
+    Register as (Register a ML description) #lightblue
+    Extract as (Extract/filter ML descriptions) #lightblue
+    Manage as (Manage ML descriptions) #lightblue
+    Generate as (Generate ML description) #lightblue
+
+
 }
 'note top of FS : Defines the framework for verifying FATES properties
 rectangle "PROFIL system" as PS{
     CheckQuality as (Check Quality) #lightyellow
-    Register as (Register a ML description) #lightyellow
-    Extract as (Extract/filter ML descriptions) #lightyellow
-    Manage as (Manage ML descriptions) #lightyellow
     Explore as (Explore the ML landscape) #lightyellow
-    Instrument as (Define new rules to check) #lightyellow
+    Instrument as (Define new quality rules to check) #lightyellow
     'GenDoc as (Generate Documentation)
 }
 note bottom of PS : Engine for \nlinting and static analysis
@@ -66,9 +70,10 @@ CheckQuality  <.. Verify:extends
 :MLProvider: --> Manage
 ':MLProvider: --> GenDoc
 
-
+Manage<..Generate   :extends
 Manage<..Extract   :extends
 Manage<..Register   :extends
+Generate <.. Register :extends
 
  Manage <.. GenJust :extends
 

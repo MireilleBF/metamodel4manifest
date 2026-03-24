@@ -1,0 +1,59 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:10e1f268-7dd4-453c-8277-bbf1634ae534",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:05:53.229106+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "apple/OpenELM-270M-Instruct-248c0cfc-9ee0-500d-acb5-24416a326672",
+            "name": "apple/OpenELM-270M-Instruct",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "apple-sample-code-license",
+                        "url": "LICENSE"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/apple/OpenELM-270M-Instruct",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "openelm",
+                    "modelArchitecture": "OpenELMForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "apple"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "openelm",
+                "text-generation",
+                "custom_code",
+                "arxiv:2404.14619",
+                "license:other",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

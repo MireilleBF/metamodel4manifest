@@ -1,0 +1,65 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:c1f6644b-41cc-4ee4-85e3-416b0f0060f3",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:30.312562+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "microsoft/Phi-3-mini-4k-instruct-onnx-0916a4af-6453-5835-aac8-386d62b02fa8",
+            "name": "microsoft/Phi-3-mini-4k-instruct-onnx",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct-onnx",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "phi3",
+                    "modelArchitecture": "Phi3ForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "microsoft"
+                }
+            ],
+            "description": "### Model Description\n\n- **Developed by:**  Microsoft\n- **Model type:** ONNX\n- **Language(s) (NLP):** Python, C, C++\n- **License:** MIT\n- **Model Description:** This is a conversion of the Phi-3 Mini-4K-Instruct model for ONNX Runtime inference.\n",
+            "tags": [
+                "transformers",
+                "onnx",
+                "phi3",
+                "text-generation",
+                "ONNX",
+                "DML",
+                "ONNXRuntime",
+                "nlp",
+                "conversational",
+                "custom_code",
+                "arxiv:2306.00978",
+                "license:mit",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

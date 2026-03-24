@@ -1,0 +1,115 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:a4ff0b64-f950-4ff2-8e87-8921bc1dbe28",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:56.107071+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "databricks/dolly-v1-6b-082b80f9-c7f0-541b-9db8-00ba3466801f",
+            "name": "databricks/dolly-v1-6b",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-NC-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/databricks/dolly-v1-6b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gptj",
+                    "modelArchitecture": "GPTJForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended Uses\n**`dolly-v1-6b` is intended exclusively for research purposes. We do not recommend using `dolly-v1-6b` in high-risk applications\n(e.g., educational or vocational training, product safety components, or other uses that may impact the well-being of individuals.)**\n\n`dolly-v1-6b` is differentiated from its predecessor, GPT-J, in the extent to which it exhibits coherent responses to natural language\nquestions and instruction prompts. `dolly-v1-6b` appears to exhibit reasonable (but categorically not state-of-the-art) behavior across a range\nof capabilities, including many of those outlined in the [InstructGPT](https://arxiv.org/abs/2203.02155) paper.\n\nWe include evocative examples below, but invite the reader to observe that they contain factual inaccuracies or semantic misfires that illustrate some of the model\u2019s shortcomings.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "databricks"
+                }
+            ],
+            "description": "## Model Overview\n`dolly-v1-6b` is a 6 billion parameter causal language model created by [Databricks](https://databricks.com/) that is derived from\n[EleutherAI\u2019s](https://www.eleuther.ai/) [GPT-J](https://huggingface.co/EleutherAI/gpt-j-6B) (released June 2021) and fine-tuned\non a ~52K record instruction corpus ([Stanford Alpaca](https://crfm.stanford.edu/2023/03/13/alpaca.html)) (CC-NC-BY-4.0)\nconsisting of question/answer pairs generated using the techniques outlined in the [Self-Instruct](https://arxiv.org/abs/2212.10560) paper.\nThe [original version](https://www.databricks.com/blog/2023/03/24/hello-dolly-democratizing-magic-chatgpt-open-models.html) of was Dolly was trained using [deepspeed](https://github.com/microsoft/DeepSpeed) [ZeRO 3](https://github.com/microsoft/DeepSpeed/blob/master/docs/code-docs/source/zero3.rst)\non the [Databricks Machine Learning Platform](https://www.databricks.com/product/machine-learning) in just 30 minutes (1 epoch) using a single\n[NDasrA100_v4](https://learn.microsoft.com/en-us/azure/virtual-machines/nda100-v4-series) machine with 8x A100 40GB GPUs.\nThe most recent `dolly-v1-6b` checkpoint was trained for 10 epochs on the same hardware.\n\nLike its base model, `dolly-v1-6b` has six billion parameters consisting of 28 transformer layers with 16 attention heads each.\nIt employs [Rotary Position Embedding](https://arxiv.org/abs/2104.09864) (RoPE) and shares the same tokenizer as GPT-3.\nGPT-J was trained on [The Pile](https://huggingface.co/datasets/the_pile), a 400B token dataset of diverse documents designed primarily for text generation tasks.\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "gptj",
+                "text-generation",
+                "en",
+                "dataset:tatsu-lab/alpaca",
+                "arxiv:2212.10560",
+                "arxiv:2104.09864",
+                "arxiv:2203.02155",
+                "license:cc-by-nc-4.0",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a",
+            "name": "tatsu-lab/alpaca",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a",
+                    "name": "tatsu-lab/alpaca",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/tatsu-lab/alpaca",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Alpaca"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-nc-4.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for Alpaca\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nAlpaca is a dataset of 52,000 instructions and demonstrations generated by OpenAI's text-davinci-003 engine. This instruction data can be used to conduct instruction-tuning for language models and make the language model follow instruction better.\nThe authors built on the data generation pipeline from Self-Instruct framework and made the following modifications:\n\nThe text-davinci-003 engine to generate the instruction data instead\u2026 See the full description on the dataset page: https://huggingface.co/datasets/tatsu-lab/alpaca.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "tatsu-lab",
+                                    "url": "https://huggingface.co/tatsu-lab"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

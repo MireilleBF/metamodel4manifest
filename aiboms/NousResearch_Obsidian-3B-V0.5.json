@@ -1,0 +1,271 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:fe049387-6862-454c-9fc9-9bb69f44b851",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:28.947778+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "NousResearch/Obsidian-3B-V0.5-ab81c8c8-a433-5c89-b055-21ba93582523",
+            "name": "NousResearch/Obsidian-3B-V0.5",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-SA-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/NousResearch/Obsidian-3B-V0.5",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llava_stablelm_epoch",
+                    "modelArchitecture": "LlavaStableLMEpochForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b"
+                        },
+                        {
+                            "ref": "LDJnr/LessWrong-Amplify-Instruct-fd396583-6aa0-5026-9748-4409738f0812"
+                        },
+                        {
+                            "ref": "LDJnr/Pure-Dove-e5138f01-f77d-5510-9285-df11d660b143"
+                        },
+                        {
+                            "ref": "LDJnr/Verified-Camel-6c954918-6150-534c-952b-ea2cff17c0b2"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "NousResearch"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "llava_stablelm_epoch",
+                "text-generation",
+                "Multimodal",
+                "StableLM",
+                "en",
+                "dataset:LDJnr/Capybara",
+                "dataset:LDJnr/LessWrong-Amplify-Instruct",
+                "dataset:LDJnr/Pure-Dove",
+                "dataset:LDJnr/Verified-Camel",
+                "license:cc-by-sa-4.0",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b",
+            "name": "LDJnr/Capybara",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b",
+                    "name": "LDJnr/Capybara",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/LDJnr/Capybara",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "conversational, question-answering, text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "LessWrong-Amplify-Instruct"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tThis is the Official Capybara dataset. Over 10,000 multi-turn examples.\n\t\n\nCapybara is the culmination of insights derived from synthesis techniques like Evol-instruct (used for WizardLM), Alpaca, Orca, Vicuna, Lamini, FLASK and others.\nThe single-turn seeds used to initiate the Amplify-Instruct synthesis of conversations are mostly based on datasets that i've personally vetted extensively, and are often highly regarded for their diversity and demonstration of logical robustness and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/LDJnr/Capybara.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "LDJnr",
+                                    "url": "https://huggingface.co/LDJnr"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "LDJnr/LessWrong-Amplify-Instruct-fd396583-6aa0-5026-9748-4409738f0812",
+            "name": "LDJnr/LessWrong-Amplify-Instruct",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LDJnr/LessWrong-Amplify-Instruct-fd396583-6aa0-5026-9748-4409738f0812",
+                    "name": "LDJnr/LessWrong-Amplify-Instruct",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/LDJnr/LessWrong-Amplify-Instruct",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "conversational, question-answering, text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "n<1K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "LessWrong-Amplify-Instruct"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tThis is the Official LessWrong-Amplify-Instruct dataset. Over 500 multi-turn examples, and many more coming soon!\n\t\n\n\nThis leverages Amplify-Instruct method to extend thousands of scraped Less-Wrong posts into advanced in-depth multi-turn conversations.\n\nComprised of over 500 highly filtered multi-turn synthetic conversations.\n\nAverage context length per conversation is over 2,000 tokens. (will measure this more accurately soon)\n\nSynthetically created using a newly developed pipeline\u2026 See the full description on the dataset page: https://huggingface.co/datasets/LDJnr/LessWrong-Amplify-Instruct.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "LDJnr",
+                                    "url": "https://huggingface.co/LDJnr"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "LDJnr/Pure-Dove-e5138f01-f77d-5510-9285-df11d660b143",
+            "name": "LDJnr/Pure-Dove",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LDJnr/Pure-Dove-e5138f01-f77d-5510-9285-df11d660b143",
+                    "name": "LDJnr/Pure-Dove",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/LDJnr/Pure-Dove",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "conversational, question-answering, text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "1K<n<10K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Pure-Dove"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tThis is the Official Pure-Dove dataset. Over 3K multi-turn examples, and many more coming soon!\n\t\n\nThis dataset aims to be the largest highest quality cluster of real human back and forth conversations with GPT-4.\nSteps have even been done to ensure that only the best GPT-4 conversations in comparisons are kept, there are many instances where two GPT-4 responses are rated as equal to eachother or as both bad. We exclude all such responses from Pure Dove and make sure to only include\u2026 See the full description on the dataset page: https://huggingface.co/datasets/LDJnr/Pure-Dove.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "LDJnr",
+                                    "url": "https://huggingface.co/LDJnr"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "LDJnr/Verified-Camel-6c954918-6150-534c-952b-ea2cff17c0b2",
+            "name": "LDJnr/Verified-Camel",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LDJnr/Verified-Camel-6c954918-6150-534c-952b-ea2cff17c0b2",
+                    "name": "LDJnr/Verified-Camel",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/LDJnr/Verified-Camel",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "conversational, question-answering, text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "n<1K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Verified-Camel"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tThis is the Official Verified Camel dataset. Just over 100 verified examples, and many more coming soon!\n\t\n\n\nComprised of over 100 highly filtered and curated examples from specific portions of CamelAI stem datasets. \n\nThese examples are verified to be true by experts in the specific related field, with atleast a bachelors degree in the subject.\n\nRoughly 30-40% of the originally curated data from CamelAI was found to have atleast minor errors and/or incoherent questions(as determined\u2026 See the full description on the dataset page: https://huggingface.co/datasets/LDJnr/Verified-Camel.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "LDJnr",
+                                    "url": "https://huggingface.co/LDJnr"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

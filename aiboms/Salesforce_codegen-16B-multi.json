@@ -1,0 +1,60 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:63d2df30-e1b9-4c64-9ba2-6d87df36de12",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:09:15.499788+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Salesforce/codegen-16B-multi-36da23de-f666-5d21-b860-16eb68769552",
+            "name": "Salesforce/codegen-16B-multi",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "BSD-3-Clause",
+                        "url": "https://spdx.org/licenses/BSD-3-Clause.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Salesforce/codegen-16B-multi",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "codegen",
+                    "modelArchitecture": "CodeGenForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Salesforce"
+                }
+            ],
+            "description": "## Model description\n\nCodeGen is a family of autoregressive language models for **program synthesis** from the paper: [A Conversational Paradigm for Program Synthesis](https://arxiv.org/abs/2203.13474) by Erik Nijkamp, Bo Pang, Hiroaki Hayashi, Lifu Tu, Huan Wang, Yingbo Zhou, Silvio Savarese, Caiming Xiong. The models are originally released in [this repository](https://github.com/salesforce/CodeGen), under 3 pre-training data variants (`NL`, `Multi`, `Mono`) and 4 model size variants (`350M`, `2B`, `6B`, `16B`).\n\nThe checkpoint included in this repository is denoted as **CodeGen-Multi 16B** in the paper, where \"Multi\" means the model is initialized with *CodeGen-NL 16B* and further pre-trained on a dataset of multiple programming languages, and \"16B\" refers to the number of trainable parameters.\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "codegen",
+                "text-generation",
+                "arxiv:2203.13474",
+                "license:bsd-3-clause",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

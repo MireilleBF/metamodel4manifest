@@ -1,0 +1,57 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:c92594b9-b114-4357-94b6-6a4f9a45df6f",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:55.208344+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "nicky007/stable-diffusion-logo-fine-tuned-a14ad9c9-302a-5502-ba24-b8f27971569e",
+            "name": "nicky007/stable-diffusion-logo-fine-tuned",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/nicky007/stable-diffusion-logo-fine-tuned",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "nicky007"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "text-to-image",
+                "stable-diffusion",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

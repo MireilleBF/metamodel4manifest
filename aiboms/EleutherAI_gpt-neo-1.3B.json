@@ -1,0 +1,140 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:200ad462-573f-41c5-8327-34050ed98d31",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:19.950861+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "EleutherAI/gpt-neo-1.3B-2b077af5-ae08-551f-b03b-23fcaf107008",
+            "name": "EleutherAI/gpt-neo-1.3B",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/EleutherAI/gpt-neo-1.3B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gpt_neo",
+                    "modelArchitecture": "GPTNeoForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "EleutherAI"
+                }
+            ],
+            "description": "## Model Description\n\nGPT-Neo 1.3B is a transformer model designed using EleutherAI's replication of the GPT-3 architecture. GPT-Neo refers to the class of models, while 1.3B represents the number of parameters of this particular pre-trained model.\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "jax",
+                "rust",
+                "safetensors",
+                "gpt_neo",
+                "text-generation",
+                "text generation",
+                "causal-lm",
+                "en",
+                "dataset:EleutherAI/pile",
+                "arxiv:2101.00027",
+                "license:mit",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787",
+            "name": "EleutherAI/pile",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "EleutherAI/pile-671dd665-c5ab-5ddc-8ee4-6f2955b81787",
+                    "name": "EleutherAI/pile",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/EleutherAI/pile",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, fill-mask"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "language-modeling, masked-language-modeling"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100B<n<1T"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "no-annotation"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "the Pile"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "the-pile"
+                            },
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "The Pile is a 825 GiB diverse, open source language modelling data set that consists of 22 smaller, high-quality\ndatasets combined together.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "EleutherAI",
+                                    "url": "https://huggingface.co/EleutherAI"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

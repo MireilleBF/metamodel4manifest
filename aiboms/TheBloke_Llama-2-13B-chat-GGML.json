@@ -1,0 +1,70 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:f5b66876-7c8a-4de8-9cce-a5eb99ef7067",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:43.391658+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "TheBloke/Llama-2-13B-chat-GGML-402003ef-8ac2-5ecd-839f-234af1987c8f",
+            "name": "TheBloke/Llama-2-13B-chat-GGML",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "other"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "meta-llama/Llama-2-13b-chat-hf"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended Use\n**Intended Use Cases** Llama 2 is intended for commercial and research use in English. Tuned models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks.\n\nTo get the expected features and performance for the chat versions, a specific formatting needs to be followed, including the `INST` and `<<SYS>>` tags, `BOS` and `EOS` tokens, and the whitespaces and breaklines in between (we recommend calling `strip()` on inputs to avoid double-spaces). See our reference code in github for details: [`chat_completion`](https://github.com/facebookresearch/llama/blob/main/llama/generation.py#L212).\n\n**Out-of-scope Uses** Use in any manner that violates applicable laws or regulations (including trade compliance laws).Use in languages other than English. Use in any other way that is prohibited by the Acceptable Use Policy and Licensing Agreement for Llama 2.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "TheBloke"
+                }
+            ],
+            "description": "## Description\n\nThis repo contains GGML format model files for [Meta's Llama 2 13B-chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf).\n",
+            "tags": [
+                "transformers",
+                "llama",
+                "facebook",
+                "meta",
+                "pytorch",
+                "llama-2",
+                "text-generation",
+                "en",
+                "arxiv:2307.09288",
+                "base_model:meta-llama/Llama-2-13b-chat-hf",
+                "base_model:finetune:meta-llama/Llama-2-13b-chat-hf",
+                "license:other",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

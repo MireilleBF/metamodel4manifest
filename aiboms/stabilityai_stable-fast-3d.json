@@ -1,0 +1,91 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:e0cea810-bbfa-4db8-aeaf-419e49fefb22",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:19.898338+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "stabilityai/stable-fast-3d-2c7f8123-3801-503e-acfd-439252e78997",
+            "name": "stabilityai/stable-fast-3d",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "stabilityai-ai-community",
+                        "url": "LICENSE.md"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/stabilityai/stable-fast-3d",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-3d",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": [
+                        {
+                            "ref": "allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46"
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "stabilityai"
+                }
+            ],
+            "tags": [
+                "safetensors",
+                "image-to-3d",
+                "dataset:allenai/objaverse",
+                "arxiv:2408.00653",
+                "license:other",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46",
+            "name": "allenai/objaverse",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "allenai/objaverse-4cc2611b-4fbe-56c7-b009-9ca67ac52e46",
+                    "name": "allenai/objaverse",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/allenai/objaverse",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tObjaverse\n\t\n\nObjaverse is a Massive Dataset with 800K+ Annotated 3D Objects.\nMore documentation is coming soon. In the meantime, please see our paper and website for additional details.\n\n\t\n\t\t\n\t\tLicense\n\t\n\nThe use of the dataset as a whole is licensed under the ODC-By v1.0 license. Individual objects in Objaverse are all licensed as creative commons distributable objects, and may be under the following licenses:\n\nCC-BY 4.0 - 721K objects\nCC-BY-NC 4.0 - 25K objects\nCC-BY-NC-SA 4.0 - 52K\u2026 See the full description on the dataset page: https://huggingface.co/datasets/allenai/objaverse.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "allenai",
+                                    "url": "https://huggingface.co/allenai"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

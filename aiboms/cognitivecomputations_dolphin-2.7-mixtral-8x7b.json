@@ -1,0 +1,375 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:29a36b23-91f2-4ca0-b8d1-304230ff1214",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:25.198304+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "cognitivecomputations/dolphin-2.7-mixtral-8x7b-c9753fe8-4c0b-5dd1-b5c2-23ea4ce49b6e",
+            "name": "cognitivecomputations/dolphin-2.7-mixtral-8x7b",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/cognitivecomputations/dolphin-2.7-mixtral-8x7b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mixtral",
+                    "modelArchitecture": "MixtralForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9"
+                        },
+                        {
+                            "ref": "jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4"
+                        },
+                        {
+                            "ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1"
+                        },
+                        {
+                            "ref": "teknium/openhermes-0c64d8d5-8457-599d-87f8-d4e3875cbd3d"
+                        },
+                        {
+                            "ref": "ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28"
+                        },
+                        {
+                            "ref": "ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41"
+                        },
+                        {
+                            "ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "cognitivecomputations"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "mixtral",
+                "text-generation",
+                "conversational",
+                "en",
+                "dataset:cognitivecomputations/dolphin",
+                "dataset:jondurbin/airoboros-2.2.1",
+                "dataset:cognitivecomputations/dolphin-coder",
+                "dataset:teknium/openhermes",
+                "dataset:ise-uiuc/Magicoder-OSS-Instruct-75K",
+                "dataset:ise-uiuc/Magicoder-Evol-Instruct-110K",
+                "dataset:LDJnr/Capybara",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9",
+            "name": "cognitivecomputations/dolphin",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9",
+                    "name": "cognitivecomputations/dolphin",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/dolphin",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: flan1m-alpaca-uncensored \"f\", \"l\", \"a\", \"n\", \"1\", \"m\", \"-\", \"a\", \"l\", \"p\", \"a\", \"c\", \"a\", \"-\", \"u\", \"n\", \"c\", \"e\", \"n\", \"s\", \"o\", \"r\", \"e\", \"d\", \".\", \"j\", \"s\", \"o\", \"n\", \"l\""
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: flan5m-alpaca-uncensored \"f\", \"l\", \"a\", \"n\", \"5\", \"m\", \"-\", \"a\", \"l\", \"p\", \"a\", \"c\", \"a\", \"-\", \"u\", \"n\", \"c\", \"e\", \"n\", \"s\", \"o\", \"r\", \"e\", \"d\", \".\", \"j\", \"s\", \"o\", \"n\", \"l\""
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "Dolphin \ud83d\udc2c\nhttps://erichartford.com/dolphin\n\n\t\n\t\t\n\t\tDataset details\n\t\n\nThis dataset is an attempt to replicate the results of Microsoft's Orca\nOur dataset consists of:\n\n~1 million of FLANv2 augmented with GPT-4 completions (flan1m-alpaca-uncensored.jsonl)\n~3.5 million of FLANv2 augmented with GPT-3.5 completions (flan5m-alpaca-uncensored.jsonl)\n\nWe followed the submix and system prompt distribution outlined in the Orca paper. With a few exceptions. We included all 75k of CoT in the FLAN-1m\u2026 See the full description on the dataset page: https://huggingface.co/datasets/cognitivecomputations/dolphin.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4",
+            "name": "jondurbin/airoboros-2.2.1",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4",
+                    "name": "jondurbin/airoboros-2.2.1",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/jondurbin/airoboros-2.2.1",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tOverview\n\t\n\nThis dataset is a slight update to 2.2.\n\n\t\n\t\t\n\t\tRe-generated writing responses\n\t\n\nMany of the responses were generated by gpt-4-0613, which unfortunately produces much shorter and \"dumber\" (i.e. various readability scores increased compared to gpt-4-0314, e.g. Flesch, Gunning Fog, etc.) responses compared to gpt-4-0314.\nI have re-created many of these responses, using gpt-4-0314, temperature 0.7, and the following prompt (which produced 3-5x longer responses):\nYou are to\u2026 See the full description on the dataset page: https://huggingface.co/datasets/jondurbin/airoboros-2.2.1.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "jondurbin",
+                                    "url": "https://huggingface.co/jondurbin"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1",
+            "name": "cognitivecomputations/dolphin-coder",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1",
+                    "name": "cognitivecomputations/dolphin-coder",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/dolphin-coder",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tdolphin-coder\n\t\n\n\nThis dataset is transformed from https://www.kaggle.com/datasets/erichartford/leetcode-rosetta\nit is used to train dolphin-coder model\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "teknium/openhermes-0c64d8d5-8457-599d-87f8-d4e3875cbd3d",
+            "name": "teknium/openhermes",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "teknium/openhermes-0c64d8d5-8457-599d-87f8-d4e3875cbd3d",
+                    "name": "teknium/openhermes",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/teknium/openhermes",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "eng"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "OpenHermes-v1.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tOpenHermes Dataset\n\t\n\n\nThe OpenHermes dataset is composed of 242,000 entries of primarily GPT-4 generated data, from open datasets across the AI landscape, including:\nOpenHermes 13B is the first fine tune of the Hermes dataset that has a fully open source dataset!\nOpenHermes was trained on 242,000 entries of primarily GPT-4 generated data, from open datasets across the AI landscape, including:\n\nGPTeacher - General Instruct, Roleplay v1, Roleplay v2, and Code Instruct Datasets, by\u2026 See the full description on the dataset page: https://huggingface.co/datasets/teknium/openhermes.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "teknium",
+                                    "url": "https://huggingface.co/teknium"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28",
+            "name": "ise-uiuc/Magicoder-OSS-Instruct-75K",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "ise-uiuc/Magicoder-OSS-Instruct-75K-5e69362e-a5cb-55b3-b09e-25d5567b8c28",
+                    "name": "ise-uiuc/Magicoder-OSS-Instruct-75K",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/ise-uiuc/Magicoder-OSS-Instruct-75K",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, conversational"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "This is the OSS-Instruct dataset generated by gpt-3.5-turbo-1106 developed by OpenAI. Please pay attention to OpenAI's usage policy when adopting this dataset: https://openai.com/policies/usage-policies.\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "ise-uiuc",
+                                    "url": "https://huggingface.co/ise-uiuc"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41",
+            "name": "ise-uiuc/Magicoder-Evol-Instruct-110K",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "ise-uiuc/Magicoder-Evol-Instruct-110K-015f56b9-f906-5fab-99ec-a279a098da41",
+                    "name": "ise-uiuc/Magicoder-Evol-Instruct-110K",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/ise-uiuc/Magicoder-Evol-Instruct-110K",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, conversational"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "A decontaminated version of evol-codealpaca-v1. Decontamination is done in the same way as StarCoder (bigcode decontamination process).\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "ise-uiuc",
+                                    "url": "https://huggingface.co/ise-uiuc"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b",
+            "name": "LDJnr/Capybara",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b",
+                    "name": "LDJnr/Capybara",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/LDJnr/Capybara",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "conversational, question-answering, text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "LessWrong-Amplify-Instruct"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tThis is the Official Capybara dataset. Over 10,000 multi-turn examples.\n\t\n\nCapybara is the culmination of insights derived from synthesis techniques like Evol-instruct (used for WizardLM), Alpaca, Orca, Vicuna, Lamini, FLASK and others.\nThe single-turn seeds used to initiate the Amplify-Instruct synthesis of conversations are mostly based on datasets that i've personally vetted extensively, and are often highly regarded for their diversity and demonstration of logical robustness and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/LDJnr/Capybara.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "LDJnr",
+                                    "url": "https://huggingface.co/LDJnr"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:43328c8a-877d-45da-b710-709973d0b9eb",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:16.140105+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "TheBloke/CodeLlama-7B-Instruct-GGUF-caf2acc1-716f-5bec-ba37-6ea9ad0b2422",
+            "name": "TheBloke/CodeLlama-7B-Instruct-GGUF",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama2"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/TheBloke/CodeLlama-7B-Instruct-GGUF",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "codellama/CodeLlama-7b-instruct-hf"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended Use\n**Intended Use Cases** Code Llama and its variants is intended for commercial and research use in English and relevant programming languages. The base model Code Llama can be adapted for a variety of code synthesis and understanding tasks, Code Llama - Python is designed specifically to handle the Python programming language, and Code Llama - Instruct is intended to be safer to use for code assistant and generation applications.\n\n**Out-of-Scope Uses** Use in any manner that violates applicable laws or regulations (including trade compliance laws). Use in languages other than English. Use in any other way that is prohibited by the Acceptable Use Policy and Licensing Agreement for Code Llama and its variants.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "TheBloke"
+                }
+            ],
+            "description": "## Description\n\nThis repo contains GGUF format model files for [Meta's CodeLlama 7B Instruct](https://huggingface.co/codellama/CodeLlama-7b-instruct-hf).\n\n<!-- description end -->\n<!-- README_GGUF.md-about-gguf start -->",
+            "tags": [
+                "transformers",
+                "gguf",
+                "llama",
+                "llama-2",
+                "text-generation",
+                "code",
+                "arxiv:2308.12950",
+                "license:llama2",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

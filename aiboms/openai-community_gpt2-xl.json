@@ -1,0 +1,69 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:4ed16e06-68f4-4452-abbd-7b5ba975bbf4",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:32.485573+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "openai-community/gpt2-xl-797abf7c-5321-5bf3-b8f8-23e57da5423a",
+            "name": "openai-community/gpt2-xl",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/openai-community/gpt2-xl",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gpt2",
+                    "modelArchitecture": "GPT2LMHeadModel",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Uses\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "openai-community"
+                }
+            ],
+            "description": "## Model Details\n\n**Model Description:** GPT-2 XL is the **1.5B parameter** version of GPT-2, a transformer-based language model created and released by OpenAI. The model is a pretrained model on English language using a causal language modeling (CLM) objective.\n\n- **Developed by:** OpenAI, see [associated research paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf) and [GitHub repo](https://github.com/openai/gpt-2) for model developers.\n- **Model Type:** Transformer-based language model\n- **Language(s):** English\n- **License:** [Modified MIT License](https://github.com/openai/gpt-2/blob/master/LICENSE)\n- **Related Models:** [GPT-2](https://huggingface.co/gpt2), [GPT-Medium](https://huggingface.co/gpt2-medium) and [GPT-Large](https://huggingface.co/gpt2-large)\n- **Resources for more information:**\n- [Research Paper](https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf)\n- [OpenAI Blog Post](https://openai.com/blog/better-language-models/)\n- [GitHub Repo](https://github.com/openai/gpt-2)\n- [OpenAI Model Card for GPT-2](https://github.com/openai/gpt-2/blob/master/model_card.md)\n- [OpenAI GPT-2 1.5B Release Blog Post](https://openai.com/blog/gpt-2-1-5b-release/)\n- Test the full generation capabilities here: https://transformer.huggingface.co/doc/gpt2-large\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "tf",
+                "jax",
+                "rust",
+                "safetensors",
+                "gpt2",
+                "text-generation",
+                "en",
+                "arxiv:1910.09700",
+                "license:mit",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

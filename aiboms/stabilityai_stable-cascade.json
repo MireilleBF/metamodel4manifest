@@ -1,0 +1,60 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:31fb95c8-93b5-49c9-8a48-beca014bd772",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:01.989782+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "stabilityai/stable-cascade-626d8da8-7271-5b63-9441-231ed99c8a75",
+            "name": "stabilityai/stable-cascade",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "stable-cascade-nc-community",
+                        "url": "LICENSE"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/stabilityai/stable-cascade",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Uses\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "stabilityai"
+                }
+            ],
+            "description": "## Model Details\n",
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "text-to-image",
+                "license:other",
+                "diffusers:StableCascadeDecoderPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

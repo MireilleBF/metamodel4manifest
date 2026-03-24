@@ -1,0 +1,67 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:29687f91-42c6-4d71-b972-6c67ea6f3f4a",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:39.651585+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "microsoft/git-large-coco-008b3c21-d321-555c-a319-d05d0fc02594",
+            "name": "microsoft/git-large-coco",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/microsoft/git-large-coco",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-text",
+                    "architectureFamily": "git",
+                    "modelArchitecture": "GitForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended uses & limitations\n\nYou can use the raw model for image captioning. See the [model hub](https://huggingface.co/models?search=microsoft/git) to look for\nfine-tuned versions on a task that interests you.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "microsoft"
+                }
+            ],
+            "description": "## Model description\n\nGIT is a Transformer decoder conditioned on both CLIP image tokens and text tokens. The model is trained using \"teacher forcing\" on a lot of (image, text) pairs.\n\nThe goal for the model is simply to predict the next text token, giving the image tokens and previous text tokens.\n\nThe model has full access to (i.e. a bidirectional attention mask is used for) the image patch tokens, but only has access to the previous text tokens (i.e. a causal attention mask is used for the text tokens) when predicting the next text token.\n\n![GIT architecture](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/git_architecture.jpg)\n\nThis allows the model to be used for tasks like:\n\n- image and video captioning\n- visual question answering (VQA) on images and videos\n- even image classification (by simply conditioning the model on the image and asking it to generate a class for it in text).\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "git",
+                "image-text-to-text",
+                "vision",
+                "image-captioning",
+                "image-to-text",
+                "en",
+                "arxiv:2205.14100",
+                "license:mit",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

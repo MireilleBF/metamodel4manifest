@@ -1,0 +1,142 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:e182cfe9-01e2-4489-a94f-d12ab5780253",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:20.173290+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "facebook/bart-large-mnli-80c6aad2-fad7-549b-a06b-3b412ced13d0",
+            "name": "facebook/bart-large-mnli",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/facebook/bart-large-mnli",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "zero-shot-classification",
+                    "architectureFamily": "bart",
+                    "modelArchitecture": "BartForSequenceClassification",
+                    "datasets": [
+                        {
+                            "ref": "multi_nli-3f66ff16-a557-5dab-8458-0d3efcbec3da"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "facebook"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "jax",
+                "rust",
+                "safetensors",
+                "bart",
+                "text-classification",
+                "zero-shot-classification",
+                "dataset:multi_nli",
+                "arxiv:1910.13461",
+                "arxiv:1909.00161",
+                "license:mit",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "multi_nli-3f66ff16-a557-5dab-8458-0d3efcbec3da",
+            "name": "multi_nli",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "multi_nli-3f66ff16-a557-5dab-8458-0d3efcbec3da",
+                    "name": "multi_nli",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/multi_nli",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-classification"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "natural-language-inference, multi-input-text-classification"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "crowdsourced"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced, found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "Multi-Genre Natural Language Inference"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "multinli"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train\", \"path\": \"data/train-*\"}, {\"split\": \"validation_matched\", \"path\": \"data/validation_matched-*\"}, {\"split\": \"validation_mismatched\", \"path\": \"data/validation_mismatched-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-3.0, cc-by-sa-3.0, mit, other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for Multi-Genre Natural Language Inference (MultiNLI)\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nThe Multi-Genre Natural Language Inference (MultiNLI) corpus is a\ncrowd-sourced collection of 433k sentence pairs annotated with textual\nentailment information. The corpus is modeled on the SNLI corpus, but differs in\nthat covers a range of genres of spoken and written text, and supports a\ndistinctive cross-genre generalization evaluation. The corpus served as the\nbasis for the shared task\u2026 See the full description on the dataset page: https://huggingface.co/datasets/nyu-mll/multi_nli.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "nyu-mll",
+                                    "url": "https://huggingface.co/nyu-mll"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

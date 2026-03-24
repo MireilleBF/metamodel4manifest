@@ -1,0 +1,73 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:8dd42125-44e7-4d3f-99b7-fdfdcd7d1dd5",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:35.743240+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "ibm-research/merlinite-7b-70c91339-5929-50c5-b525-5f668700ac4a",
+            "name": "ibm-research/merlinite-7b",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/ibm-research/merlinite-7b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "mistralai/Mistral-7B-v0.1"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "ibm-research"
+                }
+            ],
+            "description": "### Overview\n\n![Screenshot 2024-02-22 at 11.26.13\u202fAM.png](Model%20Card%20for%20Merlinite%207b%2028cc0b72cf574a4a828140d3539ede4a/Screenshot_2024-02-22_at_11.26.13_AM.png)\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "merlinite",
+                "ibm",
+                "lab",
+                "labrador",
+                "labradorite",
+                "en",
+                "arxiv:2403.01081",
+                "base_model:mistralai/Mistral-7B-v0.1",
+                "base_model:finetune:mistralai/Mistral-7B-v0.1",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

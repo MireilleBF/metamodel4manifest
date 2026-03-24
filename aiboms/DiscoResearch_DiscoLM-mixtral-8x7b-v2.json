@@ -1,0 +1,188 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:4638d5d0-70ce-404f-8bc0-2ddf7c912070",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:45.960701+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "DiscoResearch/DiscoLM-mixtral-8x7b-v2-2888b6ff-e6f5-5178-9bca-1903e5027f69",
+            "name": "DiscoResearch/DiscoLM-mixtral-8x7b-v2",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/DiscoResearch/DiscoLM-mixtral-8x7b-v2",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MixtralForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "migtissera/Synthia-v1.3-870679a5-11e4-5a5a-9021-0c574622ecb4"
+                        },
+                        {
+                            "ref": "meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1"
+                        },
+                        {
+                            "ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "DiscoResearch"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "conversational",
+                "custom_code",
+                "en",
+                "dataset:migtissera/Synthia-v1.3",
+                "dataset:meta-math/MetaMathQA",
+                "dataset:LDJnr/Capybara",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "migtissera/Synthia-v1.3-870679a5-11e4-5a5a-9021-0c574622ecb4",
+            "name": "migtissera/Synthia-v1.3",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "migtissera/Synthia-v1.3-870679a5-11e4-5a5a-9021-0c574622ecb4",
+                    "name": "migtissera/Synthia-v1.3",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/migtissera/Synthia-v1.3",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "migtissera",
+                                    "url": "https://huggingface.co/migtissera"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1",
+            "name": "meta-math/MetaMathQA",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "meta-math/MetaMathQA-c6cf810a-8b06-5552-a876-53681c5fe9a1",
+                    "name": "meta-math/MetaMathQA",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/meta-math/MetaMathQA",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "View the project page:\nhttps://meta-math.github.io/\nsee our paper at https://arxiv.org/abs/2309.12284\n\n\t\n\t\t\n\t\tNote\n\t\n\nAll MetaMathQA data are augmented from the training sets of GSM8K and MATH. \nNone of the augmented data is from the testing set.\nYou can check the original_question in meta-math/MetaMathQA, each item is from the GSM8K or MATH train set.\n\n\t\n\t\t\n\t\tModel Details\n\t\n\nMetaMath-Mistral-7B is fully fine-tuned on the MetaMathQA datasets and based on the powerful Mistral-7B model. It is\u2026 See the full description on the dataset page: https://huggingface.co/datasets/meta-math/MetaMathQA.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "meta-math",
+                                    "url": "https://huggingface.co/meta-math"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b",
+            "name": "LDJnr/Capybara",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "LDJnr/Capybara-b2bf7143-e608-5efa-808f-227e2689633b",
+                    "name": "LDJnr/Capybara",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/LDJnr/Capybara",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "conversational, question-answering, text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "LessWrong-Amplify-Instruct"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tThis is the Official Capybara dataset. Over 10,000 multi-turn examples.\n\t\n\nCapybara is the culmination of insights derived from synthesis techniques like Evol-instruct (used for WizardLM), Alpaca, Orca, Vicuna, Lamini, FLASK and others.\nThe single-turn seeds used to initiate the Amplify-Instruct synthesis of conversations are mostly based on datasets that i've personally vetted extensively, and are often highly regarded for their diversity and demonstration of logical robustness and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/LDJnr/Capybara.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "LDJnr",
+                                    "url": "https://huggingface.co/LDJnr"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

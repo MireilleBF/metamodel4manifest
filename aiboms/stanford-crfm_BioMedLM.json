@@ -1,0 +1,137 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:72cdecee-f8ac-4a77-b006-f4595e584f31",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:23.917184+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "stanford-crfm/BioMedLM-a4d237fc-ac63-5552-b98b-1b8982ffa241",
+            "name": "stanford-crfm/BioMedLM",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "bigscience-bloom-rail-1.0"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/stanford-crfm/BioMedLM",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gpt2",
+                    "modelArchitecture": "GPT2LMHeadModel",
+                    "datasets": [
+                        {
+                            "ref": "pubmed-59ba6daf-eef7-5c8f-add5-93f728e7db0f"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "# Uses\n\nThis model is licensed under the terms of [BigScience Open RAIL-M license](https://huggingface.co/spaces/bigscience/license) used for [BLOOM](https://huggingface.co/bigscience/bloom-1b1). Please note that, among other restrictions, this license forbids use of the model (or derivatives thereof)\n\"To provide medical advice and medical results interpretation.\" If you are concerned that your use case would follow under the \"letter\" of this restriction, but not the \"spirit,\" you can contact us to discuss.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "stanford-crfm"
+                }
+            ],
+            "description": "# Model Details\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "gpt2",
+                "text-generation",
+                "dataset:pubmed",
+                "arxiv:2403.18421",
+                "license:bigscience-bloom-rail-1.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "pubmed-59ba6daf-eef7-5c8f-add5-93f728e7db0f",
+            "name": "pubmed",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "pubmed-59ba6daf-eef7-5c8f-add5-93f728e7db0f",
+                    "name": "pubmed",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/pubmed",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, fill-mask, text-classification"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "language-modeling, masked-language-modeling, text-scoring, topic-classification"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10M<n<100M"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "crowdsourced"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "PubMed"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "pubmed"
+                            },
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "NLM produces a baseline set of MEDLINE/PubMed citation records in XML format for download on an annual basis. The annual baseline is released in December of each year. Each day, NLM produces update files that include new, revised and deleted citations. See our documentation page for more information.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "ncbi",
+                                    "url": "https://huggingface.co/ncbi"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

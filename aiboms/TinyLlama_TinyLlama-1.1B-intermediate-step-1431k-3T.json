@@ -1,0 +1,206 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:6dc47b09-8c83-41c6-852c-17cdd10e977e",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:40.342382+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T-18d39ff6-e8f5-527a-9461-dd57145354aa",
+            "name": "TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/TinyLlama/TinyLlama-1.1B-intermediate-step-1431k-3T",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "cerebras/SlimPajama-627B-b36a2f54-050e-55dd-bb65-57b90579dbe6"
+                        },
+                        {
+                            "ref": "bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: ai2_arc, split: test, config: ARC-Challenge",
+                            "type": "acc_norm",
+                            "value": 33.87
+                        },
+                        {
+                            "slice": "dataset: hellaswag, split: validation",
+                            "type": "acc_norm",
+                            "value": 60.31
+                        },
+                        {
+                            "slice": "dataset: cais/mmlu, split: test, config: all",
+                            "type": "acc",
+                            "value": 26.04
+                        },
+                        {
+                            "slice": "dataset: truthful_qa, split: validation, config: multiple_choice",
+                            "type": "mc2",
+                            "value": 37.32
+                        },
+                        {
+                            "slice": "dataset: winogrande, split: validation, config: winogrande_xl",
+                            "type": "acc",
+                            "value": 59.51
+                        },
+                        {
+                            "slice": "dataset: gsm8k, split: test, config: main",
+                            "type": "acc",
+                            "value": 1.44
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "TinyLlama"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "en",
+                "dataset:cerebras/SlimPajama-627B",
+                "dataset:bigcode/starcoderdata",
+                "license:apache-2.0",
+                "model-index",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "cerebras/SlimPajama-627B-b36a2f54-050e-55dd-bb65-57b90579dbe6",
+            "name": "cerebras/SlimPajama-627B",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cerebras/SlimPajama-627B-b36a2f54-050e-55dd-bb65-57b90579dbe6",
+                    "name": "cerebras/SlimPajama-627B",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cerebras/SlimPajama-627B",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "SlimPajama-627B"
+                            }
+                        ]
+                    },
+                    "description": "The dataset consists of 59166 jsonl files and is ~895GB compressed. It is a cleaned and deduplicated version of Together's RedPajama. \nCheck out our blog post explaining our methods, our code on GitHub, and join the discussion on the Cerebras Discord.\n\n\t\n\t\t\n\t\n\t\n\t\tGetting Started\n\t\n\nYou can download the dataset using Hugging Face datasets:\nfrom datasets import load_dataset\nds = load_dataset(\"cerebras/SlimPajama-627B\")\n\n\n\t\n\t\n\t\n\t\tBackground\n\t\n\nToday we are releasing SlimPajama \u2013 the largest\u2026 See the full description on the dataset page: https://huggingface.co/datasets/cerebras/SlimPajama-627B.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cerebras",
+                                    "url": "https://huggingface.co/cerebras"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827",
+            "name": "bigcode/starcoderdata",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigcode/starcoderdata-abfd2d2a-390d-56b4-ad9c-c532362d5827",
+                    "name": "bigcode/starcoderdata",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigcode/starcoderdata",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "code"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "unknown"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": ""
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced, expert-generated"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "The-Stack"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": ""
+                            },
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tStarCoder Training Dataset\n\t\n\n\n\t\n\t\t\n\t\tDataset description\n\t\n\nThis is the dataset used for training StarCoder and StarCoderBase. It contains 783GB of code in 86 programming languages, and includes 54GB GitHub Issues + 13GB Jupyter notebooks in scripts and text-code pairs,\nand 32GB of GitHub commits, which is approximately 250 Billion tokens.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset creation\n\t\n\nThe creation and filtering of The Stack is explained in the original dataset, we additionally decontaminate and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/bigcode/starcoderdata.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigcode",
+                                    "url": "https://huggingface.co/bigcode"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

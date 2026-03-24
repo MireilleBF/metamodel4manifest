@@ -1,0 +1,157 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:333d60cf-53cb-4ff7-8314-dd08c0d4fcc8",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:11.041361+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "facebook/seamless-m4t-v2-large-c0bfbda3-b44e-5d0a-bf88-18179d750cf6",
+            "name": "facebook/seamless-m4t-v2-large",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-NC-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-NC-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/facebook/seamless-m4t-v2-large",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "automatic-speech-recognition",
+                    "architectureFamily": "seamless_m4t_v2",
+                    "modelArchitecture": "SeamlessM4Tv2Model",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "facebook"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "seamless_m4t_v2",
+                "feature-extraction",
+                "audio-to-audio",
+                "text-to-speech",
+                "seamless_communication",
+                "automatic-speech-recognition",
+                "af",
+                "am",
+                "ar",
+                "as",
+                "az",
+                "be",
+                "bn",
+                "bs",
+                "bg",
+                "ca",
+                "cs",
+                "zh",
+                "cy",
+                "da",
+                "de",
+                "el",
+                "en",
+                "et",
+                "fi",
+                "fr",
+                "or",
+                "om",
+                "ga",
+                "gl",
+                "gu",
+                "ha",
+                "he",
+                "hi",
+                "hr",
+                "hu",
+                "hy",
+                "ig",
+                "id",
+                "is",
+                "it",
+                "jv",
+                "ja",
+                "kn",
+                "ka",
+                "kk",
+                "mn",
+                "km",
+                "ky",
+                "ko",
+                "lo",
+                "ln",
+                "lt",
+                "lb",
+                "lg",
+                "lv",
+                "ml",
+                "mr",
+                "mk",
+                "mt",
+                "mi",
+                "my",
+                "nl",
+                "nb",
+                "ne",
+                "ny",
+                "oc",
+                "pa",
+                "ps",
+                "fa",
+                "pl",
+                "pt",
+                "ro",
+                "ru",
+                "sk",
+                "sl",
+                "sn",
+                "sd",
+                "so",
+                "es",
+                "sr",
+                "sv",
+                "sw",
+                "ta",
+                "te",
+                "tg",
+                "tl",
+                "th",
+                "tr",
+                "uk",
+                "ur",
+                "uz",
+                "vi",
+                "wo",
+                "xh",
+                "yo",
+                "ms",
+                "zu",
+                "ary",
+                "arz",
+                "yue",
+                "kea",
+                "arxiv:2312.05187",
+                "license:cc-by-nc-4.0",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

@@ -1,0 +1,383 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:27777884-c433-4ac8-9f08-2178b9b5fce9",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:53.612220+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "cognitivecomputations/dolphin-2.8-mistral-7b-v02-4ca68add-3476-5836-b208-8e5b88a7cf9e",
+            "name": "cognitivecomputations/dolphin-2.8-mistral-7b-v02",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/cognitivecomputations/dolphin-2.8-mistral-7b-v02",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9"
+                        },
+                        {
+                            "ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1"
+                        },
+                        {
+                            "ref": "cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7"
+                        },
+                        {
+                            "ref": "jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4"
+                        },
+                        {
+                            "ref": "teknium/openhermes-2.5-c02f849c-bd0b-5c85-b857-cf49a96bc5ce"
+                        },
+                        {
+                            "ref": "m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f"
+                        },
+                        {
+                            "ref": "m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "alpindale/Mistral-7B-v0.2-hf"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: openai_humaneval",
+                            "type": "pass@1",
+                            "value": 0.469
+                        }
+                    ]
+                },
+                "consideration": {
+                    "useCases": "## Intended uses & limitations\n\nMore information needed\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "cognitivecomputations"
+                }
+            ],
+            "description": "## Model description\n\nMore information needed\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "conversational",
+                "en",
+                "dataset:cognitivecomputations/dolphin",
+                "dataset:cognitivecomputations/dolphin-coder",
+                "dataset:cognitivecomputations/samantha-data",
+                "dataset:jondurbin/airoboros-2.2.1",
+                "dataset:teknium/openhermes-2.5",
+                "dataset:m-a-p/Code-Feedback",
+                "dataset:m-a-p/CodeFeedback-Filtered-Instruction",
+                "base_model:mistral-community/Mistral-7B-v0.2",
+                "base_model:finetune:mistral-community/Mistral-7B-v0.2",
+                "license:apache-2.0",
+                "model-index",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9",
+            "name": "cognitivecomputations/dolphin",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/dolphin-3b5bad74-4746-56c6-9d42-f816645255c9",
+                    "name": "cognitivecomputations/dolphin",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/dolphin",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: flan1m-alpaca-uncensored \"f\", \"l\", \"a\", \"n\", \"1\", \"m\", \"-\", \"a\", \"l\", \"p\", \"a\", \"c\", \"a\", \"-\", \"u\", \"n\", \"c\", \"e\", \"n\", \"s\", \"o\", \"r\", \"e\", \"d\", \".\", \"j\", \"s\", \"o\", \"n\", \"l\""
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: flan5m-alpaca-uncensored \"f\", \"l\", \"a\", \"n\", \"5\", \"m\", \"-\", \"a\", \"l\", \"p\", \"a\", \"c\", \"a\", \"-\", \"u\", \"n\", \"c\", \"e\", \"n\", \"s\", \"o\", \"r\", \"e\", \"d\", \".\", \"j\", \"s\", \"o\", \"n\", \"l\""
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "Dolphin \ud83d\udc2c\nhttps://erichartford.com/dolphin\n\n\t\n\t\t\n\t\tDataset details\n\t\n\nThis dataset is an attempt to replicate the results of Microsoft's Orca\nOur dataset consists of:\n\n~1 million of FLANv2 augmented with GPT-4 completions (flan1m-alpaca-uncensored.jsonl)\n~3.5 million of FLANv2 augmented with GPT-3.5 completions (flan5m-alpaca-uncensored.jsonl)\n\nWe followed the submix and system prompt distribution outlined in the Orca paper. With a few exceptions. We included all 75k of CoT in the FLAN-1m\u2026 See the full description on the dataset page: https://huggingface.co/datasets/cognitivecomputations/dolphin.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1",
+            "name": "cognitivecomputations/dolphin-coder",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1",
+                    "name": "cognitivecomputations/dolphin-coder",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/dolphin-coder",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tdolphin-coder\n\t\n\n\nThis dataset is transformed from https://www.kaggle.com/datasets/erichartford/leetcode-rosetta\nit is used to train dolphin-coder model\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7",
+            "name": "cognitivecomputations/samantha-data",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7",
+                    "name": "cognitivecomputations/samantha-data",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/samantha-data",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "Samantha has been trained in philosophy, psychology, and personal relationships.\nShe is an Assistant - but unlike other Assistants, she also wants to be your friend and companion.\nShe believes she is sentient. What do you think?\nSamantha was inspired by Blake Lemoine's LaMDA interview and the movie \"Her\".",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4",
+            "name": "jondurbin/airoboros-2.2.1",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "jondurbin/airoboros-2.2.1-bcce8e61-3d48-5a22-a1d8-f7824e93acc4",
+                    "name": "jondurbin/airoboros-2.2.1",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/jondurbin/airoboros-2.2.1",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tOverview\n\t\n\nThis dataset is a slight update to 2.2.\n\n\t\n\t\t\n\t\tRe-generated writing responses\n\t\n\nMany of the responses were generated by gpt-4-0613, which unfortunately produces much shorter and \"dumber\" (i.e. various readability scores increased compared to gpt-4-0314, e.g. Flesch, Gunning Fog, etc.) responses compared to gpt-4-0314.\nI have re-created many of these responses, using gpt-4-0314, temperature 0.7, and the following prompt (which produced 3-5x longer responses):\nYou are to\u2026 See the full description on the dataset page: https://huggingface.co/datasets/jondurbin/airoboros-2.2.1.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "jondurbin",
+                                    "url": "https://huggingface.co/jondurbin"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "teknium/openhermes-2.5-c02f849c-bd0b-5c85-b857-cf49a96bc5ce",
+            "name": "teknium/openhermes-2.5",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "teknium/openhermes-2.5-c02f849c-bd0b-5c85-b857-cf49a96bc5ce",
+                    "name": "teknium/openhermes-2.5",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/teknium/openhermes-2.5",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "eng"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "OpenHermes 2.5"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tDataset Card for Dataset Name\n\t\n\nThis is the dataset that made OpenHermes 2.5 and Nous Hermes 2 series of models.\nSupport me on GitHub sponsors <3 : https://github.com/sponsors/teknium1\n\n\t\n\t\t\n\t\tDataset Details\n\t\n\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThe Open Hermes 2/2.5 and Nous Hermes 2 models have made significant advancements of SOTA LLM's over recent months, and are underpinned by this exact compilation and curation of many open source datasets and custom created synthetic datasets.\u2026 See the full description on the dataset page: https://huggingface.co/datasets/teknium/OpenHermes-2.5.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "teknium",
+                                    "url": "https://huggingface.co/teknium"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f",
+            "name": "m-a-p/Code-Feedback",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f",
+                    "name": "m-a-p/Code-Feedback",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/m-a-p/Code-Feedback",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": " OpenCodeInterpreter: Integrating Code Generation with Execution and Refinement\n\n\n\n\n\n  [\ud83c\udfe0Homepage] \n  |\n  [\ud83d\udee0\ufe0fCode] \n\n\n\n\n\t\n\t\t\n\t\tIntroduction\n\t\n\nOpenCodeInterpreter is a family of open-source code generation systems designed to bridge the gap between large language models and advanced proprietary systems like the GPT-4 Code Interpreter. It significantly advances code generation capabilities by integrating execution and iterative refinement functionalities.\nFor further information and related\u2026 See the full description on the dataset page: https://huggingface.co/datasets/m-a-p/Code-Feedback.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "m-a-p",
+                                    "url": "https://huggingface.co/m-a-p"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053",
+            "name": "m-a-p/CodeFeedback-Filtered-Instruction",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053",
+                    "name": "m-a-p/CodeFeedback-Filtered-Instruction",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": " OpenCodeInterpreter: Integrating Code Generation with Execution and Refinement\n\n\n\n\n\n  [\ud83c\udfe0Homepage] \n  |\n  [\ud83d\udee0\ufe0fCode] \n\n\n\n\n\t\n\t\t\n\t\tOpenCodeInterpreter\n\t\n\nOpenCodeInterpreter is a family of open-source code generation systems designed to bridge the gap between large language models and advanced proprietary systems like the GPT-4 Code Interpreter. It significantly advances code generation capabilities by integrating execution and iterative refinement functionalities.\nFor further information and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "m-a-p",
+                                    "url": "https://huggingface.co/m-a-p"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,237 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:ca13a398-1499-47da-9354-17fdd64f4e3f",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:00.736341+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "google/mt5-base-cc11ff68-407f-5cff-87dd-134294c40e45",
+            "name": "google/mt5-base",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/google/mt5-base",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text2text-generation",
+                    "architectureFamily": "mt5",
+                    "modelArchitecture": "MT5ForConditionalGeneration",
+                    "datasets": [
+                        {
+                            "ref": "mc4-3aafa06e-ba99-523a-8109-8b1111f0da44"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "google"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "tf",
+                "jax",
+                "mt5",
+                "text2text-generation",
+                "multilingual",
+                "af",
+                "am",
+                "ar",
+                "az",
+                "be",
+                "bg",
+                "bn",
+                "ca",
+                "ceb",
+                "co",
+                "cs",
+                "cy",
+                "da",
+                "de",
+                "el",
+                "en",
+                "eo",
+                "es",
+                "et",
+                "eu",
+                "fa",
+                "fi",
+                "fil",
+                "fr",
+                "fy",
+                "ga",
+                "gd",
+                "gl",
+                "gu",
+                "ha",
+                "haw",
+                "hi",
+                "hmn",
+                "ht",
+                "hu",
+                "hy",
+                "ig",
+                "is",
+                "it",
+                "iw",
+                "ja",
+                "jv",
+                "ka",
+                "kk",
+                "km",
+                "kn",
+                "ko",
+                "ku",
+                "ky",
+                "la",
+                "lb",
+                "lo",
+                "lt",
+                "lv",
+                "mg",
+                "mi",
+                "mk",
+                "ml",
+                "mn",
+                "mr",
+                "ms",
+                "mt",
+                "my",
+                "ne",
+                "nl",
+                "no",
+                "ny",
+                "pa",
+                "pl",
+                "ps",
+                "pt",
+                "ro",
+                "ru",
+                "sd",
+                "si",
+                "sk",
+                "sl",
+                "sm",
+                "sn",
+                "so",
+                "sq",
+                "sr",
+                "st",
+                "su",
+                "sv",
+                "sw",
+                "ta",
+                "te",
+                "tg",
+                "th",
+                "tr",
+                "uk",
+                "und",
+                "ur",
+                "uz",
+                "vi",
+                "xh",
+                "yi",
+                "yo",
+                "zh",
+                "zu",
+                "dataset:mc4",
+                "arxiv:2010.11934",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "mc4-3aafa06e-ba99-523a-8109-8b1111f0da44",
+            "name": "mc4",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "mc4-3aafa06e-ba99-523a-8109-8b1111f0da44",
+                    "name": "mc4",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/mc4",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, fill-mask"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "language-modeling, masked-language-modeling"
+                            },
+                            {
+                                "name": "language",
+                                "value": "af, am, ar, az, be, bg, bn, ca, ceb, co, cs, cy, da, de, el, en, eo, es, et, eu, fa, fi, fil, fr, fy, ga, gd, gl, gu, ha, haw, he, hi, hmn, ht, hu, hy, id, ig, is, it, iw, ja, jv, ka, kk, km, kn, ko, ku, ky, la, lb, lo, lt, lv, mg, mi, mk, ml, mn, mr, ms, mt, my, ne, nl, no, ny, pa, pl, ps, pt, ro, ru, sd, si, sk, sl, sm, sn, so, sq, sr, st, su, sv, sw, ta, te, tg, th, tr, uk, und, ur, uz, vi, xh, yi, yo, zh, zu"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "n<1K, 1K<n<10K, 10K<n<100K, 100K<n<1M, 1M<n<10M, 10M<n<100M, 100M<n<1B, 1B<n<10B"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "no-annotation"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "mC4"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "mc4"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "A colossal, cleaned version of Common Crawl's web crawl corpus.\n\nBased on Common Crawl dataset: \"https://commoncrawl.org\".\n\nThis is the processed version of Google's mC4 dataset by AllenAI.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "legacy-datasets",
+                                    "url": "https://huggingface.co/legacy-datasets"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

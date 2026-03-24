@@ -1,0 +1,147 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:338726cb-d48e-4355-b2d0-adc89a918c26",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:11:08.267023+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "SamLowe/roberta-base-go_emotions-3ad6c5d6-e287-57c2-b96e-a77915e66261",
+            "name": "SamLowe/roberta-base-go_emotions",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/SamLowe/roberta-base-go_emotions",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-classification",
+                    "architectureFamily": "roberta",
+                    "modelArchitecture": "RobertaForSequenceClassification",
+                    "datasets": [
+                        {
+                            "ref": "go_emotions-5ef78ddc-fb6d-52fb-a064-a3b330546c87"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "SamLowe"
+                }
+            ],
+            "description": "#### Overview\n\nModel trained from [roberta-base](https://huggingface.co/roberta-base) on the [go_emotions](https://huggingface.co/datasets/go_emotions) dataset for multi-label classification.\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "roberta",
+                "text-classification",
+                "emotions",
+                "multi-class-classification",
+                "multi-label-classification",
+                "en",
+                "dataset:go_emotions",
+                "doi:10.57967/hf/3548",
+                "license:mit",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "go_emotions-5ef78ddc-fb6d-52fb-a064-a3b330546c87",
+            "name": "go_emotions",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "go_emotions-5ef78ddc-fb6d-52fb-a064-a3b330546c87",
+                    "name": "go_emotions",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/go_emotions",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-classification"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": "multi-class-classification, multi-label-classification"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M, 10K<n<100K"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "crowdsourced"
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "found"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "GoEmotions"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "original"
+                            },
+                            {
+                                "name": "paperswithcode_id",
+                                "value": "goemotions"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: raw {\"split\": \"train\", \"path\": \"raw/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: simplified {\"split\": \"train\", \"path\": \"simplified/train-*\"}, {\"split\": \"validation\", \"path\": \"simplified/validation-*\"}, {\"split\": \"test\", \"path\": \"simplified/test-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for GoEmotions\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nThe GoEmotions dataset contains 58k carefully curated Reddit comments labeled for 27 emotion categories or Neutral.\nThe raw data is included as well as the smaller, simplified version of the dataset with predefined train/val/test\nsplits.\n\n\t\n\t\t\n\t\tSupported Tasks and Leaderboards\n\t\n\nThis dataset is intended for multi-class, multi-label emotion classification.\n\n\t\n\t\t\n\t\tLanguages\n\t\n\nThe data is in English.\n\n\t\n\t\t\n\t\tDataset Structure\u2026 See the full description on the dataset page: https://huggingface.co/datasets/google-research-datasets/go_emotions.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "google-research-datasets",
+                                    "url": "https://huggingface.co/google-research-datasets"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

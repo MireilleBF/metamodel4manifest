@@ -1,0 +1,93 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:f361358e-7a44-4a65-a164-8097b9ea79a4",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:18.547856+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "latentcat/control_v1p_sd15_brightness-f8f0a68b-e99c-54b0-a79e-2074c7c10ff3",
+            "name": "latentcat/control_v1p_sd15_brightness",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/latentcat/control_v1p_sd15_brightness",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": [
+                        {
+                            "ref": "ioclab/grayscale_image_aesthetic_3M-692f98de-fcf5-5fdf-9ff0-8bcfc6315f4e"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Uses\n\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "latentcat"
+                }
+            ],
+            "description": "## Model Details\n\n- **Developed by:** [@ciaochaos](https://github.com/ciaochaos)\n- **Shared by [optional]:** [More Information Needed]\n- **Model type:** Stable Diffusion ControlNet model for [web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui)\n- **License:** [The CreativeML OpenRAIL M license](https://huggingface.co/spaces/CompVis/stable-diffusion-license) is an [Open RAIL M license](https://www.licenses.ai/blog/2022/8/18/naming-convention-of-responsible-ai-licenses), adapted from the work that [BigScience](https://bigscience.huggingface.co/) and [the RAIL Initiative](https://www.licenses.ai/) are jointly carrying in the area of responsible AI licensing. See also [the article about the BLOOM Open RAIL license](https://bigscience.huggingface.co/blog/the-bigscience-rail-license) on which our license is based.\n\n",
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "image-to-image",
+                "controlnet",
+                "en",
+                "dataset:ioclab/grayscale_image_aesthetic_3M",
+                "license:creativeml-openrail-m",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "ioclab/grayscale_image_aesthetic_3M-692f98de-fcf5-5fdf-9ff0-8bcfc6315f4e",
+            "name": "ioclab/grayscale_image_aesthetic_3M",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "ioclab/grayscale_image_aesthetic_3M-692f98de-fcf5-5fdf-9ff0-8bcfc6315f4e",
+                    "name": "ioclab/grayscale_image_aesthetic_3M",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/ioclab/grayscale_image_aesthetic_3M",
+                        "properties": []
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for \"grayscale_image_aesthetic_3M\"\n\t\n\nMore Information needed\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "latentcat",
+                                    "url": "https://huggingface.co/latentcat"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

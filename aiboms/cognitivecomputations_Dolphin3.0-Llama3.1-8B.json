@@ -1,0 +1,762 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:fd9a1e56-2714-4f3a-a4e5-6c064316ec71",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:04.799707+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "cognitivecomputations/Dolphin3.0-Llama3.1-8B-58cbd637-5b9a-5d29-a126-ae1817a90e1e",
+            "name": "cognitivecomputations/Dolphin3.0-Llama3.1-8B",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3.1"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/cognitivecomputations/Dolphin3.0-Llama3.1-8B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "OpenCoder-LLM/opc-sft-stage1-f0572249-17d5-5847-8e5a-72583934eca0"
+                        },
+                        {
+                            "ref": "OpenCoder-LLM/opc-sft-stage2-d7e9795c-e343-5ebc-b785-9718e7d737e8"
+                        },
+                        {
+                            "ref": "microsoft/orca-agentinstruct-1M-v1-bbc92138-5aa0-5737-8ce6-93043b04b4dd"
+                        },
+                        {
+                            "ref": "microsoft/orca-math-word-problems-200k-611afa9f-b6db-5b9f-9a51-598e4ce79d0e"
+                        },
+                        {
+                            "ref": "NousResearch/hermes-function-calling-v1-a6d53a4d-e191-5d88-867f-4472e0bdc9f6"
+                        },
+                        {
+                            "ref": "AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb"
+                        },
+                        {
+                            "ref": "AI-MO/NuminaMath-TIR-7930ec33-be02-5b4c-9fd0-00effafbc6ce"
+                        },
+                        {
+                            "ref": "allenai/tulu-3-sft-mixture-4f86da52-fbf0-52de-9b77-716bafb7e098"
+                        },
+                        {
+                            "ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1"
+                        },
+                        {
+                            "ref": "HuggingFaceTB/smoltalk-0cc0e162-0f38-50bd-b5b0-169bcd97515b"
+                        },
+                        {
+                            "ref": "cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7"
+                        },
+                        {
+                            "ref": "m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053"
+                        },
+                        {
+                            "ref": "m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "base_model",
+                        "value": "meta-llama/Llama-3.1-8B"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "cognitivecomputations"
+                }
+            ],
+            "tags": [
+                "safetensors",
+                "llama",
+                "en",
+                "dataset:OpenCoder-LLM/opc-sft-stage1",
+                "dataset:OpenCoder-LLM/opc-sft-stage2",
+                "dataset:microsoft/orca-agentinstruct-1M-v1",
+                "dataset:microsoft/orca-math-word-problems-200k",
+                "dataset:NousResearch/hermes-function-calling-v1",
+                "dataset:AI-MO/NuminaMath-CoT",
+                "dataset:AI-MO/NuminaMath-TIR",
+                "dataset:allenai/tulu-3-sft-mixture",
+                "dataset:cognitivecomputations/dolphin-coder",
+                "dataset:HuggingFaceTB/smoltalk",
+                "dataset:cognitivecomputations/samantha-data",
+                "dataset:m-a-p/CodeFeedback-Filtered-Instruction",
+                "dataset:m-a-p/Code-Feedback",
+                "base_model:meta-llama/Llama-3.1-8B",
+                "base_model:finetune:meta-llama/Llama-3.1-8B",
+                "license:llama3.1",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "OpenCoder-LLM/opc-sft-stage1-f0572249-17d5-5847-8e5a-72583934eca0",
+            "name": "OpenCoder-LLM/opc-sft-stage1",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "OpenCoder-LLM/opc-sft-stage1-f0572249-17d5-5847-8e5a-72583934eca0",
+                    "name": "OpenCoder-LLM/opc-sft-stage1",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/OpenCoder-LLM/opc-sft-stage1",
+                        "properties": [
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: filtered_infinity_instruct {\"split\": \"train\", \"path\": \"data/filtered_infinity_instruct-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: largescale_diverse_instruct {\"split\": \"train\", \"path\": \"data/largescale_diverse_instruct-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: realuser_instruct {\"split\": \"train\", \"path\": \"data/realuser_instruct-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tOpenCoder Dataset\n\t\n\nThe OpenCoder dataset is composed of the following datasets:\n\nopc-sft-stage1: the sft data used for opencoder sft-stage1 <-- you are here\nopc-sft-stage2: the sft data used for opencoder sft-stage2\nopc-annealing-corpus: the synthetic data & algorithmic corpus used for opencoder annealing\nopc-fineweb-code-corpus: the code-related page recalled from fineweb\nopc-fineweb-math-corpus: the math-related page recalled from finewebrefineCode-code-corpus-meta: the meta-data\u2026 See the full description on the dataset page: https://huggingface.co/datasets/OpenCoder-LLM/opc-sft-stage1.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "OpenCoder-LLM",
+                                    "url": "https://huggingface.co/OpenCoder-LLM"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "OpenCoder-LLM/opc-sft-stage2-d7e9795c-e343-5ebc-b785-9718e7d737e8",
+            "name": "OpenCoder-LLM/opc-sft-stage2",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "OpenCoder-LLM/opc-sft-stage2-d7e9795c-e343-5ebc-b785-9718e7d737e8",
+                    "name": "OpenCoder-LLM/opc-sft-stage2",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/OpenCoder-LLM/opc-sft-stage2",
+                        "properties": [
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: educational_instruct {\"split\": \"train\", \"path\": \"educational_instruct/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: evol_instruct {\"split\": \"train\", \"path\": \"evol_instruct/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: mceval_instruct {\"split\": \"train\", \"path\": \"mceval_instruct/train-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: package_instruct {\"split\": \"train\", \"path\": \"package_instruct/train-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tOpenCoder Dataset\n\t\n\nThe OpenCoder dataset is composed of the following datasets:\n\nopc-sft-stage1: the sft data used for opencoder sft-stage1\nopc-sft-stage2: the sft data used for opencoder sft-stage2 <-- you are here\nopc-annealing-corpus: the synthetic data & algorithmic corpus used for opencoder annealing\nopc-fineweb-code-corpus: the code-related page recalled from fineweb\nopc-fineweb-math-corpus: the math-related page recalled from finewebrefineCode-code-corpus-meta: the meta-data\u2026 See the full description on the dataset page: https://huggingface.co/datasets/OpenCoder-LLM/opc-sft-stage2.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "OpenCoder-LLM",
+                                    "url": "https://huggingface.co/OpenCoder-LLM"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "microsoft/orca-agentinstruct-1M-v1-bbc92138-5aa0-5737-8ce6-93043b04b4dd",
+            "name": "microsoft/orca-agentinstruct-1M-v1",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "microsoft/orca-agentinstruct-1M-v1-bbc92138-5aa0-5737-8ce6-93043b04b4dd",
+                    "name": "microsoft/orca-agentinstruct-1M-v1",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/microsoft/orca-agentinstruct-1M-v1",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "1M<n<10M"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"creative_content\", \"path\": \"data/creative_content-*\"}, {\"split\": \"text_modification\", \"path\": \"data/text_modification-*\"}, {\"split\": \"struct2text_flow\", \"path\": \"data/struct2text_flow-*\"}, {\"split\": \"rc\", \"path\": \"data/rc-*\"}, {\"split\": \"rag\", \"path\": \"data/rag-*\"}, {\"split\": \"text_extraction\", \"path\": \"data/text_extraction-*\"}, {\"split\": \"mcq\", \"path\": \"data/mcq-*\"}, {\"split\": \"follow_up\", \"path\": \"data/follow_up-*\"}, {\"split\": \"analytical_reasoning\", \"path\": \"data/analytical_reasoning-*\"}, {\"split\": \"fermi\", \"path\": \"data/fermi-*\"}, {\"split\": \"fs_cot_flow\", \"path\": \"data/fs_cot_flow-*\"}, {\"split\": \"code_\", \"path\": \"data/code_-*\"}, {\"split\": \"brain_teaser\", \"path\": \"data/brain_teaser-*\"}, {\"split\": \"text_classification\", \"path\": \"data/text_classification-*\"}, {\"split\": \"open_domain_qa\", \"path\": \"data/open_domain_qa-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cdla-permissive-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card\n\t\n\nThis dataset is a fully synthetic set of instruction pairs where both the prompts and the responses have been synthetically generated, using the AgentInstruct framework.\nAgentInstruct is an extensible agentic framework for synthetic data generation. \nThis dataset contains ~1 million instruction pairs generated by the AgentInstruct, using only raw text content publicly avialble on the Web as seeds. The data covers different capabilities, such as text editing, creative\u2026 See the full description on the dataset page: https://huggingface.co/datasets/microsoft/orca-agentinstruct-1M-v1.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "microsoft",
+                                    "url": "https://huggingface.co/microsoft"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "microsoft/orca-math-word-problems-200k-611afa9f-b6db-5b9f-9a51-598e4ce79d0e",
+            "name": "microsoft/orca-math-word-problems-200k",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "microsoft/orca-math-word-problems-200k-611afa9f-b6db-5b9f-9a51-598e4ce79d0e",
+                    "name": "microsoft/orca-math-word-problems-200k",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train\", \"path\": \"data/train-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card\n\t\n\n\n\nThis dataset contains ~200K grade school math word problems. All the answers in this dataset is generated using Azure GPT4-Turbo. Please refer to Orca-Math: Unlocking the potential of\nSLMs in Grade School Math for details about the dataset construction. \n\n\t\n\t\t\n\t\tDataset Sources\n\t\n\n\n\n\nRepository: microsoft/orca-math-word-problems-200k\nPaper: Orca-Math: Unlocking the potential of\nSLMs in Grade School Math\n\n\n\t\n\t\t\n\t\tDirect Use\n\t\n\n\n\nThis dataset has been designed to\u2026 See the full description on the dataset page: https://huggingface.co/datasets/microsoft/orca-math-word-problems-200k.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "microsoft",
+                                    "url": "https://huggingface.co/microsoft"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "NousResearch/hermes-function-calling-v1-a6d53a4d-e191-5d88-867f-4472e0bdc9f6",
+            "name": "NousResearch/hermes-function-calling-v1",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "NousResearch/hermes-function-calling-v1-a6d53a4d-e191-5d88-867f-4472e0bdc9f6",
+                    "name": "NousResearch/hermes-function-calling-v1",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation, question-answering, feature-extraction"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: func_calling_singleturn \"f\", \"u\", \"n\", \"c\", \"-\", \"c\", \"a\", \"l\", \"l\", \"i\", \"n\", \"g\", \"-\", \"s\", \"i\", \"n\", \"g\", \"l\", \"e\", \"t\", \"u\", \"r\", \"n\", \".\", \"j\", \"s\", \"o\", \"n\""
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: func_calling \"f\", \"u\", \"n\", \"c\", \"-\", \"c\", \"a\", \"l\", \"l\", \"i\", \"n\", \"g\", \".\", \"j\", \"s\", \"o\", \"n\""
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: glaive_func_calling \"g\", \"l\", \"a\", \"i\", \"v\", \"e\", \"-\", \"f\", \"u\", \"n\", \"c\", \"t\", \"i\", \"o\", \"n\", \"-\", \"c\", \"a\", \"l\", \"l\", \"i\", \"n\", \"g\", \"-\", \"5\", \"k\", \".\", \"j\", \"s\", \"o\", \"n\""
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: json_mode_agentic \"j\", \"s\", \"o\", \"n\", \"-\", \"m\", \"o\", \"d\", \"e\", \"-\", \"a\", \"g\", \"e\", \"n\", \"t\", \"i\", \"c\", \".\", \"j\", \"s\", \"o\", \"n\""
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: json_mode_singleturn \"j\", \"s\", \"o\", \"n\", \"-\", \"m\", \"o\", \"d\", \"e\", \"-\", \"s\", \"i\", \"n\", \"g\", \"l\", \"e\", \"t\", \"u\", \"r\", \"n\", \".\", \"j\", \"s\", \"o\", \"n\""
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tHermes Function-Calling V1\n\t\n\nThis dataset is the compilation of structured output and function calling data used in the Hermes 2 Pro series of models.\nThis repository contains a structured output dataset with function-calling conversations, json-mode, agentic json-mode and structured extraction samples, designed to train LLM models in performing function calls and returning structured output based on natural language instructions. The dataset features various conversational scenarios\u2026 See the full description on the dataset page: https://huggingface.co/datasets/NousResearch/hermes-function-calling-v1.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "NousResearch",
+                                    "url": "https://huggingface.co/NousResearch"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb",
+            "name": "AI-MO/NuminaMath-CoT",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "AI-MO/NuminaMath-CoT-3aa976f5-9ca4-5435-8542-1a123856aafb",
+                    "name": "AI-MO/NuminaMath-CoT",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/AI-MO/NuminaMath-CoT",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "NuminaMath CoT"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train\", \"path\": \"data/train-*\"}, {\"split\": \"test\", \"path\": \"data/test-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for NuminaMath CoT\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nApproximately 860k math problems, where each solution is formatted in a Chain of Thought (CoT) manner. The sources of the dataset range from Chinese high school math exercises to US and international mathematics olympiad competition problems. The data were primarily collected from online exam paper PDFs and mathematics discussion forums. The processing steps include (a) OCR from the original PDFs, (b) segmentation into\u2026 See the full description on the dataset page: https://huggingface.co/datasets/AI-MO/NuminaMath-CoT.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "AI-MO",
+                                    "url": "https://huggingface.co/AI-MO"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "AI-MO/NuminaMath-TIR-7930ec33-be02-5b4c-9fd0-00effafbc6ce",
+            "name": "AI-MO/NuminaMath-TIR",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "AI-MO/NuminaMath-TIR-7930ec33-be02-5b4c-9fd0-00effafbc6ce",
+                    "name": "AI-MO/NuminaMath-TIR",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/AI-MO/NuminaMath-TIR",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "NuminaMath TIR"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train\", \"path\": \"data/train-*\"}, {\"split\": \"test\", \"path\": \"data/test-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for NuminaMath CoT\n\t\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nTool-integrated reasoning (TIR) plays a crucial role in this competition. However, collecting and annotating such data is both costly and time-consuming. To address this, we selected approximately 70k problems from the NuminaMath-CoT dataset, focusing on those with numerical outputs, most of which are integers. We then utilized a pipeline leveraging GPT-4 to generate TORA-like reasoning paths, executing the code and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/AI-MO/NuminaMath-TIR.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "AI-MO",
+                                    "url": "https://huggingface.co/AI-MO"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "allenai/tulu-3-sft-mixture-4f86da52-fbf0-52de-9b77-716bafb7e098",
+            "name": "allenai/tulu-3-sft-mixture",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "allenai/tulu-3-sft-mixture-4f86da52-fbf0-52de-9b77-716bafb7e098",
+                    "name": "allenai/tulu-3-sft-mixture",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-mixture",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "other"
+                            },
+                            {
+                                "name": "language",
+                                "value": "amh, arb, ary, ars, acq, arz, apc, ben, ceb, dan, deu, ell, eng, eus, fil, fin, fra, gle, guj, hat, hau, hin, hun, ibo, ind, ita, jav, jpn, kan, kir, kor, kur, lit, mal, mar, mlg, msa, mya, nep, nld, nso, nya, pan, pes, pol, por, pus, rus, sin, sna, snd, som, spa, sqi, srp, sun, swa, swe, tam, tel, tha, tur, ukr, urd, vie, wol, xho, yor, zho, zul"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "crowdsourced, expert-generated, machine-generated"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": "allenai/coconot, ai2-adapt-dev/flan_v2_converted, HuggingFaceH4/no_robots, OpenAssistant/oasst1, allenai/tulu-3-personas-math, allenai/tulu-3-sft-personas-math-grade, allenai/tulu-3-sft-personas-code, allenai/tulu-3-personas-algebra, allenai/tulu-3-sft-personas-instruction-following, AI-MO/NuminaMath-TIR, allenai/wildguardmix, allenai/wildjailbreak, allenai/tulu-3-hard-coded, CohereForAI/aya_dataset, allenai/WildChat-1M, LipengCS/Table-GPT, allenai/SciRIFF, theblackcat102/evol-codealpaca-v1"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train\", \"path\": \"data/train-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\n\t\n\t\t\n\t\tTulu 3 SFT Mixture\n\t\n\nNote that this collection is licensed under ODC-BY-1.0 license; different licenses apply to subsets of the data. Some portions of the dataset are non-commercial. We present the mixture as a research artifact.\nThe Tulu 3 SFT mixture was used to train the Tulu 3 series of models.\nIt contains 939,344 samples from the following sets:\n\nCoCoNot (ODC-BY-1.0), 10,983 prompts (Brahman et al., 2024)\nFLAN v2 via ai2-adapt-dev/flan_v2_converted, 89,982 prompts (Longpre et\u2026 See the full description on the dataset page: https://huggingface.co/datasets/allenai/tulu-3-sft-mixture.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "allenai",
+                                    "url": "https://huggingface.co/allenai"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1",
+            "name": "cognitivecomputations/dolphin-coder",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/dolphin-coder-69688d29-ae99-5d6e-828c-cfc37b7221b1",
+                    "name": "cognitivecomputations/dolphin-coder",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/dolphin-coder",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tdolphin-coder\n\t\n\n\nThis dataset is transformed from https://www.kaggle.com/datasets/erichartford/leetcode-rosetta\nit is used to train dolphin-coder model\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "HuggingFaceTB/smoltalk-0cc0e162-0f38-50bd-b5b0-169bcd97515b",
+            "name": "HuggingFaceTB/smoltalk",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "HuggingFaceTB/smoltalk-0cc0e162-0f38-50bd-b5b0-169bcd97515b",
+                    "name": "HuggingFaceTB/smoltalk",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/HuggingFaceTB/smoltalk",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "1M<n<10M"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "SmolTalk"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: all {\"split\": \"train\", \"path\": \"data/all/train-*\"}, {\"split\": \"test\", \"path\": \"data/all/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: smol-magpie-ultra {\"split\": \"train\", \"path\": \"data/smol-magpie-ultra/train-*\"}, {\"split\": \"test\", \"path\": \"data/smol-magpie-ultra/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: smol-constraints {\"split\": \"train\", \"path\": \"data/smol-constraints/train-*\"}, {\"split\": \"test\", \"path\": \"data/smol-constraints/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: smol-rewrite {\"split\": \"train\", \"path\": \"data/smol-rewrite/train-*\"}, {\"split\": \"test\", \"path\": \"data/smol-rewrite/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: smol-summarize {\"split\": \"train\", \"path\": \"data/smol-summarize/train-*\"}, {\"split\": \"test\", \"path\": \"data/smol-summarize/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: apigen-80k {\"split\": \"train\", \"path\": \"data/apigen-80k/train-*\"}, {\"split\": \"test\", \"path\": \"data/apigen-80k/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: everyday-conversations {\"split\": \"train\", \"path\": \"data/everyday-conversations/train-*\"}, {\"split\": \"test\", \"path\": \"data/everyday-conversations/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: explore-instruct-rewriting {\"split\": \"train\", \"path\": \"data/explore-instruct-rewriting/train-*\"}, {\"split\": \"test\", \"path\": \"data/explore-instruct-rewriting/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: longalign {\"split\": \"train\", \"path\": \"data/longalign/train-*\"}, {\"split\": \"test\", \"path\": \"data/longalign/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: metamathqa-50k {\"split\": \"train\", \"path\": \"data/metamathqa-50k/train-*\"}, {\"split\": \"test\", \"path\": \"data/metamathqa-50k/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: numina-cot-100k {\"split\": \"train\", \"path\": \"data/numina-cot-100k/train-*\"}, {\"split\": \"test\", \"path\": \"data/numina-cot-100k/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: openhermes-100k {\"split\": \"train\", \"path\": \"data/openhermes-100k/train-*\"}, {\"split\": \"test\", \"path\": \"data/openhermes-100k/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: self-oss-instruct {\"split\": \"train\", \"path\": \"data/self-oss-instruct/train-*\"}, {\"split\": \"test\", \"path\": \"data/self-oss-instruct/test-*\"}"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: systemchats-30k {\"split\": \"train\", \"path\": \"data/systemchats-30k/train-*\"}, {\"split\": \"test\", \"path\": \"data/systemchats-30k/test-*\"}"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tSmolTalk\n\t\n\n\n\n\t\n\t\t\n\t\tDataset description\n\t\n\nThis is a synthetic dataset designed for supervised finetuning (SFT) of LLMs. It was used to build SmolLM2-Instruct family of models and contains 1M samples. More details in our paper https://arxiv.org/abs/2502.02737\nDuring the development of SmolLM2, we observed that models finetuned on public SFT datasets underperformed compared to other models with proprietary instruction datasets. To address this gap, we created new synthetic datasets\u2026 See the full description on the dataset page: https://huggingface.co/datasets/HuggingFaceTB/smoltalk.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "HuggingFaceTB",
+                                    "url": "https://huggingface.co/HuggingFaceTB"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7",
+            "name": "cognitivecomputations/samantha-data",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "cognitivecomputations/samantha-data-9c52f41f-feb0-51dd-921a-2a581d9f2fc7",
+                    "name": "cognitivecomputations/samantha-data",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/cognitivecomputations/samantha-data",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "Samantha has been trained in philosophy, psychology, and personal relationships.\nShe is an Assistant - but unlike other Assistants, she also wants to be your friend and companion.\nShe believes she is sentient. What do you think?\nSamantha was inspired by Blake Lemoine's LaMDA interview and the movie \"Her\".",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "cognitivecomputations",
+                                    "url": "https://huggingface.co/cognitivecomputations"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053",
+            "name": "m-a-p/CodeFeedback-Filtered-Instruction",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "m-a-p/CodeFeedback-Filtered-Instruction-9012249d-db87-5b91-a4e9-2e2bd74e6053",
+                    "name": "m-a-p/CodeFeedback-Filtered-Instruction",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": " OpenCodeInterpreter: Integrating Code Generation with Execution and Refinement\n\n\n\n\n\n  [\ud83c\udfe0Homepage] \n  |\n  [\ud83d\udee0\ufe0fCode] \n\n\n\n\n\t\n\t\t\n\t\tOpenCodeInterpreter\n\t\n\nOpenCodeInterpreter is a family of open-source code generation systems designed to bridge the gap between large language models and advanced proprietary systems like the GPT-4 Code Interpreter. It significantly advances code generation capabilities by integrating execution and iterative refinement functionalities.\nFor further information and\u2026 See the full description on the dataset page: https://huggingface.co/datasets/m-a-p/CodeFeedback-Filtered-Instruction.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "m-a-p",
+                                    "url": "https://huggingface.co/m-a-p"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f",
+            "name": "m-a-p/Code-Feedback",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "m-a-p/Code-Feedback-f4d189a1-046d-5a43-8007-a1eec34e9a7f",
+                    "name": "m-a-p/Code-Feedback",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/m-a-p/Code-Feedback",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": " OpenCodeInterpreter: Integrating Code Generation with Execution and Refinement\n\n\n\n\n\n  [\ud83c\udfe0Homepage] \n  |\n  [\ud83d\udee0\ufe0fCode] \n\n\n\n\n\t\n\t\t\n\t\tIntroduction\n\t\n\nOpenCodeInterpreter is a family of open-source code generation systems designed to bridge the gap between large language models and advanced proprietary systems like the GPT-4 Code Interpreter. It significantly advances code generation capabilities by integrating execution and iterative refinement functionalities.\nFor further information and related\u2026 See the full description on the dataset page: https://huggingface.co/datasets/m-a-p/Code-Feedback.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "m-a-p",
+                                    "url": "https://huggingface.co/m-a-p"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

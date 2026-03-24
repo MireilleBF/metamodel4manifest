@@ -1,0 +1,80 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:bc8e02cb-c6bb-4911-b8b2-bc652d813730",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:50.062475+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "openai/whisper-tiny.en-eb5b8ac1-8407-59da-9152-c38a08894d04",
+            "name": "openai/whisper-tiny.en",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/openai/whisper-tiny.en",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "automatic-speech-recognition",
+                    "architectureFamily": "whisper",
+                    "modelArchitecture": "WhisperForConditionalGeneration",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: librispeech_asr, split: test, config: clean",
+                            "type": "wer",
+                            "value": 8.4372112320138
+                        },
+                        {
+                            "slice": "dataset: librispeech_asr, split: test, config: other",
+                            "type": "wer",
+                            "value": 14.857607503498356
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "openai"
+                }
+            ],
+            "description": "## Model details\n\nWhisper is a Transformer based encoder-decoder model, also referred to as a _sequence-to-sequence_ model.\nIt was trained on 680k hours of labelled speech data annotated using large-scale weak supervision.\n\nThe models were trained on either English-only data or multilingual data. The English-only models were trained\non the task of speech recognition. The multilingual models were trained on both speech recognition and speech\ntranslation. For speech recognition, the model predicts transcriptions in the *same* language as the audio.\nFor speech translation, the model predicts transcriptions to a *different* language to the audio.\n\nWhisper checkpoints come in five configurations of varying model sizes.\nThe smallest four are trained on either English-only or multilingual data.\nThe largest checkpoints are multilingual only. All ten of the pre-trained checkpoints\nare available on the [Hugging Face Hub](https://huggingface.co/models?search=openai/whisper). The\ncheckpoints are summarised in the following table with links to the models on the Hub:\n\n| Size     | Parameters | English-only                                         | Multilingual                                        |\n|----------|------------|------------------------------------------------------|-----------------------------------------------------|\n| tiny     | 39 M       | [\u2713](https://huggingface.co/openai/whisper-tiny.en)   | [\u2713](https://huggingface.co/openai/whisper-tiny)     |\n| base     | 74 M       | [\u2713](https://huggingface.co/openai/whisper-base.en)   | [\u2713](https://huggingface.co/openai/whisper-base)     |\n| small    | 244 M      | [\u2713](https://huggingface.co/openai/whisper-small.en)  | [\u2713](https://huggingface.co/openai/whisper-small)    |\n| medium   | 769 M      | [\u2713](https://huggingface.co/openai/whisper-medium.en) | [\u2713](https://huggingface.co/openai/whisper-medium)   |\n| large    | 1550 M     | x                                                    | [\u2713](https://huggingface.co/openai/whisper-large)    |\n| large-v2 | 1550 M     | x                                                    | [\u2713](https://huggingface.co/openai/whisper-large-v2) |\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "tf",
+                "jax",
+                "safetensors",
+                "whisper",
+                "automatic-speech-recognition",
+                "audio",
+                "hf-asr-leaderboard",
+                "en",
+                "arxiv:2212.04356",
+                "license:apache-2.0",
+                "model-index",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

@@ -1,0 +1,55 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:64d76bbb-b255-42b4-95d4-40d0e933aad2",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:03.162427+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "xinsir/controlnet-tile-sdxl-1.0-f8845e01-788e-5c8f-8385-b9ccdec01666",
+            "name": "xinsir/controlnet-tile-sdxl-1.0",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/xinsir/controlnet-tile-sdxl-1.0",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "xinsir"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "text-to-image",
+                "license:apache-2.0",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

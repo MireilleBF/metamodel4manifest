@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:e9a920b2-d54b-4c67-975e-a9a483d6ec72",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:44.333861+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "nvidia/Mistral-NeMo-Minitron-8B-Base-ae37ab7f-dc7c-5fbc-9c25-d35fd88af952",
+            "name": "nvidia/Mistral-NeMo-Minitron-8B-Base",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "nvidia-open-model-license",
+                        "url": "https://developer.download.nvidia.com/licenses/nvidia-open-model-license-agreement-june-2024.pdf"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/nvidia/Mistral-NeMo-Minitron-8B-Base",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "nvidia"
+                }
+            ],
+            "description": "## Model Overview\n\nMistral-NeMo-Minitron-8B-Base is a base text-to-text model that can be adopted for a variety of natural language generation tasks. It is a large language model (LLM) obtained by pruning and distilling the Mistral-NeMo 12B; specifically, we prune the embedding dimension and MLP intermediate dimension in the  model. Following pruning, we perform continued training with distillation using 380 billion tokens to arrive at the final model; we use the continuous pre-training data corpus used in Nemotron-4 15B for this purpose. Please refer to our [technical report](https://arxiv.org/abs/2408.11796) for more details.\n\n**Model Developer:** NVIDIA\n\n**Model Dates:** Mistral-NeMo-Minitron-8B-Base was trained between July 24, 2024 and August 10, 2024.\n",
+            "tags": [
+                "transformers",
+                "nemo",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "arxiv:2408.11796",
+                "arxiv:2009.03300",
+                "arxiv:2407.14679",
+                "license:other",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

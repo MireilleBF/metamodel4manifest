@@ -1,0 +1,61 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:8aeab6d0-f55d-434e-b66f-ccd3d0a050df",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:06.484205+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "upstage/solar-pro-preview-instruct-3fd3fd96-9108-5a6f-9896-907422d0cb63",
+            "name": "upstage/solar-pro-preview-instruct",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/upstage/solar-pro-preview-instruct",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "solar",
+                    "modelArchitecture": "SolarForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "upstage"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "solar",
+                "text-generation",
+                "nlp",
+                "conversational",
+                "custom_code",
+                "en",
+                "license:mit",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

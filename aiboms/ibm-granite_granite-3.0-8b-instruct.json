@@ -1,0 +1,187 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:b40a55dd-b93a-4fff-b46a-3671778710ab",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:52.738992+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "ibm-granite/granite-3.0-8b-instruct-add7152e-58a9-5d8f-81bf-e75e8934dd79",
+            "name": "ibm-granite/granite-3.0-8b-instruct",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/ibm-granite/granite-3.0-8b-instruct",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "granite",
+                    "modelArchitecture": "GraniteForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "ibm-granite/granite-3.0-8b-base"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: instruction-following",
+                            "type": "pass@1",
+                            "value": 52.27
+                        },
+                        {
+                            "slice": "dataset: instruction-following",
+                            "type": "pass@1",
+                            "value": 8.22
+                        },
+                        {
+                            "slice": "dataset: human-exams",
+                            "type": "pass@1",
+                            "value": 40.52
+                        },
+                        {
+                            "slice": "dataset: human-exams",
+                            "type": "pass@1",
+                            "value": 65.82
+                        },
+                        {
+                            "slice": "dataset: human-exams",
+                            "type": "pass@1",
+                            "value": 34.45
+                        },
+                        {
+                            "slice": "dataset: commonsense",
+                            "type": "pass@1",
+                            "value": 46.6
+                        },
+                        {
+                            "slice": "dataset: commonsense",
+                            "type": "pass@1",
+                            "value": 71.21
+                        },
+                        {
+                            "slice": "dataset: commonsense",
+                            "type": "pass@1",
+                            "value": 82.61
+                        },
+                        {
+                            "slice": "dataset: commonsense",
+                            "type": "pass@1",
+                            "value": 77.51
+                        },
+                        {
+                            "slice": "dataset: commonsense",
+                            "type": "pass@1",
+                            "value": 60.32
+                        },
+                        {
+                            "slice": "dataset: reading-comprehension",
+                            "type": "pass@1",
+                            "value": 88.65
+                        },
+                        {
+                            "slice": "dataset: reading-comprehension",
+                            "type": "pass@1",
+                            "value": 21.58
+                        },
+                        {
+                            "slice": "dataset: reasoning",
+                            "type": "pass@1",
+                            "value": 64.16
+                        },
+                        {
+                            "slice": "dataset: reasoning",
+                            "type": "pass@1",
+                            "value": 33.81
+                        },
+                        {
+                            "slice": "dataset: reasoning",
+                            "type": "pass@1",
+                            "value": 51.55
+                        },
+                        {
+                            "slice": "dataset: code",
+                            "type": "pass@1",
+                            "value": 64.63
+                        },
+                        {
+                            "slice": "dataset: code",
+                            "type": "pass@1",
+                            "value": 57.16
+                        },
+                        {
+                            "slice": "dataset: code",
+                            "type": "pass@1",
+                            "value": 65.85
+                        },
+                        {
+                            "slice": "dataset: code",
+                            "type": "pass@1",
+                            "value": 49.6
+                        },
+                        {
+                            "slice": "dataset: math",
+                            "type": "pass@1",
+                            "value": 68.99
+                        },
+                        {
+                            "slice": "dataset: math",
+                            "type": "pass@1",
+                            "value": 30.94
+                        },
+                        {
+                            "slice": "dataset: multilingual",
+                            "type": "pass@1",
+                            "value": 64.94
+                        },
+                        {
+                            "slice": "dataset: multilingual",
+                            "type": "pass@1",
+                            "value": 48.2
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "ibm-granite"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "granite",
+                "text-generation",
+                "language",
+                "granite-3.0",
+                "conversational",
+                "arxiv:0000.00000",
+                "base_model:ibm-granite/granite-3.0-8b-base",
+                "base_model:finetune:ibm-granite/granite-3.0-8b-base",
+                "license:apache-2.0",
+                "model-index",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

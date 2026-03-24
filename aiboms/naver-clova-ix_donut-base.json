@@ -1,0 +1,65 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:ec0e7477-2500-4f33-bc6c-962efa57a701",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:12.289708+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "naver-clova-ix/donut-base-a6b3fe07-5441-5a55-95a8-330ac13b707a",
+            "name": "naver-clova-ix/donut-base",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/naver-clova-ix/donut-base",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-text",
+                    "architectureFamily": "vision-encoder-decoder",
+                    "modelArchitecture": "VisionEncoderDecoderModel",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended uses & limitations\n\nThis model is meant to be fine-tuned on a downstream task, like document image classification or document parsing. See the [model hub](https://huggingface.co/models?search=donut) to look for fine-tuned versions on a task that interests you.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "naver-clova-ix"
+                }
+            ],
+            "description": "## Model description\n\nDonut consists of a vision encoder (Swin Transformer) and a text decoder (BART). Given an image, the encoder first encodes the image into a tensor of embeddings (of shape batch_size, seq_len, hidden_size), after which the decoder autoregressively generates text, conditioned on the encoding of the encoder.\n\n![model image](https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/model_doc/donut_architecture.jpg)\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "vision-encoder-decoder",
+                "image-text-to-text",
+                "donut",
+                "image-to-text",
+                "vision",
+                "arxiv:2111.15664",
+                "license:mit",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

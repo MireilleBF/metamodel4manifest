@@ -1,0 +1,70 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:b3baa5ae-97b5-49e3-84f1-d18b8663afab",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:09:53.500494+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Intel/dpt-large-8d41ca85-dec5-57d6-bf65-4df67b750d07",
+            "name": "Intel/dpt-large",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Intel/dpt-large",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "depth-estimation",
+                    "architectureFamily": "dpt",
+                    "modelArchitecture": "DPTForDepthEstimation",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: MIX-6",
+                            "type": "Zero-shot transfer",
+                            "value": 10.82
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "Intel"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "dpt",
+                "depth-estimation",
+                "vision",
+                "arxiv:2103.13413",
+                "license:apache-2.0",
+                "model-index",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

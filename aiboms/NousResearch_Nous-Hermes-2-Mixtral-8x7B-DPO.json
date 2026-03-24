@@ -1,0 +1,119 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:5ea8d4ff-d700-4fba-ac39-8ae7e8d626ca",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:15.518150+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO-e5a1697e-d0fa-560f-86e5-15a64ae3dfe2",
+            "name": "NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-DPO",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mixtral",
+                    "modelArchitecture": "MixtralForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "mistralai/Mixtral-8x7B-v0.1"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "NousResearch"
+                }
+            ],
+            "description": "## Model description\n\nNous Hermes 2 Mixtral 8x7B DPO is the new flagship Nous Research model trained over the [Mixtral 8x7B MoE LLM](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1).\n\nThe model was trained on over 1,000,000 entries of primarily GPT-4 generated data, as well as other high quality data from open datasets across the AI landscape, achieving state of the art performance on a variety of tasks.\n\nThis is the SFT + DPO version of Mixtral Hermes 2, we have also released an SFT only version, for people to find which works best for them, which can be found here: https://huggingface.co/NousResearch/Nous-Hermes-2-Mixtral-8x7B-SFT\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mixtral",
+                "text-generation",
+                "Mixtral",
+                "instruct",
+                "finetune",
+                "chatml",
+                "DPO",
+                "RLHF",
+                "gpt4",
+                "synthetic data",
+                "distillation",
+                "conversational",
+                "en",
+                "dataset:teknium/OpenHermes-2.5",
+                "base_model:mistralai/Mixtral-8x7B-v0.1",
+                "base_model:finetune:mistralai/Mixtral-8x7B-v0.1",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c",
+            "name": "teknium/OpenHermes-2.5",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c",
+                    "name": "teknium/OpenHermes-2.5",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/teknium/OpenHermes-2.5",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "eng"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "OpenHermes 2.5"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tDataset Card for Dataset Name\n\t\n\nThis is the dataset that made OpenHermes 2.5 and Nous Hermes 2 series of models.\nSupport me on GitHub sponsors <3 : https://github.com/sponsors/teknium1\n\n\t\n\t\t\n\t\tDataset Details\n\t\n\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThe Open Hermes 2/2.5 and Nous Hermes 2 models have made significant advancements of SOTA LLM's over recent months, and are underpinned by this exact compilation and curation of many open source datasets and custom created synthetic datasets.\u2026 See the full description on the dataset page: https://huggingface.co/datasets/teknium/OpenHermes-2.5.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "teknium",
+                                    "url": "https://huggingface.co/teknium"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

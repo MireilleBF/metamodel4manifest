@@ -96,7 +96,8 @@ MLModel --> "0..1\n ml_model_type" ML_MODEL_TYPE
 }
 package Metrics{
 class "Metric" as Metric {
-  category : Optional[str]
+  'category : Optional[str]
+  uncertainty: Optional[float]
   kind : Optional[str]
   slice : Optional[str]
   type : str

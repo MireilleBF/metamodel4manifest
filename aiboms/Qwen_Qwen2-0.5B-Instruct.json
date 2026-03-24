@@ -1,0 +1,69 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:3849b6a0-af1b-4d0c-ae11-9addc9220f75",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:19.485146+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Qwen/Qwen2-0.5B-Instruct-ad77cc53-3ef3-5729-ba70-3e0c7092bba2",
+            "name": "Qwen/Qwen2-0.5B-Instruct",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Qwen/Qwen2-0.5B-Instruct",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "qwen2",
+                    "modelArchitecture": "Qwen2ForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "Qwen/Qwen2-0.5B"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Qwen"
+                }
+            ],
+            "description": "## Introduction\n\nQwen2 is the new series of Qwen large language models. For Qwen2, we release a number of base language models and instruction-tuned language models ranging from 0.5 to 72 billion parameters, including a Mixture-of-Experts model. This repo contains the instruction-tuned 0.5B Qwen2 model.\n\nCompared with the state-of-the-art opensource language models, including the previous released Qwen1.5, Qwen2 has generally surpassed most opensource models and demonstrated competitiveness against proprietary models across a series of benchmarks targeting for language understanding, language generation, multilingual capability, coding, mathematics, reasoning, etc.\n\nFor more details, please refer to our [blog](https://qwenlm.github.io/blog/qwen2/), [GitHub](https://github.com/QwenLM/Qwen2), and [Documentation](https://qwen.readthedocs.io/en/latest/).\n<br>\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "qwen2",
+                "text-generation",
+                "chat",
+                "conversational",
+                "en",
+                "base_model:Qwen/Qwen2-0.5B",
+                "base_model:finetune:Qwen/Qwen2-0.5B",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

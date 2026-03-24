@@ -1,0 +1,330 @@
+{
+    "uid": "https://huggingface.co/openai-community/gpt2",
+    "type": "Manifest",
+    "description": "GPT2 Small",
+    "properties": {},
+    "pipeline": {
+        "uid": "nanoGPT Pipeline",
+        "type": "Pipeline",
+        "properties": {},
+        "tasks": [
+            {
+                "uid": "93b6ab8e-70a7-4073-a312-467cfdeaad28",
+                "type": "Task",
+                "name": "DataCollection",
+                "description": "Collecting the training data for GPT2 model",
+                "properties": {},
+                "steps": []
+            },
+            {
+                "uid": "5dc06d8b-a8e2-4d93-bfbe-a49a28241f28",
+                "type": "Task",
+                "name": "Tokenizing",
+                "description": "Tokenizing the training data using byte-level BPE tokenizer",
+                "properties": {
+                    "family": "byte-bpe-tokenizer"
+                },
+                "steps": []
+            },
+            {
+                "uid": "ac66a7e4-9764-45e0-abbd-8c79a7bc4a3f",
+                "type": "Task",
+                "name": "PreTraining",
+                "description": "Pre-training the GPT2 model using the tokenized data",
+                "properties": {},
+                "steps": []
+            }
+        ]
+    },
+    "artefacts": [
+        {
+            "uid": "b6f691ea-1a99-4121-8675-7eed8cf5d287",
+            "type": "MLModel",
+            "name": "nanoGPT Model",
+            "properties": {
+                "model_type": "GPT2",
+                "framework": "PyTorch",
+                "model_size": "124M"
+            },
+            "software_file_kind": "file",
+            "languages": []
+        },
+        {
+            "uid": "59784d42-a533-4bc8-a775-155f5193836f",
+            "type": "Data",
+            "name": "openWebText",
+            "description": "a reconstructed 'open' version of the GPT2 training corpus \n based on the data published in the GPT2 technical report, \n This corpus was constructed from the code located on code_ref",
+            "properties": {
+                "code_ref": "https://github.com/jcpeterson/openwebtext"
+            },
+            "access": "private",
+            "license": "none",
+            "software_file_kind": "file",
+            "software_download_location": "https://huggingface.co/datasets/Skylion007/openwebtext",
+            "languages": [],
+            "data_types": [
+                "text"
+            ],
+            "dataset_kinds": [
+                "corpus"
+            ],
+            "data_formats": [
+                ".txt"
+            ],
+            "dataset_has_sensitive_personal_information": "yes",
+            "dataset_known_bias": []
+        },
+        {
+            "uid": "bf2c3692-247d-490a-8c71-8da000e55b3f",
+            "type": "Data",
+            "name": "vocabulary",
+            "description": "The generated ...",
+            "properties": {
+                "code_ref": "https://github.com/jcpeterson/openwebtext",
+                "n_vocab": 50257
+            },
+            "access": "private",
+            "license": "none",
+            "category": "vocabulary",
+            "software_file_kind": "file",
+            "content_type": "text/plain",
+            "software_download_location": "https://openaipublic.blob.core.windows.net/gpt-2/encodings/main/vocab.bpe",
+            "languages": [],
+            "data_types": [],
+            "dataset_kinds": [
+                "dataset"
+            ],
+            "data_formats": [
+                "text",
+                "bpe"
+            ],
+            "dataset_has_sensitive_personal_information": "yes",
+            "dataset_known_bias": []
+        },
+        {
+            "uid": "ad4efc09-0589-4d1a-988e-fc18a2db41bf",
+            "type": "SoftwareFile",
+            "name": "GPT2TokenizerCode",
+            "properties": {
+                "kind": "byte-bpe-tokenizer",
+                "reference_implementation": "https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py",
+                "pre_tokenization:": "todo- encode"
+            },
+            "category": "tokenizer",
+            "software_file_kind": "file",
+            "content_type": "text/x-python",
+            "languages": []
+        },
+        {
+            "uid": "2e6435fa-17e1-4c67-837f-319602a06237",
+            "type": "SoftwareFile",
+            "name": "GPT2ModelWeights",
+            "properties": {
+                "location": "https://openaipublic.blob.core.windows.net/gpt-2/models/124M/model.ckpt.data-00000-of-00001",
+                "n_parameters": 124439808
+            },
+            "category": "model_weights",
+            "software_file_kind": "file",
+            "languages": []
+        },
+        {
+            "uid": "b521659e-a8f3-4e02-af06-3ed859feb954",
+            "type": "SoftwareFile",
+            "name": "GPT2TrainingConfig",
+            "properties": {
+                "description": "Training the GPT2 model using collected data",
+                "optimizer": {
+                    "type": "adamw",
+                    "weight_decay": 0.1,
+                    "beta1": 0.9,
+                    "beta2": 0.95,
+                    "notes": "Weight decay is not applied to bias and layer norm layers"
+                },
+                "model_config": {
+                    "type": "decoder",
+                    "n_parameters": 124439808,
+                    "n_active_parameters": 124439808,
+                    "n_embedding_dimensions": 768,
+                    "n_transformers": 12,
+                    "positional_embedding": {
+                        "type": "learned",
+                        "n_positions": 1024
+                    },
+                    "transformer_attention": {
+                        "type": "multi-head-attention",
+                        "n_heads": 12
+                    },
+                    "transformer_ffn": {
+                        "hidden_layer_size": 3072,
+                        "hidden_layer_size_ratio": 4.0
+                    }
+                }
+            },
+            "category": "config",
+            "software_file_kind": "file",
+            "languages": []
+        }
+    ],
+    "relations": [
+        {
+            "uid": "694bc92d-14b3-4289-97d3-a81c950fc41c",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "93b6ab8e-70a7-4073-a312-467cfdeaad28",
+            "to_": [
+                {
+                    "uid": "step:data-acquisition",
+                    "type": "Category",
+                    "name": "Data Acquisition",
+                    "description": "Collect of data from various sources (databases, APIs, web scraping).",
+                    "properties": {}
+                },
+                {
+                    "uid": "taxo:ml-lifecycle",
+                    "type": "Taxonomy",
+                    "name": "Machine Learning Lifecycle Steps",
+                    "description": "Classification standard for the main steps of the machine learning lifecycle, based on the CRISP-DM methodology.",
+                    "properties": {},
+                    "categories": {
+                        "step:data-acquisition": "step:data-acquisition",
+                        "step:data-preparation": {
+                            "uid": "step:data-preparation",
+                            "type": "Category",
+                            "name": "Data Preparation",
+                            "description": "Cleaning, normalization, and splitting of data into training and test sets.",
+                            "properties": {}
+                        },
+                        "step:feature-engineering": {
+                            "uid": "step:feature-engineering",
+                            "type": "Category",
+                            "name": "Feature Engineering",
+                            "description": "Transformation of raw data into features that better represent the underlying problem to the predictive models, resulting in improved model performance.",
+                            "properties": {}
+                        },
+                        "step:model-training": {
+                            "uid": "step:model-training",
+                            "type": "Category",
+                            "name": "Model Training",
+                            "description": "Training of the machine learning model using the training dataset.",
+                            "properties": {}
+                        },
+                        "step:model-evaluation": {
+                            "uid": "step:model-evaluation",
+                            "type": "Category",
+                            "name": "Model Evaluation",
+                            "description": "Evaluation of the model's performance using the test dataset and relevant metrics.",
+                            "properties": {}
+                        },
+                        "step:model-deployment": {
+                            "uid": "step:model-deployment",
+                            "type": "Category",
+                            "name": "Model Deployment",
+                            "description": "Deployment of the trained model into a production environment for inference.",
+                            "properties": {}
+                        },
+                        "step:monitoring": {
+                            "uid": "step:monitoring",
+                            "type": "Category",
+                            "name": "Monitoring & Observability",
+                            "description": "Monitoring of the model's performance and behavior in production, including detection of data drift, performance degradation, and other issues that may arise over time.",
+                            "properties": {}
+                        },
+                        "step:other": {
+                            "uid": "step:other",
+                            "type": "Category",
+                            "name": "Other",
+                            "description": "Other steps that may be part of the machine learning lifecycle but are not covered by the main categories.",
+                            "properties": {}
+                        }
+                    }
+                }
+            ],
+            "relationship_type": "annotatedBy"
+        },
+        {
+            "uid": "8b0a63a9-57d3-453b-bbfc-e3c0cac97dfe",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "93b6ab8e-70a7-4073-a312-467cfdeaad28",
+            "to_": [
+                "59784d42-a533-4bc8-a775-155f5193836f"
+            ],
+            "relationship_type": "produces"
+        },
+        {
+            "uid": "3090fdc5-8091-4b8f-9eb0-3e50b4a006a8",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "93b6ab8e-70a7-4073-a312-467cfdeaad28",
+            "to_": [
+                "5dc06d8b-a8e2-4d93-bfbe-a49a28241f28"
+            ],
+            "relationship_type": "next"
+        },
+        {
+            "uid": "56fb8f14-e784-49a2-b1cf-7358cfd03d49",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "5dc06d8b-a8e2-4d93-bfbe-a49a28241f28",
+            "to_": [
+                "step:other",
+                "taxo:ml-lifecycle"
+            ],
+            "relationship_type": "annotatedBy"
+        },
+        {
+            "uid": "198bb005-035e-4976-8b0f-6e2c49b166c7",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "5dc06d8b-a8e2-4d93-bfbe-a49a28241f28",
+            "to_": [
+                "bf2c3692-247d-490a-8c71-8da000e55b3f"
+            ],
+            "relationship_type": "produces"
+        },
+        {
+            "uid": "aa667193-5560-4849-870c-bf8bb588be63",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "5dc06d8b-a8e2-4d93-bfbe-a49a28241f28",
+            "to_": [
+                "ad4efc09-0589-4d1a-988e-fc18a2db41bf",
+                "59784d42-a533-4bc8-a775-155f5193836f"
+            ],
+            "relationship_type": "uses"
+        },
+        {
+            "uid": "ee6f5dce-e261-42cb-8fdf-cf05d9a2ab47",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "5dc06d8b-a8e2-4d93-bfbe-a49a28241f28",
+            "to_": [
+                "ac66a7e4-9764-45e0-abbd-8c79a7bc4a3f"
+            ],
+            "relationship_type": "next"
+        },
+        {
+            "uid": "0e1278ce-d206-445c-a563-15fdaf04dc4f",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "ac66a7e4-9764-45e0-abbd-8c79a7bc4a3f",
+            "to_": [
+                "b6f691ea-1a99-4121-8675-7eed8cf5d287",
+                "2e6435fa-17e1-4c67-837f-319602a06237"
+            ],
+            "relationship_type": "produces"
+        },
+        {
+            "uid": "d7397bb4-d28b-4d3a-912b-afc1815ea843",
+            "type": "Relationship",
+            "properties": {},
+            "from_": "ac66a7e4-9764-45e0-abbd-8c79a7bc4a3f",
+            "to_": [
+                "bf2c3692-247d-490a-8c71-8da000e55b3f",
+                "59784d42-a533-4bc8-a775-155f5193836f",
+                "b521659e-a8f3-4e02-af06-3ed859feb954"
+            ],
+            "relationship_type": "uses"
+        }
+    ]
+}

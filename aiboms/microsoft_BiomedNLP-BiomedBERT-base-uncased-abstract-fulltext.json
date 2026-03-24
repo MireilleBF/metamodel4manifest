@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:33d03aac-4065-451e-82be-daf8d3d8a06b",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:06.481706+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext-567c8993-636b-53bd-9cdf-b09c2892bca4",
+            "name": "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "fill-mask",
+                    "architectureFamily": "bert",
+                    "modelArchitecture": "BertForMaskedLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "microsoft"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "jax",
+                "bert",
+                "fill-mask",
+                "exbert",
+                "en",
+                "arxiv:2007.15779",
+                "license:mit",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

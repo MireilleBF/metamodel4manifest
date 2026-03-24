@@ -28,9 +28,10 @@ class Metric(Artefact):
     value: Optional[str] = None  # ex: "0.45", "150", "2.3"
     unit: Optional[str] = None  # ex: "MB", "kWh", "kgCO2e"
     slice: Optional[str] = None  # ex:  "idle", "peak-load"
-    category: Optional[str] = (
-        None  # ex: "PERFORMANCE" (manually or automatically filled based on the kind if it matches a known metric in the catalog)
-    )
+    uncertainty: Optional[float] = None  # ex: "±0.05" (for performance metrics, to indicate the confidence interval or margin of error)
+    #category: Optional[str] = (
+    #    None  # ex: "PERFORMANCE" (manually or automatically filled based on the kind if it matches a known metric in the catalog)
+    #)
 
     def validate_with_catalog(self) -> bool:
         """

@@ -18,7 +18,7 @@ from DSL4Pipelines.src.metamodel.pipelines.workflow import (
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.metamodel.catalogs.vocabulary import RelationshipType, FileKind
 from DSL4Pipelines.src.tools.toFile import save_in_file
-from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
+from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerializer
 #from OLD.toMermaid import MERMAIDSerializer
 from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy
 from tools.transformations.toMermaid import MERMAIDSerializer
@@ -386,7 +386,7 @@ def test_build_artefact_metric_accuracy() -> Metric:
     metric_accuracy = Metric(
         name="Model Accuracy",
         description="Accuracy du modèle de classification sur le dataset IRIS.",
-        kind=MetricCatalog.PERFORMANCE.ACCURACY,
+        kind=MetricCatalog.PREDICT_PERFORMANCE.ACCURACY,
         # value=0.95,
         # unit="%",
         properties={"calculation_method": "accuracy_score from scikit-learn"},
@@ -402,7 +402,7 @@ def test_build_artefact_metric_confusion_matrix() -> Metric:
     confusion_matrix_metric = Metric(
         name="Confusion Matrix",
         description="Matrice de confusion du modèle de classification sur le dataset IRIS.",
-        kind=MetricCatalog.PERFORMANCE.CONFUSION_MATRIX,
+        kind=MetricCatalog.PREDICT_PERFORMANCE.CONFUSION_MATRIX,
         properties={"calculation_method": "confusion_matrix from scikit-learn"},
     )
     confusion_matrix_metric.validate_with_catalog()

@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:bb0d2442-1adb-4b2a-9c91-37bc8eaf1aee",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:09:11.169347+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "vikhyatk/moondream2-cba90de0-deee-55a7-b3d9-c640af31b070",
+            "name": "vikhyatk/moondream2",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/vikhyatk/moondream2",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-text-to-text",
+                    "architectureFamily": "moondream1",
+                    "modelArchitecture": "HfMoondream",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "vikhyatk"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "gguf",
+                "moondream1",
+                "text-generation",
+                "image-text-to-text",
+                "custom_code",
+                "doi:10.57967/hf/3219",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

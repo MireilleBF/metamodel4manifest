@@ -1,0 +1,57 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:8c4f2ebf-a6db-461e-a31e-1efe2d95db99",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:14.033142+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "0xJustin/Dungeons-and-Diffusion-94a42afb-ddca-5d9e-82e3-45cd0f6736f3",
+            "name": "0xJustin/Dungeons-and-Diffusion",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/0xJustin/Dungeons-and-Diffusion",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "0xJustin"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "text-to-image",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

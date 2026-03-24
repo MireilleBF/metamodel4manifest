@@ -1,0 +1,71 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:9d00aeb0-3232-4a96-8ff4-7c6b4090ffd8",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:52.452942+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "allenai/Molmo-7B-D-0924-21b262d7-37bb-51c7-a37b-bfb531412e98",
+            "name": "allenai/Molmo-7B-D-0924",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/allenai/Molmo-7B-D-0924",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-text-to-text",
+                    "architectureFamily": "molmo",
+                    "modelArchitecture": "MolmoForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "openai/clip-vit-large-patch14-336, Qwen/Qwen2-7B"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "allenai"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "molmo",
+                "text-generation",
+                "multimodal",
+                "olmo",
+                "pixmo",
+                "image-text-to-text",
+                "conversational",
+                "custom_code",
+                "en",
+                "arxiv:2409.17146",
+                "base_model:Qwen/Qwen2-7B",
+                "base_model:finetune:Qwen/Qwen2-7B",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

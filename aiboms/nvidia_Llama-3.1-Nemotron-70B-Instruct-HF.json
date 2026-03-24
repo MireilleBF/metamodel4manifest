@@ -1,0 +1,121 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:162fbd5e-8dfc-44b0-af2e-34993a286025",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:12:16.775591+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF-722385b1-5f41-5429-bb73-e249e4f32b4f",
+            "name": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3.1"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "nvidia/HelpSteer2-d2736dd2-fbdf-52ea-bfec-384e68dcad8d"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "meta-llama/Llama-3.1-70B-Instruct"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "nvidia"
+                }
+            ],
+            "description": "# Model Overview\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "nvidia",
+                "llama3.1",
+                "conversational",
+                "en",
+                "dataset:nvidia/HelpSteer2",
+                "arxiv:2410.01257",
+                "arxiv:2405.01481",
+                "arxiv:2406.08673",
+                "base_model:meta-llama/Llama-3.1-70B-Instruct",
+                "base_model:finetune:meta-llama/Llama-3.1-70B-Instruct",
+                "license:llama3.1",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "nvidia/HelpSteer2-d2736dd2-fbdf-52ea-bfec-384e68dcad8d",
+            "name": "nvidia/HelpSteer2",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "nvidia/HelpSteer2-d2736dd2-fbdf-52ea-bfec-384e68dcad8d",
+                    "name": "nvidia/HelpSteer2",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/nvidia/HelpSteer2",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "HelpSteer2"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-4.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tHelpSteer2: Open-source dataset for training top-performing reward models\n\t\n\nHelpSteer2 is an open-source Helpfulness Dataset (CC-BY-4.0) that supports aligning models to become more helpful, factually correct and coherent, while being adjustable in terms of the complexity and verbosity of its responses.\nThis dataset has been created in partnership with Scale  AI. \nWhen used to tune a Llama 3.1 70B Instruct Model, we achieve 94.1% on RewardBench, which makes it the best Reward Model as\u2026 See the full description on the dataset page: https://huggingface.co/datasets/nvidia/HelpSteer2.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "nvidia",
+                                    "url": "https://huggingface.co/nvidia"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

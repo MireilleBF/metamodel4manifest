@@ -1,0 +1,50 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:871fe8e9-baa5-456f-b552-c7b7da36c110",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:55.995339+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "EvolutionaryScale/esm3-sm-open-v1-59914449-bf59-59f5-a141-759584fe85f4",
+            "name": "EvolutionaryScale/esm3-sm-open-v1",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/EvolutionaryScale/esm3-sm-open-v1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "EvolutionaryScale"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "biology",
+                "esm",
+                "protein",
+                "en",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

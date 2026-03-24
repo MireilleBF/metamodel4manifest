@@ -1,0 +1,59 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:d8ad0d27-b14a-4937-a101-4bedd8f4816a",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:00.506679+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "deepseek-ai/deepseek-vl2-small-1035058b-b374-527e-ae05-88bd5a65b77c",
+            "name": "deepseek-ai/deepseek-vl2-small",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "deepseek",
+                        "url": "https://github.com/deepseek-ai/DeepSeek-LLM/blob/HEAD/LICENSE-MODEL"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/deepseek-ai/deepseek-vl2-small",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-text-to-text",
+                    "architectureFamily": "deepseek_vl_v2",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "deepseek-ai"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "deepseek_vl_v2",
+                "image-text-to-text",
+                "conversational",
+                "arxiv:2412.10302",
+                "license:other",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

@@ -1,0 +1,56 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:e7f4f70a-91f3-4015-b066-142dd34cc3fe",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:33.505097+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "JeffreyXiang/TRELLIS-image-large-3ff2962a-f2cb-54e1-beb5-6b677466d74e",
+            "name": "JeffreyXiang/TRELLIS-image-large",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/JeffreyXiang/TRELLIS-image-large",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-to-3d",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "trellis"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "JeffreyXiang"
+                }
+            ],
+            "tags": [
+                "trellis",
+                "image-to-3d",
+                "en",
+                "arxiv:2412.01506",
+                "license:mit",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

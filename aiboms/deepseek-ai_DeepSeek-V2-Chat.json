@@ -1,0 +1,63 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:1607b9c3-10bd-47cd-bb16-79e2e0154b35",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:48.683447+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "deepseek-ai/DeepSeek-V2-Chat-c2c830ab-510b-5b2b-b8d9-a1931ad93e08",
+            "name": "deepseek-ai/DeepSeek-V2-Chat",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "deepseek",
+                        "url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V2-Chat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "deepseek_v2",
+                    "modelArchitecture": "DeepseekV2ForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "deepseek-ai"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "deepseek_v2",
+                "text-generation",
+                "conversational",
+                "custom_code",
+                "arxiv:2405.04434",
+                "arxiv:2311.18743",
+                "license:other",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

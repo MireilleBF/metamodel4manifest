@@ -9,13 +9,16 @@ from DSL4Pipelines.src.metamodel.manifests.manifests import Manifest
 from DSL4Pipelines.src.metamodel.pipelines.workflow import Pipeline, Task
 from DSL4Pipelines.src.metamodel.relations.relations import Relationship
 from DSL4Pipelines.src.tools.toFile import save_in_file
-from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
+from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerializer
 from DSL4Pipelines.src.metamodel.taxonomies.taxonomy import cripDM_Taxonomy
+from DSL4Pipelines.src.metamodel.core.structure import ExternalReference
 from tools.transformations.toMermaid import MERMAIDSerializer
 
 
 def test_nanoGPT_manifest() -> Manifest:
     manifest_nanoGPT = Manifest("nanoGPT manifest")
+    manifest_nanoGPT.description="GPT2 Small"
+    manifest_nanoGPT.uid = "https://huggingface.co/openai-community/gpt2"
     manifest_nanoGPT.pipeline = test_nanoGPT_pipeline()
     manifest_nanoGPT.artefacts = test_nanoGPT_artefacts()
     manifest_nanoGPT.relations = create_relations(manifest_nanoGPT)
@@ -96,11 +99,13 @@ def test_nanoGPT_vocabulary() -> Data:
 def test_nanoGPT_tokenizer_code() -> SoftwareFile:
     tokenizer_code = SoftwareFile(
         name="GPT2TokenizerCode",
-        # category=SoftwareCatalog.CATEGORIES.CODE,
+        #category=ArtefactCatalog.CATEGORIES.CODE,
+        category=ArtefactCatalog.CATEGORIES.TOKENIZER,
         content_type="text/x-python",
         properties={
+            "kind" : "byte-bpe-tokenizer",
             "reference_implementation": "https://github.com/openai/tiktoken/blob/main/tiktoken_ext/openai_public.py",
-            "pre_tokenization:": "to encode",
+            "pre_tokenization:": "todo- encode",
         },
     )
     errors = []

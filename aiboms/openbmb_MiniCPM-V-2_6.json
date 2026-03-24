@@ -1,0 +1,112 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:d1f3a90a-d6a4-4638-9321-8a693a488cfd",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:11:30.966665+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "openbmb/MiniCPM-V-2_6-e2428f04-3157-5daa-a1dc-324d158420b6",
+            "name": "openbmb/MiniCPM-V-2_6",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/openbmb/MiniCPM-V-2_6",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-text-to-text",
+                    "architectureFamily": "minicpmv",
+                    "modelArchitecture": "MiniCPMV",
+                    "datasets": [
+                        {
+                            "ref": "openbmb/RLAIF-V-Dataset-d1ff380b-52a0-586f-946e-773a0ef8556f"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "openbmb"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "minicpmv",
+                "feature-extraction",
+                "minicpm-v",
+                "vision",
+                "ocr",
+                "multi-image",
+                "video",
+                "custom_code",
+                "image-text-to-text",
+                "conversational",
+                "multilingual",
+                "dataset:openbmb/RLAIF-V-Dataset",
+                "arxiv:2408.01800",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "openbmb/RLAIF-V-Dataset-d1ff380b-52a0-586f-946e-773a0ef8556f",
+            "name": "openbmb/RLAIF-V-Dataset",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "openbmb/RLAIF-V-Dataset-d1ff380b-52a0-586f-946e-773a0ef8556f",
+                    "name": "openbmb/RLAIF-V-Dataset",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "visual-question-answering"
+                            },
+                            {
+                                "name": "language",
+                                "value": "en"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "10K<n<100K"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "RLAIF-V-Dataset"
+                            },
+                            {
+                                "name": "license",
+                                "value": "cc-by-nc-4.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for RLAIF-V-Dataset\n\t\n\nGitHub  | Paper\n\n\t\n\t\t\n\t\tNews:\n\t\n\n\n[2024.05.28] \ud83d\udcc3 Our paper is accesible at arxiv now!\n[2024.05.20] \ud83d\udd25 Our data is used in MiniCPM-Llama3-V 2.5, which represents the first end-side MLLM achieving GPT-4V level performance!\n\n\n\t\n\t\t\n\t\tDataset Summary\n\t\n\nRLAIF-V-Dataset is a large-scale multimodal feedback dataset. The dataset provides high-quality feedback with a total number of 83,132 preference pairs, where the instructions are collected from a diverse\u2026 See the full description on the dataset page: https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "openbmb",
+                                    "url": "https://huggingface.co/openbmb"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

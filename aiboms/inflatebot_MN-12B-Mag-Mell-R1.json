@@ -1,0 +1,74 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:d76256cf-1c40-4437-9753-e960cf8de9b8",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:28.018406+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "inflatebot/MN-12B-Mag-Mell-R1-ded18657-a7bb-5658-a93c-527f39493899",
+            "name": "inflatebot/MN-12B-Mag-Mell-R1",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/inflatebot/MN-12B-Mag-Mell-R1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "IntervitensInc/Mistral-Nemo-Base-2407-chatml, nbeerbower/mistral-nemo-bophades-12B, nbeerbower/mistral-nemo-wissenschaft-12B, elinas/Chronos-Gold-12B-1.0, Fizzarolli/MN-12b-Sunrose, nbeerbower/mistral-nemo-gutenberg-12B-v4, anthracite-org/magnum-12b-v2.5-kto"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "inflatebot"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "mergekit",
+                "merge",
+                "conversational",
+                "arxiv:2311.03099",
+                "arxiv:2306.01708",
+                "base_model:Fizzarolli/MN-12b-Sunrose",
+                "base_model:merge:Fizzarolli/MN-12b-Sunrose",
+                "base_model:IntervitensInc/Mistral-Nemo-Base-2407-chatml",
+                "base_model:merge:IntervitensInc/Mistral-Nemo-Base-2407-chatml",
+                "base_model:anthracite-org/magnum-v2.5-12b-kto",
+                "base_model:merge:anthracite-org/magnum-v2.5-12b-kto",
+                "base_model:elinas/Chronos-Gold-12B-1.0",
+                "base_model:merge:elinas/Chronos-Gold-12B-1.0",
+                "base_model:nbeerbower/mistral-nemo-bophades-12B",
+                "base_model:merge:nbeerbower/mistral-nemo-bophades-12B",
+                "base_model:nbeerbower/mistral-nemo-gutenberg-12B-v4",
+                "base_model:merge:nbeerbower/mistral-nemo-gutenberg-12B-v4",
+                "base_model:nbeerbower/mistral-nemo-wissenschaft-12B",
+                "base_model:merge:nbeerbower/mistral-nemo-wissenschaft-12B",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

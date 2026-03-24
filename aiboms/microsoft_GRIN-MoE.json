@@ -1,0 +1,68 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:94af8b2c-588b-4060-b07a-ac0256f68786",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:17.532088+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "microsoft/GRIN-MoE-2b5a5ce3-2aa9-51b9-a7bb-363938d5cd49",
+            "name": "microsoft/GRIN-MoE",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "MIT",
+                        "url": "https://spdx.org/licenses/MIT.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/microsoft/GRIN-MoE",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "grinmoe",
+                    "modelArchitecture": "GRIN-MoE",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended Uses\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "microsoft"
+                }
+            ],
+            "description": "### Model\n|                     |     |\n|---------------------|-----|\n| Developer           | Microsoft |\n| Architecture        | GRIN MoE has 16x3.8B parameters with **6.6B active parameters** when using 2 experts. The model is a mixture-of-expert decoder-only Transformer model using the tokenizer with vocabulary size of 32,064. |\n| Inputs              | Text. It is best suited for prompts using chat format. |\n| Context length      | 4K tokens |\n| GPUs                | 512 H100-80G |\n| Training time       | 18 days |\n| Training data       | 4.0T tokens |\n| Outputs             | Generated text in response to the input |\n| Dates               | Trained between April and June 2024 |\n| Status              | This is a static model trained on an offline dataset with cutoff date October 2023 for publicly available data. Future versions of the tuned models may be released as we improve models. |\n| Supported languages | English |\n| Release date        | Sep 2024 |\n| License             | MIT |\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "grinmoe",
+                "nlp",
+                "code",
+                "text-generation",
+                "conversational",
+                "custom_code",
+                "en",
+                "arxiv:2409.12136",
+                "arxiv:2404.14219",
+                "license:mit",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

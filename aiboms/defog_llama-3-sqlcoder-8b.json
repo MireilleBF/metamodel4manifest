@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:bbbb0bf3-f020-4113-8eac-fcbf52c325c4",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:32.100334+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "defog/llama-3-sqlcoder-8b-7b9c5933-7b24-50f1-8877-0c689a6b5f15",
+            "name": "defog/llama-3-sqlcoder-8b",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "CC-BY-SA-4.0",
+                        "url": "https://spdx.org/licenses/CC-BY-SA-4.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/defog/llama-3-sqlcoder-8b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "defog"
+                }
+            ],
+            "description": "## Model Description\n\nDeveloped by: Defog, Inc\nModel type: [Text to SQL]\nLicense: [CC-by-SA-4.0]\nFinetuned from model: [Meta-Llama-3-8B-Instruct]\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "code",
+                "conversational",
+                "license:cc-by-sa-4.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

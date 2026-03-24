@@ -1,0 +1,95 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:41e298ed-34c6-4ab1-80e7-c1c5d2ad0594",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:09.630867+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "IlyaGusev/saiga_llama3_8b-0cb6bc2f-dc9c-584c-8dbb-68f82fae76ff",
+            "name": "IlyaGusev/saiga_llama3_8b",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3",
+                        "url": "https://llama.meta.com/llama3/license/"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/IlyaGusev/saiga_llama3_8b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "IlyaGusev/saiga_scored-72f57be8-e186-5dd7-8ebb-47de1d605e32"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "IlyaGusev"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "conversational",
+                "ru",
+                "dataset:IlyaGusev/saiga_scored",
+                "doi:10.57967/hf/2368",
+                "license:other",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "IlyaGusev/saiga_scored-72f57be8-e186-5dd7-8ebb-47de1d605e32",
+            "name": "IlyaGusev/saiga_scored",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "IlyaGusev/saiga_scored-72f57be8-e186-5dd7-8ebb-47de1d605e32",
+                    "name": "IlyaGusev/saiga_scored",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/IlyaGusev/saiga_scored",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "IlyaGusev",
+                                    "url": "https://huggingface.co/IlyaGusev"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

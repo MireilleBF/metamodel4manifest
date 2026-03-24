@@ -1,0 +1,61 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:40ccd24c-4773-4866-b7d2-b60c18264f7a",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:41.967035+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "fofr/sdxl-emoji-dab3fccf-64e1-55ef-998a-e1fc22db060a",
+            "name": "fofr/sdxl-emoji",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/fofr/sdxl-emoji",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "stabilityai/stable-diffusion-xl-base-1.0"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "fofr"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "text-to-image",
+                "stable-diffusion",
+                "lora",
+                "base_model:stabilityai/stable-diffusion-xl-base-1.0",
+                "base_model:adapter:stabilityai/stable-diffusion-xl-base-1.0",
+                "license:creativeml-openrail-m",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

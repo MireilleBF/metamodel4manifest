@@ -1,0 +1,84 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:c2b21158-a35e-4d57-bc1c-b10b2f708db1",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:44.400061+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "aifeifei798/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored-07b691cc-5101-5f52-a2ce-8ae18712e968",
+            "name": "aifeifei798/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3.1"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/aifeifei798/DarkIdol-Llama-3.1-8B-Instruct-1.2-Uncensored",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Intended Use\n\n**Intended Use Cases** Llama 3.1 is intended for commercial and research use in multiple languages. Instruction tuned text only models are intended for assistant-like chat, whereas pretrained models can be adapted for a variety of natural language generation tasks. The Llama 3.1 model collection also supports the ability to leverage the outputs of its models to improve other models including synthetic data generation and distillation. The Llama 3.1 Community License allows for these use cases.\n\n**Out-of-scope** Use in any manner that violates applicable laws or regulations (including trade compliance laws). Use in any other way that is prohibited by the Acceptable Use Policy and Llama 3.1 Community License. Use in languages beyond those explicitly referenced as supported in this model card**.\n\n**<span style=\"text-decoration:underline;\">Note</span>: Llama 3.1 has been trained on a broader collection of languages than the 8 supported languages. Developers may fine-tune Llama 3.1 models for languages beyond the 8 supported languages provided they comply with the Llama 3.1 Community License and the Acceptable Use Policy and in such cases are responsible for ensuring that any uses of Llama 3.1 in additional languages is done in a safe and responsible manner.\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "aifeifei798"
+                }
+            ],
+            "description": "## Model Information\nThe module combination has been readjusted to better fulfill various roles and has been adapted for mobile phones.\n- Saving money(LLama 3.1;Llama-3.1-8B-Instruct more informtion look at Llama-3.1-8B-Instruct Information)\n- Llama-3.1-8B-Instruct Uncensored\n- Roleplay(roleplay and Dark-roleplay)\n- Writing Prompts\n- writing opus\n- Realignment of Chinese, Japanese, and Korean\n- only test en.\n- Input Models input text only. Output Models generate text and code only.\n- Uncensored\n- Quick response\n- A scholarly response akin to a thesis.(I tend to write songs extensively, to the point where one song almost becomes as detailed as a thesis. :)\n- DarkIdol:Roles that you can imagine and those that you cannot imagine.\n- Specialized in various role-playing scenarios\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "roleplay",
+                "llama3",
+                "sillytavern",
+                "idol",
+                "facebook",
+                "meta",
+                "pytorch",
+                "llama-3",
+                "conversational",
+                "en",
+                "de",
+                "fr",
+                "it",
+                "pt",
+                "hi",
+                "es",
+                "th",
+                "zh",
+                "ko",
+                "ja",
+                "arxiv:2204.05149",
+                "doi:10.57967/hf/3846",
+                "license:llama3.1",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

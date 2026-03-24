@@ -1,0 +1,57 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:4ec55fd1-a0ac-48b5-bcf3-b32943fcad0b",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:54.785277+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "dataautogpt3/TempestV0.1-cd34603a-11ed-54a6-a42c-12de3cd15e7c",
+            "name": "dataautogpt3/TempestV0.1",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "GPL-3.0",
+                        "url": "https://spdx.org/licenses/GPL-3.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/dataautogpt3/TempestV0.1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "dataautogpt3"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "text-to-image",
+                "license:gpl-3.0",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionXLPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

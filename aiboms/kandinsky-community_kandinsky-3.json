@@ -1,0 +1,56 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:c25517db-d983-41b9-a277-0a6ee1ada249",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:51.681504+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "kandinsky-community/kandinsky-3-4cf02339-0300-5e6d-8680-9e5b3bd6fee5",
+            "name": "kandinsky-community/kandinsky-3",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/kandinsky-community/kandinsky-3",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "kandinsky-community"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "text-to-image",
+                "license:apache-2.0",
+                "diffusers:Kandinsky3Pipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

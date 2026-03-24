@@ -1,0 +1,58 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:437992a0-6fc2-441e-85fb-d8e1dd023a54",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:11:39.999496+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Joeythemonster/anything-midjourney-v-4-1-fa35de91-f458-5eab-9d15-5167be95c523",
+            "name": "Joeythemonster/anything-midjourney-v-4-1",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Joeythemonster/anything-midjourney-v-4-1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Joeythemonster"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "safetensors",
+                "text-to-image",
+                "stable-diffusion",
+                "license:creativeml-openrail-m",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

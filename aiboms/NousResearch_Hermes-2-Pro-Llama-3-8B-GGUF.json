@@ -1,0 +1,112 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:fd2ca509-2452-45a4-b9d6-6078b234d450",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:00.611753+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF-220a6f20-57bb-5a98-9ad2-bd9675c81ea5",
+            "name": "NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/NousResearch/Hermes-2-Pro-Llama-3-8B-GGUF",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": [
+                        {
+                            "ref": "teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "base_model",
+                        "value": "NousResearch/Meta-Llama-3-8B"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "NousResearch"
+                }
+            ],
+            "description": "## Model Description\n",
+            "tags": [
+                "gguf",
+                "Llama-3",
+                "instruct",
+                "finetune",
+                "chatml",
+                "DPO",
+                "RLHF",
+                "gpt4",
+                "synthetic data",
+                "distillation",
+                "function calling",
+                "json mode",
+                "en",
+                "dataset:teknium/OpenHermes-2.5",
+                "base_model:NousResearch/Meta-Llama-3-8B",
+                "base_model:quantized:NousResearch/Meta-Llama-3-8B",
+                "license:apache-2.0",
+                "endpoints_compatible",
+                "region:us",
+                "conversational"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c",
+            "name": "teknium/OpenHermes-2.5",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "teknium/OpenHermes-2.5-1a7eb3be-7eaa-5577-91f6-d4ad0d639c6c",
+                    "name": "teknium/OpenHermes-2.5",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/teknium/OpenHermes-2.5",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "eng"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "OpenHermes 2.5"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tDataset Card for Dataset Name\n\t\n\nThis is the dataset that made OpenHermes 2.5 and Nous Hermes 2 series of models.\nSupport me on GitHub sponsors <3 : https://github.com/sponsors/teknium1\n\n\t\n\t\t\n\t\tDataset Details\n\t\n\n\n\t\n\t\t\n\t\tDataset Description\n\t\n\nThe Open Hermes 2/2.5 and Nous Hermes 2 models have made significant advancements of SOTA LLM's over recent months, and are underpinned by this exact compilation and curation of many open source datasets and custom created synthetic datasets.\u2026 See the full description on the dataset page: https://huggingface.co/datasets/teknium/OpenHermes-2.5.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "teknium",
+                                    "url": "https://huggingface.co/teknium"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

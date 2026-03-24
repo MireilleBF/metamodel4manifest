@@ -6,7 +6,7 @@ from DSL4Pipelines.src.tools.queries.rules.rules import (
     check_french_support,
 )
 from DSL4Pipelines.src.tools.toFile import save_in_file
-from DSL4Pipelines.src.tools.transformations.YAMLSerializer import YAMLSerializer
+from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerializer
 from tools.transformations.toMermaid import MERMAIDSerializer
 
 PATH = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/sources/"
@@ -42,7 +42,6 @@ def step1Bis() -> Manifest:
         "-------------------- Step 1: Read Manifest Yaml file for iris classification"
     )
     file = PATH + "iris_manifest.yaml"
-    manifest = YAMLSerializer.from_yaml_file(file, Manifest)
     manifest = YAMLSerializer.from_yaml_file(file, Manifest)
     return manifest
 

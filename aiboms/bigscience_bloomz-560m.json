@@ -1,0 +1,439 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:f87ef9e5-ede7-49d0-8583-a7a85cb2bad9",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:01.680007+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "bigscience/bloomz-560m-8ec9c501-b433-5bf0-bbc7-d9fba290a5d7",
+            "name": "bigscience/bloomz-560m",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "bigscience-bloom-rail-1.0"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/bigscience/bloomz-560m",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "bloom",
+                    "modelArchitecture": "BloomForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "bigscience/xP3-46b9c417-20b8-557a-9f9d-95425e507c9e"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: winogrande, split: validation, config: xl",
+                            "type": "Accuracy",
+                            "value": 52.41
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xwinograd, split: test, config: en",
+                            "type": "Accuracy",
+                            "value": 51.01
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xwinograd, split: test, config: fr",
+                            "type": "Accuracy",
+                            "value": 51.81
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xwinograd, split: test, config: jp",
+                            "type": "Accuracy",
+                            "value": 52.03
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xwinograd, split: test, config: pt",
+                            "type": "Accuracy",
+                            "value": 53.99
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xwinograd, split: test, config: ru",
+                            "type": "Accuracy",
+                            "value": 53.97
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xwinograd, split: test, config: zh",
+                            "type": "Accuracy",
+                            "value": 54.76
+                        },
+                        {
+                            "slice": "dataset: anli, split: validation, config: r1",
+                            "type": "Accuracy",
+                            "value": 33.4
+                        },
+                        {
+                            "slice": "dataset: anli, split: validation, config: r2",
+                            "type": "Accuracy",
+                            "value": 33.4
+                        },
+                        {
+                            "slice": "dataset: anli, split: validation, config: r3",
+                            "type": "Accuracy",
+                            "value": 33.5
+                        },
+                        {
+                            "slice": "dataset: super_glue, split: validation, config: cb",
+                            "type": "Accuracy",
+                            "value": 53.57
+                        },
+                        {
+                            "slice": "dataset: super_glue, split: validation, config: rte",
+                            "type": "Accuracy",
+                            "value": 67.15
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: ar",
+                            "type": "Accuracy",
+                            "value": 44.46
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: bg",
+                            "type": "Accuracy",
+                            "value": 39.76
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: de",
+                            "type": "Accuracy",
+                            "value": 39.36
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: el",
+                            "type": "Accuracy",
+                            "value": 40.96
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: en",
+                            "type": "Accuracy",
+                            "value": 46.43
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: es",
+                            "type": "Accuracy",
+                            "value": 44.98
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: fr",
+                            "type": "Accuracy",
+                            "value": 45.54
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: hi",
+                            "type": "Accuracy",
+                            "value": 41.81
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: ru",
+                            "type": "Accuracy",
+                            "value": 39.64
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: sw",
+                            "type": "Accuracy",
+                            "value": 38.35
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: th",
+                            "type": "Accuracy",
+                            "value": 35.5
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: tr",
+                            "type": "Accuracy",
+                            "value": 37.31
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: ur",
+                            "type": "Accuracy",
+                            "value": 38.96
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: vi",
+                            "type": "Accuracy",
+                            "value": 44.74
+                        },
+                        {
+                            "slice": "dataset: xnli, split: validation, config: zh",
+                            "type": "Accuracy",
+                            "value": 44.66
+                        },
+                        {
+                            "slice": "dataset: openai_humaneval, split: test, config: None",
+                            "type": "Pass@1",
+                            "value": 2.18
+                        },
+                        {
+                            "slice": "dataset: openai_humaneval, split: test, config: None",
+                            "type": "Pass@10",
+                            "value": 4.11
+                        },
+                        {
+                            "slice": "dataset: openai_humaneval, split: test, config: None",
+                            "type": "Pass@100",
+                            "value": 9
+                        },
+                        {
+                            "slice": "dataset: story_cloze, split: validation, config: 2016",
+                            "type": "Accuracy",
+                            "value": 60.29
+                        },
+                        {
+                            "slice": "dataset: super_glue, split: validation, config: copa",
+                            "type": "Accuracy",
+                            "value": 52
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: et",
+                            "type": "Accuracy",
+                            "value": 53
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: ht",
+                            "type": "Accuracy",
+                            "value": 49
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: id",
+                            "type": "Accuracy",
+                            "value": 57
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: it",
+                            "type": "Accuracy",
+                            "value": 52
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: qu",
+                            "type": "Accuracy",
+                            "value": 55
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: sw",
+                            "type": "Accuracy",
+                            "value": 56
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: ta",
+                            "type": "Accuracy",
+                            "value": 58
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: th",
+                            "type": "Accuracy",
+                            "value": 58
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: tr",
+                            "type": "Accuracy",
+                            "value": 61
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: vi",
+                            "type": "Accuracy",
+                            "value": 61
+                        },
+                        {
+                            "slice": "dataset: xcopa, split: validation, config: zh",
+                            "type": "Accuracy",
+                            "value": 61
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: ar",
+                            "type": "Accuracy",
+                            "value": 54.4
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: es",
+                            "type": "Accuracy",
+                            "value": 56.45
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: eu",
+                            "type": "Accuracy",
+                            "value": 50.56
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: hi",
+                            "type": "Accuracy",
+                            "value": 55.79
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: id",
+                            "type": "Accuracy",
+                            "value": 57.84
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: my",
+                            "type": "Accuracy",
+                            "value": 47.05
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: ru",
+                            "type": "Accuracy",
+                            "value": 53.14
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: sw",
+                            "type": "Accuracy",
+                            "value": 51.36
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: te",
+                            "type": "Accuracy",
+                            "value": 54.86
+                        },
+                        {
+                            "slice": "dataset: Muennighoff/xstory_cloze, split: validation, config: zh",
+                            "type": "Accuracy",
+                            "value": 56.52
+                        }
+                    ]
+                },
+                "consideration": {
+                    "useCases": "# Use\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "bigscience"
+                }
+            ],
+            "description": "# Model Summary\n\n> We present BLOOMZ & mT0, a family of models capable of following human instructions in dozens of languages zero-shot. We finetune BLOOM & mT5 pretrained multilingual language models on our crosslingual task mixture (xP3) and find the resulting models capable of crosslingual generalization to unseen tasks & languages.\n\n- **Repository:** [bigscience-workshop/xmtf](https://github.com/bigscience-workshop/xmtf)\n- **Paper:** [Crosslingual Generalization through Multitask Finetuning](https://arxiv.org/abs/2211.01786)\n- **Point of Contact:** [Niklas Muennighoff](mailto:niklas@hf.co)\n- **Languages:** Refer to [bloom](https://huggingface.co/bigscience/bloom) for pretraining & [xP3](https://huggingface.co/datasets/bigscience/xP3) for finetuning language proportions. It understands both pretraining & finetuning languages.\n- **BLOOMZ & mT0 Model Family:**\n\n<div class=\"max-w-full overflow-auto\">\n<table>\n<tr>\n<th colspan=\"12\">Multitask finetuned on <a style=\"font-weight:bold\" href=https://huggingface.co/datasets/bigscience/xP3>xP3</a>. Recommended for prompting in English.\n</tr>\n<tr>\n<td>Parameters</td>\n<td>300M</td>\n<td>580M</td>\n<td>1.2B</td>\n<td>3.7B</td>\n<td>13B</td>\n<td>560M</td>\n<td>1.1B</td>\n<td>1.7B</td>\n<td>3B</td>\n<td>7.1B</td>\n<td>176B</td>\n</tr>\n<tr>\n<td>Finetuned Model</td>\n<td><a href=https://huggingface.co/bigscience/mt0-small>mt0-small</a></td>\n<td><a href=https://huggingface.co/bigscience/mt0-base>mt0-base</a></td>\n<td><a href=https://huggingface.co/bigscience/mt0-large>mt0-large</a></td>\n<td><a href=https://huggingface.co/bigscience/mt0-xl>mt0-xl</a></td>\n<td><a href=https://huggingface.co/bigscience/mt0-xxl>mt0-xxl</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-560m>bloomz-560m</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-1b1>bloomz-1b1</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-1b7>bloomz-1b7</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-3b>bloomz-3b</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-7b1>bloomz-7b1</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz>bloomz</a></td>\n</tr>\n</tr>\n<tr>\n<th colspan=\"12\">Multitask finetuned on <a style=\"font-weight:bold\" href=https://huggingface.co/datasets/bigscience/xP3mt>xP3mt</a>. Recommended for prompting in non-English.</th>\n</tr>\n<tr>\n<td>Finetuned Model</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td><a href=https://huggingface.co/bigscience/mt0-xxl-mt>mt0-xxl-mt</a></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-7b1-mt>bloomz-7b1-mt</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-mt>bloomz-mt</a></td>\n</tr>\n<th colspan=\"12\">Multitask finetuned on <a style=\"font-weight:bold\" href=https://huggingface.co/datasets/Muennighoff/P3>P3</a>. Released for research purposes only. Strictly inferior to above models!</th>\n</tr>\n<tr>\n<td>Finetuned Model</td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td><a href=https://huggingface.co/bigscience/mt0-xxl-p3>mt0-xxl-p3</a></td>\n<td></td>\n<td></td>\n<td></td>\n<td></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-7b1-p3>bloomz-7b1-p3</a></td>\n<td><a href=https://huggingface.co/bigscience/bloomz-p3>bloomz-p3</a></td>\n</tr>\n<th colspan=\"12\">Original pretrained checkpoints. Not recommended.</th>\n<tr>\n<td>Pretrained Model</td>\n<td><a href=https://huggingface.co/google/mt5-small>mt5-small</a></td>\n<td><a href=https://huggingface.co/google/mt5-base>mt5-base</a></td>\n<td><a href=https://huggingface.co/google/mt5-large>mt5-large</a></td>\n<td><a href=https://huggingface.co/google/mt5-xl>mt5-xl</a></td>\n<td><a href=https://huggingface.co/google/mt5-xxl>mt5-xxl</a></td>\n<td><a href=https://huggingface.co/bigscience/bloom-560m>bloom-560m</a></td>\n<td><a href=https://huggingface.co/bigscience/bloom-1b1>bloom-1b1</a></td>\n<td><a href=https://huggingface.co/bigscience/bloom-1b7>bloom-1b7</a></td>\n<td><a href=https://huggingface.co/bigscience/bloom-3b>bloom-3b</a></td>\n<td><a href=https://huggingface.co/bigscience/bloom-7b1>bloom-7b1</a></td>\n<td><a href=https://huggingface.co/bigscience/bloom>bloom</a></td>\n</tr>\n</table>\n</div>\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "tensorboard",
+                "safetensors",
+                "bloom",
+                "text-generation",
+                "ak",
+                "ar",
+                "as",
+                "bm",
+                "bn",
+                "ca",
+                "code",
+                "en",
+                "es",
+                "eu",
+                "fon",
+                "fr",
+                "gu",
+                "hi",
+                "id",
+                "ig",
+                "ki",
+                "kn",
+                "lg",
+                "ln",
+                "ml",
+                "mr",
+                "ne",
+                "nso",
+                "ny",
+                "or",
+                "pa",
+                "pt",
+                "rn",
+                "rw",
+                "sn",
+                "st",
+                "sw",
+                "ta",
+                "te",
+                "tn",
+                "ts",
+                "tum",
+                "tw",
+                "ur",
+                "vi",
+                "wo",
+                "xh",
+                "yo",
+                "zh",
+                "zu",
+                "dataset:bigscience/xP3",
+                "arxiv:2211.01786",
+                "license:bigscience-bloom-rail-1.0",
+                "model-index",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "bigscience/xP3-46b9c417-20b8-557a-9f9d-95425e507c9e",
+            "name": "bigscience/xP3",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigscience/xP3-46b9c417-20b8-557a-9f9d-95425e507c9e",
+                    "name": "bigscience/xP3",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigscience/xP3",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "other"
+                            },
+                            {
+                                "name": "language",
+                                "value": "ak, ar, as, bm, bn, ca, code, en, es, eu, fon, fr, gu, hi, id, ig, ki, kn, lg, ln, ml, mr, ne, nso, ny, or, pa, pt, rn, rw, sn, st, sw, ta, te, tn, ts, tum, tw, ur, vi, wo, xh, yo, zh, zu"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100M<n<1B"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": "expert-generated, crowdsourced"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "xP3"
+                            },
+                            {
+                                "name": "license",
+                                "value": "apache-2.0"
+                            }
+                        ]
+                    },
+                    "description": "xP3 (Crosslingual Public Pool of Prompts) is a collection of prompts & datasets across 46 of languages & 16 NLP tasks. It is used for the training of BLOOMZ and mT0, multilingual language models capable of following human instructions in dozens of languages zero-shot.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigscience",
+                                    "url": "https://huggingface.co/bigscience"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

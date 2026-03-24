@@ -1,16 +1,25 @@
 import inspect
 
-
 class MetricCatalog:
-    class PERFORMANCE:
+
+    class PREDICT_PERFORMANCE:
+        NAME = "PREDICT_PERFORMANCE"
+        DESCRIPTION = "Measure the capcity of the model to make accurate predictions on unseen data. Other word : CORRECTNESS of the model."
         ACCURACY = "perf:accuracy"
         F1_SCORE = "perf:f1_score"
         LATENCY = "perf:latency"
         CONFUSION_MATRIX = "perf:confusion_matrix"
+        PRECISION = "perf:precision"
+        RECALL = "perf:recall"
+        AUC = "perf:auc"
 
     class FAIRNESS:
+        NAME = "FAIRNESS"
+        DESCRIPTION = "Measure the fairness of the model, i.e., its ability to make unbiased predictions across different demographic groups."
         DEMOGRAPHIC_PARITY = "fair:demographic_parity"
         EQUALIZED_ODDS = "fair:equalized_odds"
+        FNR_GAP = "fair:fnr_gap"
+        FPR_GAP = "fair:fpr_gap"
 
     class SUSTAINABILITY:
         ENERGY_KWH = "env:energy_consumption"
@@ -19,6 +28,14 @@ class MetricCatalog:
     class ROBUSTNESS:
         ADVERSARIAL_ACCURACY = "rob:adversarial_accuracy"
         NOISE_SENSITIVITY = "rob:noise_sensitivity"
+
+    class EFFICIENCY:
+        NAME = "EFFICIENCY"
+        DESCRIPTION = "Measure the efficiency of the model, i.e., it resource usage (e.g., inference time, memory usage)."
+        INFERENCE_TIME = "eff:inference_time"
+        MEMORY_USAGE = "eff:memory_usage"
+        TRAINING_TIME = "eff:training_time"
+        TIME_TO_FIRST_TOKEN = "eff:time_to_first_token"
 
     @classmethod
     def get_all_types_map(cls) -> dict[str, str]:

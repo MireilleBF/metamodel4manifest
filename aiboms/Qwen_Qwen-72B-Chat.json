@@ -1,0 +1,70 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:0da611d8-d2a4-4701-9190-8bbcb90b2127",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:28.197412+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Qwen/Qwen-72B-Chat-93e293ac-2034-5b05-8421-d60fcc08a720",
+            "name": "Qwen/Qwen-72B-Chat",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "tongyi-qianwen",
+                        "url": "https://huggingface.co/Qwen/Qwen-72B-Chat/blob/main/LICENSE"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Qwen/Qwen-72B-Chat",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "qwen",
+                    "modelArchitecture": "QWenLMHeadModel",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "Qwen/Qwen-72B"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Qwen"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "qwen",
+                "text-generation",
+                "custom_code",
+                "zh",
+                "en",
+                "arxiv:2309.16609",
+                "arxiv:2305.08322",
+                "arxiv:2009.03300",
+                "arxiv:2307.11088",
+                "base_model:Qwen/Qwen-72B",
+                "base_model:finetune:Qwen/Qwen-72B",
+                "license:other",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

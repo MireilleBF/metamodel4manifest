@@ -1,0 +1,225 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:fb135b86-b2a3-4702-879b-5abbcd303df1",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:37.453250+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "fblgit/una-cybertron-7b-v2-bf16-73779040-fde0-5243-bd08-0e842adb8d84",
+            "name": "fblgit/una-cybertron-7b-v2-bf16",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/fblgit/una-cybertron-7b-v2-bf16",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "fblgit/tree-of-knowledge-cccd8665-0437-5663-a809-9a09e5c4d126"
+                        },
+                        {
+                            "ref": "Open-Orca/SlimOrca-Dedup-82e0871b-2ebd-5ce6-afb5-69ec2f86ce36"
+                        },
+                        {
+                            "ref": "allenai/ultrafeedback_binarized_cleaned-9c5e42aa-af11-5e8f-a596-9c890d9cb120"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: ai2_arc, split: test, config: ARC-Challenge",
+                            "type": "acc_norm",
+                            "value": 68.26
+                        },
+                        {
+                            "slice": "dataset: hellaswag, split: validation",
+                            "type": "acc_norm",
+                            "value": 85.85
+                        },
+                        {
+                            "slice": "dataset: cais/mmlu, split: test, config: all",
+                            "type": "acc",
+                            "value": 63.23
+                        },
+                        {
+                            "slice": "dataset: truthful_qa, split: validation, config: multiple_choice",
+                            "type": "mc2",
+                            "value": 64.63
+                        },
+                        {
+                            "slice": "dataset: winogrande, split: validation, config: winogrande_xl",
+                            "type": "acc",
+                            "value": 80.98
+                        },
+                        {
+                            "slice": "dataset: gsm8k, split: test, config: main",
+                            "type": "acc",
+                            "value": 55.04
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "fblgit"
+                }
+            ],
+            "description": "## Model Details\n\nAdiestrated with UNA: Uniform Neural Alignment technique (paper going out soon).\n* What is **NOT** UNA? Its not a merged layers model. Is not SLERP or SLURP or similar.\n* What **is** UNA? A formula & A technique to *TAME* models\n* When will be released the code and paper? When have time, contribute and it'll be faster.\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "juanako",
+                "UNA",
+                "cybertron",
+                "fbl",
+                "dataset:fblgit/tree-of-knowledge",
+                "dataset:Open-Orca/SlimOrca-Dedup",
+                "dataset:allenai/ultrafeedback_binarized_cleaned",
+                "license:apache-2.0",
+                "model-index",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "fblgit/tree-of-knowledge-cccd8665-0437-5663-a809-9a09e5c4d126",
+            "name": "fblgit/tree-of-knowledge",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "fblgit/tree-of-knowledge-cccd8665-0437-5663-a809-9a09e5c4d126",
+                    "name": "fblgit/tree-of-knowledge",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/fblgit/tree-of-knowledge",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "lgpl-3.0"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\ttree-of-knowledge-llm\n\t\n\nToK aka Tree of Knowledge for Large Language Models LLM. It's a novel dataset that inspires knowledge symbolic correlation in simple input and output prompts.\nhttps://github.com/fblgit/tree-of-knowledge-llm\nThe set experimentially can be used with multiple purposes:\n\nKnowledge Extraction from a Model\nFine Tuning a model with newer data\nCreate Granular Domain Knowledge Sets\nImprove training performance\n\nSyntax Example:\n  {\n    \"instruction\": \"Describe energy\"\u2026 See the full description on the dataset page: https://huggingface.co/datasets/fblgit/tree-of-knowledge.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "fblgit",
+                                    "url": "https://huggingface.co/fblgit"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "Open-Orca/SlimOrca-Dedup-82e0871b-2ebd-5ce6-afb5-69ec2f86ce36",
+            "name": "Open-Orca/SlimOrca-Dedup",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "Open-Orca/SlimOrca-Dedup-82e0871b-2ebd-5ce6-afb5-69ec2f86ce36",
+                    "name": "Open-Orca/SlimOrca-Dedup",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/Open-Orca/SlimOrca-Dedup",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-classification, question-answering, text-generation"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "100K<n<1M"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "SlimOrca Dedup"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "\n\n\t\n\t\t\n\t\tOverview\n\t\n\n\n\"SlimOrca Dedup\" is a deduplicated, unfiltered subset of the SlimOrca dataset, excluding RLHF instances, resulting in 363k unique examples.\n\n\t\n\t\t\n\t\tKey Features\n\t\n\n\nRemoval of RLHF instances.\nDeduplication using minhash and Jaccard similarity techniques.\n\n\n\t\n\t\t\n\t\tDemo Models\n\t\n\n\n\t\n\t\t\n\t\tNote: These models were trained on the full SlimOrca dataset, not the deduplicated, unfiltered version.\n* https://huggingface.co/openaccess-ai-collective/jackalope-7b\n*\u2026 See the full description on the dataset page: https://huggingface.co/datasets/Open-Orca/SlimOrca-Dedup.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "Open-Orca",
+                                    "url": "https://huggingface.co/Open-Orca"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "allenai/ultrafeedback_binarized_cleaned-9c5e42aa-af11-5e8f-a596-9c890d9cb120",
+            "name": "allenai/ultrafeedback_binarized_cleaned",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "allenai/ultrafeedback_binarized_cleaned-9c5e42aa-af11-5e8f-a596-9c890d9cb120",
+                    "name": "allenai/ultrafeedback_binarized_cleaned",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/allenai/ultrafeedback_binarized_cleaned",
+                        "properties": [
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train_sft\", \"path\": \"data/train_sft-*\"}, {\"split\": \"test_sft\", \"path\": \"data/test_sft-*\"}, {\"split\": \"train_gen\", \"path\": \"data/train_gen-*\"}, {\"split\": \"test_gen\", \"path\": \"data/test_gen-*\"}, {\"split\": \"train_prefs\", \"path\": \"data/train_prefs-*\"}, {\"split\": \"test_prefs\", \"path\": \"data/test_prefs-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for \"ultrafeedback_binarized_cleaned\"\n\t\n\nUpdate 1/12/2023: I've removed examples identified as faulty by Argilla - see their awesome work for more details.\nThis is a version of the UltraFeedback binarized dataset but with TruthfulQA prompts removed and source annotations added (so you can filter out samples from different sources yourself if you want!).\nPlease see the binarized dataset card for more information, or the original UltraFeedback dataset card.\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "allenai",
+                                    "url": "https://huggingface.co/allenai"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

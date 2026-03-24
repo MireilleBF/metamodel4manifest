@@ -1,0 +1,67 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:78983a85-c2c7-493a-9496-a0dc6deb1303",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:02.006211+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "nvidia/Llama3-ChatQA-1.5-8B-72b4b2e0-0f43-5528-8bee-9ec2a17f6aa1",
+            "name": "nvidia/Llama3-ChatQA-1.5-8B",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/nvidia/Llama3-ChatQA-1.5-8B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "nvidia"
+                }
+            ],
+            "description": "## Model Details\nWe introduce Llama3-ChatQA-1.5, which excels at conversational question answering (QA) and retrieval-augmented generation (RAG). Llama3-ChatQA-1.5 is developed using an improved training recipe from [ChatQA paper](https://arxiv.org/pdf/2401.10225), and it is built on top of [Llama-3 base model](https://huggingface.co/meta-llama/Meta-Llama-3-8B). Specifically, we incorporate more conversational QA data to enhance its tabular and arithmetic calculation capability. Llama3-ChatQA-1.5 has two variants: Llama3-ChatQA-1.5-8B and Llama3-ChatQA-1.5-70B. Both models were originally trained using [Megatron-LM](https://github.com/NVIDIA/Megatron-LM), we converted the checkpoints to Hugging Face format. **For more information about ChatQA, check the [website](https://chatqa-project.github.io/)!**\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "nvidia",
+                "chatqa-1.5",
+                "chatqa",
+                "llama-3",
+                "pytorch",
+                "conversational",
+                "en",
+                "arxiv:2401.10225",
+                "license:llama3",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

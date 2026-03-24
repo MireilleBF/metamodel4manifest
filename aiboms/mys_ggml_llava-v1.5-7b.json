@@ -1,0 +1,44 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:073d1aca-8f66-4793-a706-94b0dd14e166",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:31.854327+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "mys/ggml_llava-v1.5-7b-47c2134a-768d-563e-ac58-621f5b13f05c",
+            "name": "mys/ggml_llava-v1.5-7b",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/mys/ggml_llava-v1.5-7b",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                }
+            },
+            "authors": [
+                {
+                    "name": "mys"
+                }
+            ],
+            "tags": [
+                "gguf",
+                "llava",
+                "lmm",
+                "ggml",
+                "llama.cpp",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

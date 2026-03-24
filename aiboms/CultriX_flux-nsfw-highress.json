@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:7183e8f3-5a84-4b02-8288-5debc955a7bd",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:09:36.096656+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "CultriX/flux-nsfw-highress-d6befd47-a704-5d8d-a2c6-d0c587a5852e",
+            "name": "CultriX/flux-nsfw-highress",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/CultriX/flux-nsfw-highress",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "black-forest-labs/FLUX.1-dev"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "CultriX"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "text-to-image",
+                "stable-diffusion",
+                "lora",
+                "template:sd-lora",
+                "base_model:black-forest-labs/FLUX.1-dev",
+                "base_model:adapter:black-forest-labs/FLUX.1-dev",
+                "license:apache-2.0",
+                "region:us",
+                "not-for-all-audiences"
+            ]
+        }
+    },
+    "components": []
+}

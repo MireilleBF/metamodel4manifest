@@ -1,0 +1,74 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:80c8acf5-4e2c-4a4c-8c0b-146fea885943",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:09:49.538498+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Groq/Llama-3-Groq-70B-Tool-Use-9c21b450-4006-5155-abfc-40517fd40844",
+            "name": "Groq/Llama-3-Groq-70B-Tool-Use",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "llama3"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Groq/Llama-3-Groq-70B-Tool-Use",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "meta-llama/Meta-Llama-3-70B"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Groq"
+                }
+            ],
+            "description": "## Model Details\n\n- **Model Type:** Causal language model fine-tuned for tool use\n- **Language(s):** English\n- **License:** Meta Llama 3 Community License\n- **Model Architecture:** Optimized transformer\n- **Training Approach:** Full fine-tuning and Direct Preference Optimization (DPO) on Llama 3 70B base model\n- **Input:** Text\n- **Output:** Text, with enhanced capabilities for tool use and function calling\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "facebook",
+                "meta",
+                "pytorch",
+                "llama-3",
+                "groq",
+                "tool-use",
+                "function-calling",
+                "conversational",
+                "en",
+                "base_model:meta-llama/Meta-Llama-3-70B",
+                "base_model:finetune:meta-llama/Meta-Llama-3-70B",
+                "license:llama3",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

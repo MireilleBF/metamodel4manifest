@@ -23,15 +23,21 @@ note right of MetricCatalog::get_all_types_map
 end note
 
 class PERFORMANCE {
-  {static} +ACCURACY : String = "perf:accuracy"
-  {static} +F1_SCORE : String = "perf:f1_score"
-  {static} +LATENCY : String = "perf:latency"
-  {static} +CONFUSION_MATRIX : String = "perf:confusion_matrix"
+  {static} +ACCURACY = "perf:accuracy"
+  {static} +F1_SCORE = "perf:f1_score"
+  {static} +CONFUSION_MATRIX = "perf:confusion_matrix"
+  {static} +PRECISION = "perf:precision"
+  {static} +RECALL = "perf:recall"
+  {static} +AUC = "perf:auc"
+  {static} +DESCRIPTION = "Measure the model' capacity.. CORRECTNESS."
 }
 
 class FAIRNESS {
-  {static} +DEMOGRAPHIC_PARITY : String = "fair:demographic_parity"
-  {static} +EQUALIZED_ODDS : String = "fair:equalized_odds"
+  {static} +DEMOGRAPHIC_PARITY = "fair:demographic_parity"
+  {static} +EQUALIZED_ODDS = "fair:equalized_odds"
+  {static} +DESCRIPTION = "Measure the model' ability to make unbiased predictions."
+ {static} +FNR_GAP = "fair:fnr_gap"
+ {static} +FPR_GAP = "fair:fpr_gap"
 }
 
 ' Symbolise l'imbrication (Inner Classes)

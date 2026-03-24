@@ -1,0 +1,484 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:eca1af19-a02f-4176-9e5b-1d5d54cd40bf",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:57.159127+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "smallcloudai/Refact-1_6B-fim-5f8a6e1a-78b6-523d-a2fe-34322c9fbc29",
+            "name": "smallcloudai/Refact-1_6B-fim",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "bigscience-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/smallcloudai/Refact-1_6B-fim",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gpt_refact",
+                    "modelArchitecture": "GPTRefactForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd"
+                        },
+                        {
+                            "ref": "rombodawg/2XUNCENSORED_MegaCodeTraining188k-739f6327-7af1-5c61-bbc5-ded88b6babdf"
+                        },
+                        {
+                            "ref": "bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: openai_humaneval",
+                            "type": "pass@1",
+                            "value": 32
+                        },
+                        {
+                            "slice": "dataset: openai_humaneval",
+                            "type": "pass@1",
+                            "value": 31.5
+                        },
+                        {
+                            "slice": "dataset: openai_humaneval",
+                            "type": "pass@10",
+                            "value": 53
+                        },
+                        {
+                            "slice": "dataset: openai_humaneval",
+                            "type": "pass@100",
+                            "value": 76.9
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 35.8
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 31.6
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 29.1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 26.3
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 18.38
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 12.28
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 15.12
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 13.17
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 2.8
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 26.92
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 26.85
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 30.76
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 25.94
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 8.44
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 26.46
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 17.86
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 20.94
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": 18.78
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: bigcode/humanevalpack",
+                            "type": "pass@1",
+                            "value": -1
+                        },
+                        {
+                            "slice": "dataset: mbpp",
+                            "type": "pass@1",
+                            "value": 31.15
+                        },
+                        {
+                            "slice": "dataset: ds1000",
+                            "type": "pass@1",
+                            "value": 10.1
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 21.61
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 13.91
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 9.5
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 53.57
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 21.58
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 13.75
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 26.88
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 15.26
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 23.04
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 12.1
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 29.6
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 13.77
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 12.68
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 4.29
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 19.54
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 18.33
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 5.7
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 17.68
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 25
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "smallcloudai"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "gpt_refact",
+                "text-generation",
+                "code",
+                "custom_code",
+                "en",
+                "dataset:bigcode/the-stack-dedup",
+                "dataset:rombodawg/2XUNCENSORED_MegaCodeTraining188k",
+                "dataset:bigcode/commitpackft",
+                "arxiv:2108.12409",
+                "arxiv:1607.06450",
+                "arxiv:1910.07467",
+                "arxiv:1911.02150",
+                "license:bigscience-openrail-m",
+                "model-index",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd",
+            "name": "bigcode/the-stack-dedup",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigcode/the-stack-dedup-991f9bee-32e6-518f-ae20-b1e89b6243dd",
+                    "name": "bigcode/the-stack-dedup",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigcode/the-stack-dedup",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": ""
+                            },
+                            {
+                                "name": "language",
+                                "value": "code"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "unknown"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": ""
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced, expert-generated"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "The-Stack"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": ""
+                            },
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for The Stack\n\t\n\n\n\n\t\n\t\t\n\t\tChangelog\n\t\n\n\n\t\n\t\t\nRelease\nDescription\n\n\n\t\t\nv1.0\nInitial release of the Stack. Included 30 programming languages and 18 permissive licenses. Note: Three included licenses (MPL/EPL/LGPL) are considered weak copyleft licenses. The resulting near-deduplicated dataset is 1.5TB in size.\n\n\nv1.1\nThe three copyleft licenses ((MPL/EPL/LGPL) were excluded and the list of permissive licenses extended to 193 licenses in total. The list of programming\u2026 See the full description on the dataset page: https://huggingface.co/datasets/bigcode/the-stack-dedup.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigcode",
+                                    "url": "https://huggingface.co/bigcode"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "rombodawg/2XUNCENSORED_MegaCodeTraining188k-739f6327-7af1-5c61-bbc5-ded88b6babdf",
+            "name": "rombodawg/2XUNCENSORED_MegaCodeTraining188k",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "rombodawg/2XUNCENSORED_MegaCodeTraining188k-739f6327-7af1-5c61-bbc5-ded88b6babdf",
+                    "name": "rombodawg/2XUNCENSORED_MegaCodeTraining188k",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/rombodawg/2XUNCENSORED_MegaCodeTraining188k",
+                        "properties": [
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\nVERSION 3 IS RELEASED DOWNLOAD HERE:\n\nhttps://huggingface.co/datasets/rombodawg/LosslessMegaCodeTrainingV3_2.2m_Evol\n\n\nThis is a uncensored mega combined dataset using both razent/wizardlm-code-evol-32k and nickrosh/Evol-Instruct-Code-80k-v1\nIn this version many lines of instructions were removed in part of a uncensoring process. \nThe Rombo's format.rar file is so you can use the  training data in oobagooba text generation webui. Simply unzip it, and use it as a json file.\nAll links bellow\u2026 See the full description on the dataset page: https://huggingface.co/datasets/rombodawg/MegaCodeTraining.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "rombodawg",
+                                    "url": "https://huggingface.co/rombodawg"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "type": "data",
+            "bom-ref": "bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b",
+            "name": "bigcode/commitpackft",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigcode/commitpackft-7dd931ed-c49b-58fe-b83e-9e9d6c32ee7b",
+                    "name": "bigcode/commitpackft",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigcode/commitpackft",
+                        "properties": [
+                            {
+                                "name": "language",
+                                "value": "code"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "CommitPackFT"
+                            },
+                            {
+                                "name": "license",
+                                "value": "mit"
+                            }
+                        ]
+                    },
+                    "description": "CommitPackFT is is a 2GB filtered version of CommitPack to contain only high-quality commit messages that resemble natural language instructions.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigcode",
+                                    "url": "https://huggingface.co/bigcode"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

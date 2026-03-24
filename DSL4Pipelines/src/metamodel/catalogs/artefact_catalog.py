@@ -12,4 +12,5 @@ class ArtefactCatalog:
         CONFIG = "config"
         PERFORMANCE = "performance"
         VOCABULARY = "vocabulary"
-        ALL = [DATA, CODE, MODEL_WEIGHTS, CONFIG, PERFORMANCE]
+        TOKENIZER = "tokenizer"
+        ALL = [DATA, CODE, MODEL_WEIGHTS, CONFIG, PERFORMANCE,TOKENIZER]

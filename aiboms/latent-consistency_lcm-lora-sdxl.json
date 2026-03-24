@@ -1,0 +1,61 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:82ed6dbf-7f1e-4bfc-9be1-c6ee36b0e232",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:26.393519+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "latent-consistency/lcm-lora-sdxl-cdcfc3f2-5488-574c-a2f1-7eaee609d6a2",
+            "name": "latent-consistency/lcm-lora-sdxl",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "openrail++"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/latent-consistency/lcm-lora-sdxl",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "stabilityai/stable-diffusion-xl-base-1.0"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "latent-consistency"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "lora",
+                "text-to-image",
+                "arxiv:2311.05556",
+                "base_model:stabilityai/stable-diffusion-xl-base-1.0",
+                "base_model:adapter:stabilityai/stable-diffusion-xl-base-1.0",
+                "license:openrail++",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

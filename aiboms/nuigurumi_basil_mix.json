@@ -1,0 +1,56 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:0ba8c2b6-b513-4fc5-9dde-8e44b2468d40",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:47.882843+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "nuigurumi/basil_mix-c583e8f3-b193-54dd-8d0e-f0f767ee573e",
+            "name": "nuigurumi/basil_mix",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "other"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/nuigurumi/basil_mix",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "nuigurumi"
+                }
+            ],
+            "description": "## Model Description\n\n- merged model.\n- realistic texture and Asian face.\n- designed to maintain a responsive reaction to danbooru based prompts.\n",
+            "tags": [
+                "diffusers",
+                "license:other",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "diffusers:StableDiffusionPipeline",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

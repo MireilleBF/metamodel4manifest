@@ -1,0 +1,61 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:703373e3-56dd-4cc7-9346-f723ab8d164b",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:52.662806+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "sambanovasystems/BLOOMChat-176B-v1-57db1302-fc40-5114-91b5-eec339b12762",
+            "name": "sambanovasystems/BLOOMChat-176B-v1",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "other"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/sambanovasystems/BLOOMChat-176B-v1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "bloom",
+                    "modelArchitecture": "BloomForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Uses\n<details>\n<summary>Click to expand</summary>\n<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "sambanovasystems"
+                }
+            ],
+            "description": "## Model Details\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "bloom",
+                "text-generation",
+                "license:other",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

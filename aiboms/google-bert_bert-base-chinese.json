@@ -1,0 +1,59 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:3e97679f-30e2-4625-b8ec-65f697d51e58",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:18.722860+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "google-bert/bert-base-chinese-f7567e79-acde-5a07-907b-e439dd8d23ad",
+            "name": "google-bert/bert-base-chinese",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/google-bert/bert-base-chinese",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "fill-mask",
+                    "architectureFamily": "bert",
+                    "modelArchitecture": "BertForMaskedLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Uses\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "google-bert"
+                }
+            ],
+            "description": "## Model Details\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "tf",
+                "jax",
+                "safetensors",
+                "bert",
+                "fill-mask",
+                "zh",
+                "arxiv:1810.04805",
+                "autotrain_compatible",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

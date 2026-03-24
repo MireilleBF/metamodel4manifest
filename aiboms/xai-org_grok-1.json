@@ -1,0 +1,55 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:2ae7afad-803b-4a49-bc5c-91480a735f86",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:45.978034+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "xai-org/grok-1-86e2cda8-3667-51a5-9b51-bfc0fcbcf7ef",
+            "name": "xai-org/grok-1",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/xai-org/grok-1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "grok"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "xai-org"
+                }
+            ],
+            "tags": [
+                "grok",
+                "grok-1",
+                "text-generation",
+                "license:apache-2.0",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

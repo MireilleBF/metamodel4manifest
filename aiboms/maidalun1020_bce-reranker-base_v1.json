@@ -1,0 +1,61 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:cfbe59fd-402f-4ce6-8c66-454a76f65322",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:02:20.676790+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "maidalun1020/bce-reranker-base_v1-32d9ba33-f0f7-51b4-ac0f-78388f312adf",
+            "name": "maidalun1020/bce-reranker-base_v1",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/maidalun1020/bce-reranker-base_v1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-classification",
+                    "architectureFamily": "xlm-roberta",
+                    "modelArchitecture": "XLMRobertaForSequenceClassification",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "sentence-transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "maidalun1020"
+                }
+            ],
+            "tags": [
+                "sentence-transformers",
+                "pytorch",
+                "xlm-roberta",
+                "text-classification",
+                "transformers",
+                "en",
+                "zh",
+                "ja",
+                "ko",
+                "license:apache-2.0",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

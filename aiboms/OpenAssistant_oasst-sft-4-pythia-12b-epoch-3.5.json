@@ -1,0 +1,62 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:baebd05e-39dd-4559-b8a3-8a447f16469d",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:03:58.110774+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5-188b6e80-3375-562f-af20-f35cd0ef3e2a",
+            "name": "OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gpt_neox",
+                    "modelArchitecture": "GPTNeoXForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "OpenAssistant"
+                }
+            ],
+            "description": "## Model Details\n\n- **Developed by:** [Open-Assistant Contributors](https://open-assistant.io/)\n- **Model type:** Transformer-based Language Model\n- **Language:** English\n- **Finetuned from:** [EleutherAI / pythia-12b-deduped](https://huggingface.co/EleutherAI/pythia-12b-deduped)\n- **Code:** [Open-Assistant/model/model_training](https://github.com/LAION-AI/Open-Assistant/tree/main/model/model_training)\n- **Demo:** [Continuations for 250 random prompts](https://open-assistant.github.io/oasst-model-eval/?f=https%3A%2F%2Fraw.githubusercontent.com%2FOpen-Assistant%2Foasst-model-eval%2Fmain%2Fsampling_reports%2Foasst-sft%2F2023-04-03_andreaskoepf_oasst-sft-4-pythia-12b-epoch-3_5_sampling_noprefix_lottery.json%0Ahttps%3A%2F%2Fraw.githubusercontent.com%2FOpen-Assistant%2Foasst-model-eval%2Fmain%2Fsampling_reports%2Fchat-gpt%2F2023-04-11_gpt-3.5-turbo_lottery.json)\n- **License:** Apache 2.0\n- **Contact:** [Open-Assistant Discord](https://ykilcher.com/open-assistant-discord)\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "gpt_neox",
+                "text-generation",
+                "sft",
+                "en",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}
