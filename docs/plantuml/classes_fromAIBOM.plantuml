@@ -1,0 +1,31 @@
+@startuml classes_fromAIBOM
+set namespaceSeparator none
+class "AIBOMManager" as AIBOMManager {
+  'aibom_files : list[str]
+  'manifests : dict[str, Manifest]
+  filter_manifests_by_rule(rule) -> list[Manifest]
+  get_aibom_files(path: str) -> list[str]
+  get_file_name_from_manifest(manifest: Manifest) -> str
+  get_manifest(manifest_name: str) -> Manifest
+  save_manifests_in_yaml(output_path: str)
+}
+AIBOMManager --> "0..*\n "Manifest : manifests
+
+
+@enduml
+class "aibom_translator.AIBOMTranslator" as aibom_translator.AIBOMTranslator {
+  data
+  file_path
+  manifest
+  metadata
+  ml_model
+  addLocalDefinedComponents(dataComponent)
+  build_components() -> MLModel
+  build_model() -> MLModel
+  build_sofware_file_for_aibom() -> SoftwareFile
+  deal_with_MLModelComponent(component, component_treated_properties: set[Any], mlmodel_properties: dict[str, Any]) -> dict[str, Any]
+  deal_with_modelCard_in_component(modelcard, mlmodel_properties) -> Any
+  extract_base_model(properties)
+  extract_library(properties) -> Optional[SoftwareFile]
+  transform_aibom_to_manifest()
+}

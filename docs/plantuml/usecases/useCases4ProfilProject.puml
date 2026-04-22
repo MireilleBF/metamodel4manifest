@@ -8,17 +8,44 @@ skinparam note {
 
 '-------------- Actors -------------
 "Data Scientist" as DS #lightyellow
-"ML Provider" as MLProvider
-note right of MLProvider : Publishes the consolidated \nresults of Data Scientist and ML engineer work.
 "ML Engineer" as Dev #lightgreen
-"Domain Expert" as DomainExpert #lightgreen
 
-DS <|-- MLProvider
-Dev <|-- MLProvider
 
 
 ' ------------- Use Cases -------------
+
+'note top of FS : Defines the framework for verifying FATES properties
+rectangle "PROFIL system" as PS{
+    CheckQuality as (Check Quality) #lightyellow
+    Explore as (Explore the ML landscape) #lightyellow
+    Instrument as (Define  rules to check) #lightyellow
+    GenDoc as (Generate PROFIL documentation) #lightblue
+    Abstract as (Abstract Pipeline representation) #lightblue
+}
+note bottom of PS : Engine for \nlinting and static analysis
+
+
+'-------------- Relations -------------
+
+
+'-------------- Data Scientist -------------
+DS --> Explore
+Dev --> Abstract
+DS --> Instrument
+Dev --> CheckQuality
+'DS --> CheckQuality
+Instrument ..> CheckQuality :extends
+':Dev: --> GenDoc
+Abstract <.. GenDoc :extends
+GenDoc ..> CheckQuality :extends
+
+DS --|> Dev
+
+@enduml
+
 'Préciser les requirements FATEs du ML
+"Domain Expert" as DomainExpert #lightgreen
+
 rectangle "FATEs Justification System" as FS {
     Collect as (Collect FATEs requirements) #lightgreen
     GenJustModel as (Generate a Justification Model) #lightgreen
@@ -37,33 +64,16 @@ rectangle "FATEs Justification System" as FS {
 
 
 }
-'note top of FS : Defines the framework for verifying FATES properties
-rectangle "PROFIL system" as PS{
-    CheckQuality as (Check Quality) #lightyellow
-    Explore as (Explore the ML landscape) #lightyellow
-    Instrument as (Define quality rules to check) #lightyellow
-    'GenDoc as (Generate Documentation)
-}
-note bottom of PS : Engine for \nlinting and static analysis
 
-
-
-
-
-
-'-------------- Relations -------------
-'domaine expert
-':DomainExpert: --> Collect
 :DomainExpert: --> GenJustModel
-GenJustModel ..> Collect :extends
-:DomainExpert: --> (Audit Justification)
 
-'ML developer
-:Dev: --> CollectEvidence
-:Dev: --> InstrumentCI
+"ML Provider" as MLProvider
+note right of MLProvider : Publishes the consolidated \nresults of Data Scientist and ML engineer work.
 ':Dev: --> Verify
 InstrumentCI --> Verify:includes
 InstrumentCI --> GenJust:includes
+:Dev: --> InstrumentCI
+
 CheckQuality  <.. Verify:extends
 
 'note on link : FATEs verification specializes \ngeneric quality checks
@@ -72,6 +82,8 @@ CheckQuality  <.. Verify:extends
 'ML provider
 :MLProvider: --> Manage
 ':MLProvider: --> GenDoc
+
+
 
 Manage<..Generate   :extends
 Manage<..Extract   :extends
@@ -83,13 +95,6 @@ Instrument <.. DefineRule :extends
 
 'Verify <.. GenJust :extends
 
-'-------------- Data Scientist -------------
-DS --> Explore
-DS --> Instrument
-DS --> CheckQuality
-'DS --> DefineRule
 
-
-
-
-@enduml
+DS <|-- MLProvider
+Dev <|-- DS

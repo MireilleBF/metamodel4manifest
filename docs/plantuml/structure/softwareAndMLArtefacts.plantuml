@@ -90,10 +90,29 @@ class "MLModel" as MLModel {
 '  ml_model_type : Optional[str]
 '  type : str
 '  validate(errors: list) -> bool
+  architectureFamily : Optional[str]
+  'consideration : Optional[Consideration]
+  ml_model_type : Optional[str]
+  modelArchitecture : Optional[str]
+  modelSize : Optional[str]
+  purpose : Optional[str]
+  'type : str
+  validate(errors: list) -> bool
 }
+MLModel --> "0..1\n consideration" Consideration
 MLModel --|> SoftwareFile
 MLModel --> "0..1\n ml_model_type" ML_MODEL_TYPE
+
+class "Consideration" as Consideration {
+  ethical_risks : list
+  intended_users : list
+  limitations : list
+  'type : Optional[str]
+  'uid : str
+  use_cases : list
 }
+}
+
 package Metrics{
 class "Metric" as Metric {
   'category : Optional[str]
