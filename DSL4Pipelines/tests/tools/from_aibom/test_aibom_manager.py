@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import pytest
+
 from DSL4Pipelines.src.tools.from_aibom.aibom_translator import AIBOMTranslator
 from DSL4Pipelines.src.tools.queries.manifest_query import ManifestQuery
 from DSL4Pipelines.src.tools.queries.rules.rules import check_dataset_and_model_presence
@@ -13,22 +15,24 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 #To run on main datasets
-#BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
-#BASE_DIR_DATASETS = BASE_DIR/'datasets'
-#PATH_AIBOMS = str(BASE_DIR_DATASETS /'aiboms')
-#OUTPUT = str(BASE_DIR_DATASETS /'OUTPUT/evaluations/')
+BASE_DIR_4IC = Path(__file__).resolve().parent.parent.parent.parent.parent
+BASE_DIR_DATASETS = BASE_DIR_4IC/'datasets'
+PATH_AIBOMS_DATASET = str(BASE_DIR_DATASETS /'aiboms')
+OUTPUT_DATASET = str(BASE_DIR_DATASETS /'OUTPUT/evaluations/')
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
 OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/OUTPUT/aibom_fixtures_Evaluation/')
-PATH_AIBOMS = str(BASE_DIR /'datasets/aiboms')
+PATH_AIBOMS = str(BASE_DIR /'DSL4Pipelines/tests/fixtures/aiboms')
 
+@pytest.mark.local_only
 def test_build_AIBOMManager():
     print_cwd()
-    path = PATH_AIBOMS
+    path = PATH_AIBOMS_DATASET
     manager = AIBOMManager(path)
     assert len(manager.aibom_files) == 312, f"Expected 4 AIBOM files, but got {len(manager.aibom_files)}"
     assert len(manager.manifests) == 312, f"Expected 4 manifests, but got {len(manager.manifests)}"
     print("✅ AIBOM Manager built successfully with the expected number of AIBOM files and manifests.")
+
 
 def test_save_AIBOMManager():
     print_cwd()
@@ -42,6 +46,8 @@ def test_save_AIBOMManager():
         file_path = output_path + '/' + file_name
         assert check_file_or_dict_exists(file_path), f"Expected file {file_path} to be saved, but it does not exist."
     logger.info("✅ All manifests saved successfully in yaml format in the output path.")
+
+
 def test_save_stranger():
     path = PATH_AIBOMS+'/strangerzonehf_Flux-Super-Realism-LoRA.json'
     manifest = AIBOMTranslator(path).transform_aibom_to_manifest()
@@ -52,8 +58,9 @@ def test_save_stranger():
     file_path = output_path +'/' + file_name
     assert check_file_or_dict_exists(file_path), f"Expected file {file_path} to be saved, but it does not exist."
 
+@pytest.mark.local_only
 def test_filter_manifests_by_rule_llama():
-    path = PATH_AIBOMS
+    path = PATH_AIBOMS_DATASET
     manager = AIBOMManager(path)
     #we define a rule that says that the model must be based on a transformer architecture, we will check if the manifest contains an MLModel artefact with a property "ml_model_type" with value "Transformer", and we will keep only the manifests that contain such an artefact.
     def rule(mq: ManifestQuery) -> bool:
@@ -81,9 +88,9 @@ def test_filter_manifests_by_rule_llama():
         name = manager.get_file_name_from_manifest(manifest)
         print(f"MLModel artefact in the manifest {name}")
 
-
+@pytest.mark.local_only
 def test_filter_manifests_by_rule_gpt():
-    path = PATH_AIBOMS
+    path = PATH_AIBOMS_DATASET
 
     manager = AIBOMManager(path)
     #we define a rule that says that the model must be based on a transformer architecture, we will check if the manifest contains an MLModel artefact with a property "ml_model_type" with value "Transformer", and we will keep only the manifests that contain such an artefact.
@@ -143,9 +150,9 @@ def test_filter_manifests_by_rule_purpose():
     #assert len(results) == 8, f"Expected 8 manifests that validate the rule, but got {len(results)}"
     print(f"Manifests that do'nt have for purpose text-generation : {len(results)}")
 
-
+@pytest.mark.local_only
 def test_filter_manifests_by_rule_r():
-    path = PATH_AIBOMS
+    path = PATH_AIBOMS_DATASET
     manager = AIBOMManager(path)
     #we define a rule that says that the model must be based on a transformer architecture, we will check if the manifest contains an MLModel artefact with a property "ml_model_type" with value "Transformer", and we will keep only the manifests that contain such an artefact.
     manifests = manager.filter_manifests_by_rule(check_dataset_and_model_presence)
