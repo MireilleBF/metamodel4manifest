@@ -1,0 +1,252 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:b588f14e-9728-4d6a-b742-cd2dafdf1bbb",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:11:45.583575+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "bigcode/santacoder-33fc3cce-5355-588f-95c1-0a49af703272",
+            "name": "bigcode/santacoder",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "bigcode-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/bigcode/santacoder",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "gpt2",
+                    "modelArchitecture": "GPT2LMHeadCustomModel",
+                    "datasets": [
+                        {
+                            "ref": "bigcode/the-stack-407e7b13-27c4-5929-bccd-52a13a854a28"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 0.18
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@10",
+                            "value": 0.29
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@100",
+                            "value": 0.49
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 0.35
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@10",
+                            "value": 0.58
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@100",
+                            "value": 0.77
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 0.16
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@10",
+                            "value": 0.27
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@100",
+                            "value": 0.47
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 0.28
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@10",
+                            "value": 0.51
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@100",
+                            "value": 0.7
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 0.15
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@10",
+                            "value": 0.26
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@100",
+                            "value": 0.41
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@1",
+                            "value": 0.28
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@10",
+                            "value": 0.44
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "pass@100",
+                            "value": 0.59
+                        },
+                        {
+                            "slice": "dataset: loubnabnl/humaneval_infilling",
+                            "type": "exact_match",
+                            "value": 0.44
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "exact_match",
+                            "value": 0.62
+                        },
+                        {
+                            "slice": "dataset: nuprl/MultiPL-E",
+                            "type": "exact_match",
+                            "value": 0.6
+                        },
+                        {
+                            "slice": "dataset: code_x_glue_ct_code_to_text",
+                            "type": "bleu",
+                            "value": 18.13
+                        }
+                    ]
+                },
+                "consideration": {
+                    "useCases": "# Use\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "bigcode"
+                }
+            ],
+            "description": "# Model Summary\n\nThe SantaCoder models are a series of 1.1B parameter models trained on the Python, Java, and JavaScript subset of [The Stack (v1.1)](https://huggingface.co/datasets/bigcode/the-stack) (which excluded opt-out requests).\nThe main model uses [Multi Query Attention](https://arxiv.org/abs/1911.02150), a context window of 2048 tokens, and was trained using near-deduplication and comment-to-code ratio as filtering criteria and using the [Fill-in-the-Middle objective](https://arxiv.org/abs/2207.14255).\nIn addition there are several models that were trained on datasets with different filter parameters and with architecture and objective variations.\n\n- **Repository:** [bigcode/Megatron-LM](https://github.com/bigcode-project/Megatron-LM)\n- **Project Website:** [bigcode-project.org](https://www.bigcode-project.org)\n- **Paper:** [\ud83c\udf85SantaCoder: Don't reach for the stars!\ud83c\udf1f](https://arxiv.org/abs/2301.03988)\n- **Point of Contact:** [contact@bigcode-project.org](mailto:contact@bigcode-project.org)\n- **Languages:** Python, Java, and JavaScript\n\n|Model|Architecture|Objective|Filtering|\n|:-|:-|:-|:-|\n|`mha`|MHA|AR + FIM| Base |\n|`no-fim`| MQA | AR| Base |\n|`fim`| MQA | AR + FIM | Base |\n|`stars`| MQA | AR + FIM | GitHub stars |\n|`fertility`| MQA | AR + FIM | Tokenizer fertility |\n|`comments`| MQA | AR + FIM | Comment-to-code ratio |\n|`dedup-alt`| MQA | AR + FIM | Stronger near-deduplication |\n|`final`| MQA | AR + FIM | Stronger near-deduplication and comment-to-code ratio |\n\nThe `final` model is the best performing model and was trained twice as long (236B tokens) as the others. This checkpoint is the default model and available on the `main` branch. All other checkpoints are on separate branches with according names.\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "gpt2",
+                "text-generation",
+                "custom_code",
+                "code",
+                "dataset:bigcode/the-stack",
+                "arxiv:1911.02150",
+                "arxiv:2207.14255",
+                "arxiv:2301.03988",
+                "license:bigcode-openrail-m",
+                "model-index",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "bigcode/the-stack-407e7b13-27c4-5929-bccd-52a13a854a28",
+            "name": "bigcode/the-stack",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigcode/the-stack-407e7b13-27c4-5929-bccd-52a13a854a28",
+                    "name": "bigcode/the-stack",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigcode/the-stack",
+                        "properties": [
+                            {
+                                "name": "task_categories",
+                                "value": "text-generation"
+                            },
+                            {
+                                "name": "task_ids",
+                                "value": ""
+                            },
+                            {
+                                "name": "language",
+                                "value": "code"
+                            },
+                            {
+                                "name": "size_categories",
+                                "value": "unknown"
+                            },
+                            {
+                                "name": "annotations_creators",
+                                "value": ""
+                            },
+                            {
+                                "name": "language_creators",
+                                "value": "crowdsourced, expert-generated"
+                            },
+                            {
+                                "name": "pretty_name",
+                                "value": "The-Stack"
+                            },
+                            {
+                                "name": "source_datasets",
+                                "value": ""
+                            },
+                            {
+                                "name": "license",
+                                "value": "other"
+                            }
+                        ]
+                    },
+                    "description": "\n\t\n\t\t\n\t\tDataset Card for The Stack\n\t\n\n\n\n\t\n\t\t\n\t\tChangelog\n\t\n\n\n\t\n\t\t\nRelease\nDescription\n\n\n\t\t\nv1.0\nInitial release of the Stack. Included 30 programming languages and 18 permissive licenses. Note: Three included licenses (MPL/EPL/LGPL) are considered weak copyleft licenses. The resulting near-deduplicated dataset is 3TB in size.\n\n\nv1.1\nThe three copyleft licenses ((MPL/EPL/LGPL) were excluded and the list of permissive licenses extended to 193 licenses in total. The list of programming languages\u2026 See the full description on the dataset page: https://huggingface.co/datasets/bigcode/the-stack.",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigcode",
+                                    "url": "https://huggingface.co/bigcode"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

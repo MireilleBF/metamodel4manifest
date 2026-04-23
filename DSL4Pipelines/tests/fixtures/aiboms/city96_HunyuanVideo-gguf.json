@@ -1,0 +1,60 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:f23dd521-3ad8-4107-b77a-3c9b5531d690",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:05.877266+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "city96/HunyuanVideo-gguf-9a5915d3-7f16-51a0-af43-a59967694cf3",
+            "name": "city96/HunyuanVideo-gguf",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "tencent-hunyuan-community",
+                        "url": "LICENSE.md"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/city96/HunyuanVideo-gguf",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-video",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "gguf"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "tencent/HunyuanVideo"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "city96"
+                }
+            ],
+            "tags": [
+                "gguf",
+                "text-to-video",
+                "base_model:tencent/HunyuanVideo",
+                "base_model:quantized:tencent/HunyuanVideo",
+                "license:other",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

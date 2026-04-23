@@ -1,0 +1,64 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:543ebe37-c68b-4660-805a-ffbd698453a1",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:10:59.286820+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "01-ai/Yi-6B-200K-6b93bfc8-189e-5f68-bdb6-87bc611b9af5",
+            "name": "01-ai/Yi-6B-200K",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/01-ai/Yi-6B-200K",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "llama",
+                    "modelArchitecture": "LlamaForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "01-ai"
+                }
+            ],
+            "description": "## Introduction\n\n- \ud83e\udd16 The Yi series models are the next generation of open-source large language models trained from scratch by [01.AI](https://01.ai/).\n\n- \ud83d\ude4c Targeted as a bilingual language model and trained on 3T multilingual corpus, the Yi series models become one of the strongest LLM worldwide, showing promise in language understanding, commonsense reasoning, reading comprehension, and more. For example,\n\n- Yi-34B-Chat model **landed in second place (following GPT-4 Turbo)**, outperforming other LLMs (such as GPT-4, Mixtral, Claude) on the AlpacaEval Leaderboard (based on data available up to January 2024).\n\n- Yi-34B model **ranked first among all existing open-source models** (such as Falcon-180B, Llama-70B, Claude) in **both English and Chinese** on various benchmarks, including Hugging Face Open LLM Leaderboard (pre-trained) and C-Eval (based on data available up to November 2023).\n\n- \ud83d\ude4f (Credits to Llama) Thanks to the Transformer and Llama open-source communities, as they reduce the efforts required to build from scratch and enable the utilization of the same tools within the AI ecosystem.\n\n<details style=\"display: inline;\"><summary> If you're interested in Yi's adoption of Llama architecture and license usage policy, see  <span style=\"color:  green;\">Yi's relation with Llama.</span> \u2b07\ufe0f</summary> <ul> <br>\n\n\n> \ud83d\udca1 TL;DR\n>\n> The Yi series models adopt the same model architecture as Llama but are **NOT** derivatives of Llama.\n\n- Both Yi and Llama are based on the Transformer structure, which has been the standard architecture for large language models since 2018.\n\n- Grounded in the Transformer architecture, Llama has become a new cornerstone for the majority of state-of-the-art open-source models due to its excellent stability, reliable convergence, and robust compatibility. This positions Llama as the recognized foundational framework for models including Yi.\n\n- Thanks to the Transformer and Llama architectures, other models can leverage their power, reducing the effort required to build from scratch and enabling the utilization of the same tools within their ecosystems.\n\n- However, the Yi series models are NOT derivatives of Llama, as they do not use Llama's weights.\n\n- As Llama's structure is employed by the majority of open-source models, the key factors of determining model performance are training datasets, training pipelines, and training infrastructure.\n\n- Developing in a unique and proprietary way, Yi has independently created its own high-quality training datasets, efficient training pipelines, and robust training infrastructure entirely from the ground up. This effort has led to excellent performance with Yi series models ranking just behind GPT4 and surpassing Llama on the [Alpaca Leaderboard in Dec 2023](https://tatsu-lab.github.io/alpaca_eval/).\n</ul>\n</details>\n\n<p align=\"right\"> [\n<a href=\"#top\">Back to top \u2b06\ufe0f </a>  ]\n</p>\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "safetensors",
+                "llama",
+                "text-generation",
+                "arxiv:2403.04652",
+                "arxiv:2311.16502",
+                "arxiv:2401.11944",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

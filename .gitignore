@@ -41,3 +41,5 @@ __pycache__/
 ### PERSO ###
 PERSO/
 OLD/
+OUPUT/
+datasets/aiboms

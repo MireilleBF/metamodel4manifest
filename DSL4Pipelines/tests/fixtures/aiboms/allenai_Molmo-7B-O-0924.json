@@ -1,0 +1,71 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:3bba18e5-999d-4b3a-bdd4-3843c81eada9",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:08:54.864678+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "allenai/Molmo-7B-O-0924-8ca62b21-56ac-5984-ab31-a55a8ca079b0",
+            "name": "allenai/Molmo-7B-O-0924",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/allenai/Molmo-7B-O-0924",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "image-text-to-text",
+                    "architectureFamily": "molmo",
+                    "modelArchitecture": "MolmoForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "openai/clip-vit-large-patch14-336, allenai/OLMo-7B-1124"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "allenai"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "molmo",
+                "text-generation",
+                "multimodal",
+                "olmo",
+                "pixmo",
+                "image-text-to-text",
+                "conversational",
+                "custom_code",
+                "en",
+                "arxiv:2409.17146",
+                "base_model:openai/clip-vit-large-patch14-336",
+                "base_model:finetune:openai/clip-vit-large-patch14-336",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

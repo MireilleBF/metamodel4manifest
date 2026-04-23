@@ -1,0 +1,107 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:cb24353d-3c25-41da-bd79-216a9d15bcc5",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:05:56.698869+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Anashel/rpg-761d8486-7af7-5ef7-8864-71d633ef46d1",
+            "name": "Anashel/rpg",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "creativeml-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Anashel/rpg",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-to-image",
+                    "architectureFamily": "",
+                    "modelArchitecture": "",
+                    "datasets": [
+                        {
+                            "ref": "custom-dataset-rpg-00063d68-3eee-5859-ab2c-a146d15208b7"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "diffusers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "black-forest-labs/FLUX.1-dev"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: custom",
+                            "type": "accuracy",
+                            "value": 95
+                        }
+                    ]
+                }
+            },
+            "authors": [
+                {
+                    "name": "Anashel"
+                }
+            ],
+            "tags": [
+                "diffusers",
+                "stable-diffusion",
+                "role-playing game",
+                "art generation",
+                "flux1",
+                "text-to-image",
+                "en",
+                "dataset:custom-dataset-rpg",
+                "base_model:black-forest-labs/FLUX.1-dev",
+                "base_model:finetune:black-forest-labs/FLUX.1-dev",
+                "license:creativeml-openrail-m",
+                "model-index",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "custom-dataset-rpg-00063d68-3eee-5859-ab2c-a146d15208b7",
+            "name": "custom-dataset-rpg",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "custom-dataset-rpg-00063d68-3eee-5859-ab2c-a146d15208b7",
+                    "name": "custom-dataset-rpg",
+                    "contents": {
+                        "url": "",
+                        "properties": []
+                    },
+                    "description": "",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "",
+                                    "url": ""
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:556916f3-4dd9-4fbc-9814-3845fc0996a0",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:06:35.264992+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "bigcode/starcoder2-15b-instruct-v0.1-e7aea605-679e-5203-beb5-6bb2732ebe54",
+            "name": "bigcode/starcoder2-15b-instruct-v0.1",
+            "licenses": [
+                {
+                    "license": {
+                        "name": "bigcode-openrail-m"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/bigcode/starcoder2-15b-instruct-v0.1",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "starcoder2",
+                    "modelArchitecture": "Starcoder2ForCausalLM",
+                    "datasets": [
+                        {
+                            "ref": "bigcode/self-oss-instruct-sc2-exec-filter-50k-87afcdf4-328e-5009-ba04-8150239e25f2"
+                        }
+                    ]
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    },
+                    {
+                        "name": "base_model",
+                        "value": "bigcode/starcoder2-15b"
+                    }
+                ],
+                "quantitativeAnalysis": {
+                    "performanceMetrics": [
+                        {
+                            "slice": "dataset: livecodebench-codegeneration",
+                            "type": "pass@1",
+                            "value": 20.4
+                        },
+                        {
+                            "slice": "dataset: livecodebench-selfrepair",
+                            "type": "pass@1",
+                            "value": 20.9
+                        },
+                        {
+                            "slice": "dataset: livecodebench-testoutputprediction",
+                            "type": "pass@1",
+                            "value": 29.8
+                        },
+                        {
+                            "slice": "dataset: livecodebench-codeexecution",
+                            "type": "pass@1",
+                            "value": 28.1
+                        },
+                        {
+                            "slice": "dataset: humaneval",
+                            "type": "pass@1",
+                            "value": 72.6
+                        },
+                        {
+                            "slice": "dataset: humanevalplus",
+                            "type": "pass@1",
+                            "value": 63.4
+                        },
+                        {
+                            "slice": "dataset: mbpp",
+                            "type": "pass@1",
+                            "value": 75.2
+                        },
+                        {
+                            "slice": "dataset: mbppplus",
+                            "type": "pass@1",
+                            "value": 61.2
+                        },
+                        {
+                            "slice": "dataset: ds-1000",
+                            "type": "pass@1",
+                            "value": 40.6
+                        }
+                    ]
+                },
+                "consideration": {
+                    "useCases": "## Use\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "bigcode"
+                }
+            ],
+            "description": "## Model Summary\n\nWe introduce StarCoder2-15B-Instruct-v0.1, the very first entirely self-aligned code Large Language Model (LLM) trained with a fully permissive and transparent pipeline. Our open-source pipeline uses StarCoder2-15B to generate thousands of instruction-response pairs, which are then used to fine-tune StarCoder-15B itself without any human annotations or distilled data from huge and proprietary LLMs.\n\n- **Model:** [bigcode/starcoder2-15b-instruct-v0.1](https://huggingface.co/bigcode/starcoder2-instruct-15b-v0.1)\n- **Code:** [bigcode-project/starcoder2-self-align](https://github.com/bigcode-project/starcoder2-self-align)\n- **Dataset:** [bigcode/self-oss-instruct-sc2-exec-filter-50k](https://huggingface.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k/)\n- **Authors:**\n[Yuxiang Wei](https://yuxiang.cs.illinois.edu),\n[Federico Cassano](https://federico.codes/),\n[Jiawei Liu](https://jw-liu.xyz),\n[Yifeng Ding](https://yifeng-ding.com),\n[Naman Jain](https://naman-ntc.github.io),\n[Harm de Vries](https://www.harmdevries.com),\n[Leandro von Werra](https://twitter.com/lvwerra),\n[Arjun Guha](https://www.khoury.northeastern.edu/home/arjunguha/main/home/),\n[Lingming Zhang](https://lingming.cs.illinois.edu).\n\n![self-alignment pipeline](https://huggingface.co/datasets/bigcode/starcoder2-instruct-assets/resolve/main/method.png)\n",
+            "tags": [
+                "transformers",
+                "safetensors",
+                "starcoder2",
+                "text-generation",
+                "code",
+                "conversational",
+                "dataset:bigcode/self-oss-instruct-sc2-exec-filter-50k",
+                "arxiv:2410.24198",
+                "base_model:bigcode/starcoder2-15b",
+                "base_model:finetune:bigcode/starcoder2-15b",
+                "license:bigcode-openrail-m",
+                "model-index",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": [
+        {
+            "type": "data",
+            "bom-ref": "bigcode/self-oss-instruct-sc2-exec-filter-50k-87afcdf4-328e-5009-ba04-8150239e25f2",
+            "name": "bigcode/self-oss-instruct-sc2-exec-filter-50k",
+            "data": [
+                {
+                    "type": "dataset",
+                    "bom-ref": "bigcode/self-oss-instruct-sc2-exec-filter-50k-87afcdf4-328e-5009-ba04-8150239e25f2",
+                    "name": "bigcode/self-oss-instruct-sc2-exec-filter-50k",
+                    "contents": {
+                        "url": "https://huggingface.co/datasets/bigcode/self-oss-instruct-sc2-exec-filter-50k",
+                        "properties": [
+                            {
+                                "name": "pretty_name",
+                                "value": "StarCoder2-15b Self-Alignment Dataset (50K)"
+                            },
+                            {
+                                "name": "configs",
+                                "value": "Name of the dataset subset: default {\"split\": \"train\", \"path\": \"data/train-*\"}"
+                            },
+                            {
+                                "name": "license",
+                                "value": "odc-by"
+                            }
+                        ]
+                    },
+                    "description": "Final self-alignment training dataset for StarCoder2-Instruct. \n\nseed: Contains the seed Python function\nconcepts: Contains the concepts generated from the seed\ninstruction: Contains the instruction generated from the concepts\nresponse: Contains the execution-validated response to the instruction\n\nThis dataset utilizes seed Python functions derived from the MultiPL-T pipeline.\n",
+                    "governance": {
+                        "owners": [
+                            {
+                                "organization": {
+                                    "name": "bigcode",
+                                    "url": "https://huggingface.co/bigcode"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

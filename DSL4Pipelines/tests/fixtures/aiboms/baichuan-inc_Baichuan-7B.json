@@ -1,0 +1,60 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:66ae96f1-33ea-474f-9098-1e6adc1ba02b",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:04:33.118917+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "baichuan-inc/Baichuan-7B-231f8b66-ef23-54b4-9281-37e1e7f51d40",
+            "name": "baichuan-inc/Baichuan-7B",
+            "licenses": [],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/baichuan-inc/Baichuan-7B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "baichuan",
+                    "modelArchitecture": "BaiChuanForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ],
+                "consideration": {
+                    "useCases": "## Uses\n\n<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->\n"
+                }
+            },
+            "authors": [
+                {
+                    "name": "baichuan-inc"
+                }
+            ],
+            "description": "## Model Details\n",
+            "tags": [
+                "transformers",
+                "pytorch",
+                "baichuan",
+                "text-generation",
+                "custom_code",
+                "zh",
+                "en",
+                "arxiv:1910.07467",
+                "arxiv:2009.03300",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "endpoints_compatible",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}

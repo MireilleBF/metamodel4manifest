@@ -1,0 +1,66 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:85ca16ae-829f-4a95-aac2-74f98cfa1cf5",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-02-28T12:07:00.723258+00:00",
+        "component": {
+            "type": "machine-learning-model",
+            "bom-ref": "Almawave/Velvet-14B-b672c5c3-cd3d-585a-8eb7-efbadd7e1e44",
+            "name": "Almawave/Velvet-14B",
+            "licenses": [
+                {
+                    "license": {
+                        "id": "Apache-2.0",
+                        "url": "https://spdx.org/licenses/Apache-2.0.html"
+                    }
+                }
+            ],
+            "externalReferences": [
+                {
+                    "url": "https://huggingface.co/Almawave/Velvet-14B",
+                    "type": "documentation"
+                }
+            ],
+            "modelCard": {
+                "modelParameters": {
+                    "task": "text-generation",
+                    "architectureFamily": "mistral",
+                    "modelArchitecture": "MistralForCausalLM",
+                    "datasets": []
+                },
+                "properties": [
+                    {
+                        "name": "library_name",
+                        "value": "transformers"
+                    }
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Almawave"
+                }
+            ],
+            "tags": [
+                "transformers",
+                "safetensors",
+                "mistral",
+                "text-generation",
+                "vllm",
+                "conversational",
+                "en",
+                "fr",
+                "de",
+                "es",
+                "it",
+                "pt",
+                "license:apache-2.0",
+                "autotrain_compatible",
+                "text-generation-inference",
+                "region:us"
+            ]
+        }
+    },
+    "components": []
+}
