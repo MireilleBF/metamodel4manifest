@@ -466,7 +466,7 @@ def to_mermaid(manifest):
     #    "./diagrams",
     #    "notebook_pipeline_example_simple.mmd",
     #    to_simple_mermaid(manifest))
-    save_in_file("./diagrams", "notebook_pipeline_example_full.mmd", mermaid_output)
+    save_in_file("OUTPUT/diagrams", "notebook_pipeline_example_full.mmd", mermaid_output)
 
 
 # -----
@@ -539,7 +539,7 @@ def test_extension_task_hub():
 
     serializer = MERMAIDSerializer()
     mermaid_output = serializer.object_to_mermaid_full(rel_hub )
-    save_in_file("./diagrams", "relation_composed.mmd", mermaid_output)
+    save_in_file("OUTPUT/diagrams", "relation_composed.mmd", mermaid_output)
 
 
 

@@ -10,7 +10,7 @@ def test_to_json():
     # Ensuite, tu construis ton chemin à partir de la racine du projet
     #read yaml file and transform it to json
     file = str(BASE_DIR /"tests/examples/sources/nanoGPT_manifest3.yaml")
-    output_dir = str(BASE_DIR /"tests/examples/outputs/")
+    output_dir = str(BASE_DIR /"tests/OUTPUT/json/")
     outputPath = yaml_to_json(file,output_dir)
     print(f"Json file generated in : {outputPath}")
 

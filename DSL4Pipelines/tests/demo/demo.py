@@ -10,7 +10,7 @@ from DSL4Pipelines.src.tools.transformations.yamlSerializer import YAMLSerialize
 from tools.transformations.toMermaid import MERMAIDSerializer
 
 PATH = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/sources/"
-OUTPUT = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/outputs/"
+OUTPUT = "/Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/examples/OUTPUT/"
 
 
 def test_demo():
