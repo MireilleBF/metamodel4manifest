@@ -13,31 +13,40 @@ from DSL4Pipelines.src.tools.queries.rules.rules import (
     check_english_support,
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
-OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/examples/outputs/aibom/')
+#To run on main dataset of aiboms'
+#BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+#BASE_DIR_DATASETS = BASE_DIR/'datasets/aiboms'
+#OUTPUT = str(BASE_DIR_DATASETS /'OUTPUT/aibom_manifests_in_yaml/')
+
+#to run on fixtures'
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+BASE_DIR_DATASETS = BASE_DIR/'tests/fixtures/aiboms'
+OUTPUT = str(BASE_DIR /'tests/generated/aibom_fixtures_manifests_yaml/')
+
 
 def test_build_sofwareFile():
     print(f"\nBase directory: {BASE_DIR}")
-    nom_fichier = BASE_DIR/'aiboms/0xJustin_Dungeons-and-Diffusion.json'
-
+    print(f"\ndataset directory: {BASE_DIR_DATASETS}")
+    nom_fichier = BASE_DIR_DATASETS/'0xJustin_Dungeons-and-Diffusion.json'
+    print(f"\nTesting build_software_file for AIBOM file: {nom_fichier}")
     translator = AIBOMTranslator(str(nom_fichier))
     file = translator.build_sofware_file_for_aibom()
     print(f"Fichier AIBOM transformé en artefact : {file}")
 
 def test_build_model():
-    nom_fichier = BASE_DIR/'aiboms/0xJustin_Dungeons-and-Diffusion.json'
+    nom_fichier = BASE_DIR_DATASETS/'0xJustin_Dungeons-and-Diffusion.json'
     translator = AIBOMTranslator(str(nom_fichier))
     model = translator.build_model()
     print(f"Model Card  transformed into MLModel artifact : {model}")
 
 def test_transform_aibom_to_manifest():
-    nom_fichier = BASE_DIR/'aiboms/0xJustin_Dungeons-and-Diffusion.json'
+    nom_fichier = BASE_DIR_DATASETS/'0xJustin_Dungeons-and-Diffusion.json'
     translator = AIBOMTranslator(str(nom_fichier))
-    nom_fichier = BASE_DIR/'aiboms/1bitLLM_bitnet_b1_58-3B.json'
+    nom_fichier = BASE_DIR_DATASETS/'1bitLLM_bitnet_b1_58-3B.json'
     check_transform_aibom(str(nom_fichier))
-    nom_fichier= BASE_DIR/'aiboms/agentica-org_DeepScaleR-1.5B-Preview.json'
+    nom_fichier= BASE_DIR_DATASETS/'agentica-org_DeepScaleR-1.5B-Preview.json'
     check_transform_aibom(str(nom_fichier))
-    nom_fichier= BASE_DIR/'aiboms/albert_albert-base-v2.json'
+    nom_fichier= BASE_DIR_DATASETS/'albert_albert-base-v2.json'
     check_transform_aibom(str(nom_fichier))
 
 
@@ -53,7 +62,7 @@ def check_transform_aibom(nom_fichier: str) -> Manifest:
 
 
 def test_transform_complexe_aibom():
-    nom_fichier= BASE_DIR/'aiboms/agentica-org_DeepScaleR-1.5B-Preview.json'
+    nom_fichier= BASE_DIR_DATASETS/'agentica-org_DeepScaleR-1.5B-Preview.json'
     manifest = check_transform_aibom(str(nom_fichier))
     artefacts = manifest.artefacts
     assert len(artefacts) == 8, f"Expected 8 artefacts, but got {len(artefacts)}"
@@ -113,11 +122,11 @@ def test_transform_complexe_aibom():
 
 #@todo : add more tests on the content of the artefacts, and on the properties of the relations
 def test_transform_aibom_with_metrics():
-    file_path= BASE_DIR/'aiboms/BAAI_bge-multilingual-gemma2.json'
+    file_path= BASE_DIR_DATASETS/'BAAI_bge-multilingual-gemma2.json'
 
 #@todo : add more tests on the content of the artefacts, and on the properties of the relations
 def test_transform_aibom_with_consideration():
-  file_path= BASE_DIR/'aiboms/baichuan-inc_Baichuan-7B.json'
+  file_path= BASE_DIR_DATASETS/'baichuan-inc_Baichuan-7B.json'
   #tester yaml car ajout d'un type....
   manifest = check_transform_aibom(str(file_path))
   #get the mlmodel and check that it contains the consideration
@@ -131,10 +140,10 @@ def test_transform_aibom_with_consideration():
 
 
 def test_transform_aibom_with_dataset():
-    file_path= BASE_DIR/'aiboms/baichuan-bigcode_starcoder2-7b.json'
+    file_path= BASE_DIR_DATASETS/'baichuan-bigcode_starcoder2-7b.json'
 
 def test_aibom_with_multi_languages():
-    file_path= BASE_DIR/'aiboms/CarperAI_stable-vicuna-13b-delta.json'
+    file_path= BASE_DIR_DATASETS/'CarperAI_stable-vicuna-13b-delta.json'
     manifest = check_transform_aibom(str(file_path))
     rules = [check_dataset_and_model_presence, check_english_support, rule_global_english_purity]
     engine = EvaluationEngine()

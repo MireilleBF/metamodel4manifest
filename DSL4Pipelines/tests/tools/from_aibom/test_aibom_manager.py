@@ -12,9 +12,15 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
+#To run on main datasets
+#BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
+#BASE_DIR_DATASETS = BASE_DIR/'datasets'
+#PATH_AIBOMS = str(BASE_DIR_DATASETS /'aiboms')
+#OUTPUT = str(BASE_DIR_DATASETS /'OUTPUT/evaluations/')
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent.parent
-OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/examples/outputs/aibom/')
-PATH_AIBOMS = str(BASE_DIR /'aiboms')
+OUTPUT = str(BASE_DIR /'DSL4Pipelines/tests/OUTPUT/aibom_fixtures_Evaluation/')
+PATH_AIBOMS = str(BASE_DIR /'datasets/aiboms')
 
 def test_build_AIBOMManager():
     print_cwd()
@@ -28,22 +34,22 @@ def test_save_AIBOMManager():
     print_cwd()
     path = PATH_AIBOMS
     manager = AIBOMManager(path)
-    output_path = 'aibom_manifests_yaml/'
+    output_path = OUTPUT #'aibom_manifests_yaml/'
     manager.save_manifests_in_yaml(output_path)
     # we check that the files are saved in the output path
     for manifest_name in manager.manifests:
         file_name = manifest_name.replace('.json', '.yaml')
-        file_path = output_path + file_name
+        file_path = output_path + '/' + file_name
         assert check_file_or_dict_exists(file_path), f"Expected file {file_path} to be saved, but it does not exist."
     logger.info("✅ All manifests saved successfully in yaml format in the output path.")
 def test_save_stranger():
     path = PATH_AIBOMS+'/strangerzonehf_Flux-Super-Realism-LoRA.json'
     manifest = AIBOMTranslator(path).transform_aibom_to_manifest()
     output = YAMLSerializer.to_yaml(manifest, True)
-    output_path = 'aibom_manifests_yaml/'
+    output_path = OUTPUT #'aibom_manifests_yaml/'
     file_name = path.split('/')[-1].replace('.json', '.yaml')
     save_in_file(output_path, file_name, output)
-    file_path = output_path + file_name
+    file_path = output_path +'/' + file_name
     assert check_file_or_dict_exists(file_path), f"Expected file {file_path} to be saved, but it does not exist."
 
 def test_filter_manifests_by_rule_llama():

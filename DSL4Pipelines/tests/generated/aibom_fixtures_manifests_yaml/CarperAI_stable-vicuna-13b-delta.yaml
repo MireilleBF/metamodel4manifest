@@ -1,0 +1,174 @@
+uid: b6addb2d-0b3a-4f1d-b183-17121fd56770
+type: Manifest
+properties: {}
+artefacts:
+- uid: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/fixtures/aiboms/CarperAI_stable-vicuna-13b-delta.json
+  type: SoftwareFile
+  name: CarperAI_stable-vicuna-13b-delta.json
+  properties:
+    bomFormat: CycloneDX
+    specVersion: '1.6'
+    serialNumber: urn:uuid:72a14d88-c54a-41ce-8a3b-3ac3712b4e46
+    version: 1
+  software_file_kind: file
+  content_type: AIBOM
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/fixtures/aiboms/CarperAI_stable-vicuna-13b-delta.json
+    type: ExternalReference
+  languages: []
+- uid: 9b90471c-a7ee-4190-b0a6-eaadfe15410d
+  type: Data
+  properties:
+    bom-ref: OpenAssistant/oasst1-8503d98f-2231-5d5d-a1bc-dd2f8959cd1e
+    name: OpenAssistant/oasst1
+    content_url: https://huggingface.co/datasets/OpenAssistant/oasst1
+    size_categories: 100K<n<1M
+    pretty_name: OpenAssistant Conversations
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: OpenAssistant/oasst1-8503d98f-2231-5d5d-a1bc-dd2f8959cd1e
+    type: ExternalReference
+  languages:
+  - en, es, ru, de, pl, th, vi, sv, bn, da, he, it, fa, sk, id, nb, el, nl, hu, eu, zh, eo, ja, ca, cs, bg, fi, pt, tr, ro, ar, uk, gl, fr, ko
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: b4089d8b-e405-4c5f-b02c-beb7070fc49b
+  type: Data
+  properties:
+    bom-ref: nomic-ai/gpt4all_prompt_generations-48b78a2b-6cb6-5c00-969a-278a0423e4a5
+    name: nomic-ai/gpt4all_prompt_generations
+    content_url: https://huggingface.co/datasets/nomic-ai/gpt4all_prompt_generations
+    task_categories: text-generation
+    size_categories: 100K<n<1M
+    license: apache-2.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: nomic-ai/gpt4all_prompt_generations-48b78a2b-6cb6-5c00-969a-278a0423e4a5
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: 1040cbd2-0384-487d-820c-4ebe592d3dcc
+  type: Data
+  properties:
+    bom-ref: tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a
+    name: tatsu-lab/alpaca
+    content_url: https://huggingface.co/datasets/tatsu-lab/alpaca
+    task_categories: text-generation
+    pretty_name: Alpaca
+    license: cc-by-nc-4.0
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: other
+    identifier: tatsu-lab/alpaca-fe64dd38-6a83-5779-a6ca-a80ee9d1d33a
+    type: ExternalReference
+  languages:
+  - en
+  data_types: []
+  dataset_kinds: []
+  data_formats: []
+  dataset_has_sensitive_personal_information: 'yes'
+  dataset_known_bias: []
+- uid: c2c0e33f-841b-435b-ae03-ae59383806e9
+  type: SoftwareFile
+  name: transformers
+  properties: {}
+  software_file_kind: file
+  content_type: library
+  languages: []
+- uid: bc8e0b26-dd0c-4e42-bad9-51f143b5b81a
+  type: MLModel
+  properties:
+    timestamp: '2025-02-28T12:11:10.395129+00:00'
+    bom-ref: CarperAI/stable-vicuna-13b-delta-427bec73-82de-5c98-968e-82fb03f3a021
+    name: CarperAI/stable-vicuna-13b-delta
+    authors:
+    - name: CarperAI
+    architectureFamily: llama
+    modelArchitecture: LlamaForCausalLM
+    description: '## Model Description
+
+
+      StableVicuna-13B is a [Vicuna-13B v0](https://huggingface.co/lmsys/vicuna-13b-delta-v0) model fine-tuned using reinforcement learning from human feedback (RLHF) via Proximal Policy Optimization (PPO) on various conversational and instructional datasets.
+
+      '
+    tags:
+    - transformers
+    - pytorch
+    - llama
+    - text-generation
+    - causal-lm
+    - en
+    - dataset:OpenAssistant/oasst1
+    - dataset:nomic-ai/gpt4all_prompt_generations
+    - dataset:tatsu-lab/alpaca
+    - arxiv:2302.13971
+    - doi:10.57967/hf/0588
+    - license:cc-by-nc-sa-4.0
+    - autotrain_compatible
+    - text-generation-inference
+    - endpoints_compatible
+    - region:us
+  license:
+    id: CC-BY-NC-SA-4.0
+    url: https://spdx.org/licenses/CC-BY-NC-SA-4.0.html
+  software_file_kind: file
+  external_reference:
+    external_identifier_type: urlScheme
+    identifier: https://huggingface.co/CarperAI/stable-vicuna-13b-delta
+    type: ExternalReference
+    kind: documentation
+  languages: []
+  purpose: text-generation
+  consideration:
+    use_cases: '### Intended Use
+
+
+      This model is intended to be used for text generation with a focus on conversational tasks. Users may further fine-tune the model on their own data to improve the model''s performance on their specific tasks in accordance with the non-commercial [license](https://creativecommons.org/licenses/by-nc/4.0/).
+
+      '
+    limitations: []
+    ethical_risks: []
+    intended_users: []
+relations:
+- uid: 6b8200cf-183d-48ef-ab39-8d2b27c47e6a
+  type: Relationship
+  properties: {}
+  from_: b6addb2d-0b3a-4f1d-b183-17121fd56770
+  to_:
+  - file:///Users/mireillefornarino/GIT/RECHERCHES/metamodele4manifest/DSL4Pipelines/tests/fixtures/aiboms/CarperAI_stable-vicuna-13b-delta.json
+  relationship_type: annotatedBy
+- uid: 7f0c8b7a-9d65-4778-a19d-8046bddcfcff
+  type: Relationship
+  properties: {}
+  from_: bc8e0b26-dd0c-4e42-bad9-51f143b5b81a
+  to_:
+  - 9b90471c-a7ee-4190-b0a6-eaadfe15410d
+  - b4089d8b-e405-4c5f-b02c-beb7070fc49b
+  - 1040cbd2-0384-487d-820c-4ebe592d3dcc
+  relationship_type: uses
+- uid: 9e856407-c653-40d6-9f1c-e9114151626e
+  type: Relationship
+  properties: {}
+  from_: bc8e0b26-dd0c-4e42-bad9-51f143b5b81a
+  to_:
+  - c2c0e33f-841b-435b-ae03-ae59383806e9
+  relationship_type: uses
+- uid: a507e631-7412-457c-842e-e09afc21bcaa
+  type: Relationship
+  properties: {}
+  from_: b6addb2d-0b3a-4f1d-b183-17121fd56770
+  to_:
+  - bc8e0b26-dd0c-4e42-bad9-51f143b5b81a
+  relationship_type: produces
